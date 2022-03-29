@@ -5,17 +5,19 @@ from admin_main.models import *
 
 # Create your models here.
 
-class Lab(model.Model):
-    labNum = models.IntegerField(max_length=3, primary_key=True, null = False)
+
+class Lab(models.Model):
+    labNum = models.IntegerField(max_length=3, primary_key=True, null=False)
     manager = models.CharField(max_length=10, null=False)
     mPhoneNum = models.CharField(max_length=11, null=False)
     curPeople = models.IntegerField(max_length=2, null=False)
 
-class Renting(model.Model):
-    serialnum = models.IntegerField(max_length=4, primary_key=True, null = False)
-    equipID = models.ForeignKey(Equip, on_delete=models.PROTECT, null = False)
+
+class Renting(models.Model):
+    serialnum = models.IntegerField(max_length=4, primary_key=True, null=False)
+    equipID = models.ForeignKey(Equip, on_delete=models.PROTECT, null=False)
     userName = models.CharField(max_length=10, null=False)
-    userID = models.ForeignKey(User, on_delete=models.PROTECT, null = False)
+    userID = models.ForeignKey(User, on_delete=models.PROTECT, null=False)
     userPhoneNum = models.CharField(max_length=11, null=False)
     rentingDate = models.DateField(null=False)
     returningDate = models.DateField(null=False)
