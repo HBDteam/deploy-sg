@@ -3,7 +3,6 @@ from django.db import models
 from sign.models import *
 from admin_main.models import Equip, EquipCode
 
-# Create your models here.
 
 class Lab(models.Model):
     labNum = models.IntegerField(max_length=3, primary_key=True, null = False)
