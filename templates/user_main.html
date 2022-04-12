@@ -1,161 +1,125 @@
-<html lang="ko">
-  <head>
-    <meta charset="UTF-8">
-    <title>Dashboard</title>
-    
-   
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">   
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사용자메인</title>
+    <link href="https://fonts.googleapis.com/css?family=Droid+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="../static/css/user_main.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     
-    <link href="https://fonts.googleapis.com/css?family=Droid+Sans" rel="stylesheet">
-    
-    <link rel="stylesheet" href="../static/css/admin_main.css">
-    
-    
-    
-    
-       <aside class="side-nav" id="show-side-navigation1">
+</head>
+<body>
+    <header class = "fix_header" style="position: fixed">
+        <div class="wide-inner">
+            <div class = "header_top">
+                <div class="menu_leftside">
+                    <img src = "/Users/k/success_kwonyujeong/static/img/skulogo.PNG" height=100px alt="메뉴아이콘">
+                </div>
 
-      <div class="heading">
-        <img src="../static/img/default_profile.PNG">
-        <div class="info">
-          <h3><a href="#">컴공이</a></h3>
-          <p>20190899</p>
+                <a href="/" class="logo">
+                    <span class="logo_txt01">성결대학교</span>
+                    <br>
+                    <span class="logo_txt02">실습장비&실습실 대여</span>
+                </a>
         </div>
-      </div>
+        </div>
+ 
+        <div class="top_menu_gnb">
+            <nav class="top_gnb_fix">
+                <div class = "gnb_wrap"> </div>
+                <div class = "top_gnb_wrap">
+                    <nav>
+                        <div class="category_wrap">
+                            <a href="" class >실습장비 관리</a>
+                            <a href="" class>대여/반납 내역</a>
+                            <a href="" class>마이페이지</a>
+                            <a href="" class>실습장비 관리</a>
+                            <a href="" class>실습장비 관리</a>
+                            <a href="" class>실습장비 관리</a>
+                            <a href="" class>실습장비 관리</a>
+                        </div>
+                    </nav>
+                </div>
+            </nav>
+        </div>
+    </header>
 
-      <div class="search">
-      </div>
-      <ul class="categories">
-        <li><i class="fa fa-home fa-fw"></i><a href="#">실습장비 관리</a>
-          <ul class="side-nav-dropdown">
-            <li><a href="#">Lorem ipsum</a></li>
-            <li><a href="#">ipsum dolor</a></li>
-            <li><a href="#">dolor ipsum</a></li>
-            <li><a href="#">amet consectetur</a></li>
-            <li><a href="#">ipsum dolor sit</a></li>
-          </ul>
-        </li>
-        <li><i class="fa fa-support fa-fw"></i><a href="#">대여/반납 내역</a>
-          <ul class="side-nav-dropdown">
-            <li><a href="#">Lorem ipsum</a></li>
-            <li><a href="#">ipsum dolor</a></li>
-            <li><a href="#">dolor ipsum</a></li>
-            <li><a href="#">amet consectetur</a></li>
-            <li><a href="#">ipsum dolor sit</a></li>
-          </ul>
-        </li>
-        <li><i class="fa fa-envelope fa-fw"></i><a href="#"> Contact us</a>
-          <ul class="side-nav-dropdown">
-            <li><a href="#">Lorem ipsum</a></li>
-            <li><a href="#">ipsum dolor</a></li>
-            <li><a href="#">dolor ipsum</a></li>
-            <li><a href="#">amet consectetur</a></li>
-            <li><a href="#">ipsum dolor sit</a></li>
-          </ul>
-        </li>
-        <li><i class="fa fa-users fa-fw"></i><a href="#"> Our team</a>
-          <ul class="side-nav-dropdown">
-            <li><a href="#">Lorem ipsum</a></li>
-            <li><a href="#">ipsum dolor</a></li>
-            <li><a href="#">dolor ipsum</a></li>
-            <li><a href="#">amet consectetur</a></li>
-            <li><a href="#">ipsum dolor sit</a></li>
-          </ul>
-        </li>
-        <li><i class="fa fa-bolt fa-fw"></i><a href="#"> Testimonials</a>
-          <ul class="side-nav-dropdown">
-            <li><a href="#">Lorem ipsum</a></li>
-            <li><a href="#">ipsum dolor</a></li>
-            <li><a href="#">dolor ipsum</a></li>
-            <li><a href="#">amet consectetur</a></li>
-            <li><a href="#">ipsum dolor sit</a></li>
-          </ul>
-        </li>
-        <li><i class="fa fa-envelope-open-o fa-fw"></i><a href="#"> Messages <span class="num dang">56</span></a></li>
-        <li><i class="fa fa-wrench fa-fw"></i><a href="#"> Settings <span class="num prim">6</span></a>
-          <ul class="side-nav-dropdown">
-            <li><a href="#">Lorem ipsum</a></li>
-            <li><a href="#">ipsum dolor</a></li>
-            <li><a href="#">dolor ipsum</a></li>
-            <li><a href="#">amet consectetur</a></li>
-            <li><a href="#">ipsum dolor sit</a></li>
-          </ul>
-        </li>
-        <li><i class="fa fa-laptop fa-fw"></i><a href="#"> About UI &amp; UX <span class="num succ">43</span></a></li>
-        <li><i class="fa fa-comments-o fa-fw"></i><a href="#"> Something else</a></li>
-      </ul>
-    </aside>
-    <section id="contents">
-      <nav class="navbar navbar-default">
-        <div class="container-fluid">
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-              <i class="fa fa-align-right"></i>
-            </button>
-          </div>
-          <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">My profile <span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                  <li><a href="#"><i class="fa fa-user-o fw"></i> My account</a></li>
-                  <li><a href="#"><i class="fa fa-envelope-o fw"></i> My inbox</a></li>
-                  <li><a href="#"><i class="fa fa-question-circle-o fw"></i> Help</a></li>
-                  <li role="separator" class="divider"></li>
-                  <li><a href="#"><i class="fa fa-sign-out"></i> Log out</a></li>
+    <div id="container" class="main_container">
+        <div class = "center_top">
+
+        </div>
+        <div class = "center_middle">
+            <div class ="middle_rank">
+                <p class = "rank_text">
+                    "학생들이 많이 찾는"
+                    <span>실습장비 BEST</span>
+                </p>
+                <p class="rank_test_hide">인기 카테고리</p>
+                <ul class="rank_list">
+                    <li>
+                        <a href = "">
+                            <img src="/Users/k/success_kwonyujeong/static/img/raspberrypi_img.PNG" alt>
+                            <p>라즈베리파이</p>
+                            <p>재고: 0000</p>
+                        </a>                      
+                    </li>
+                    <li>
+                        <a href = "">
+                            <img src="/Users/k/success_kwonyujeong/static/img/raspberrypi_img.PNG" alt>
+                            <p>라즈베리파이</p>
+                            <p>재고: 0000</p>
+                        </a>                       
+                    </li>
+                    <li>
+                        <a href = "">
+                            <img src="/Users/k/success_kwonyujeong/static/img/raspberrypi_img.PNG" alt>
+                            <p>라즈베리파이</p>
+                            <p>재고: 0000</p>
+                        </a>                       
+                    </li>
+                    <li>
+                        <a href = "">
+                            <img src="/Users/k/success_kwonyujeong/static/img/raspberrypi_img.PNG" alt>
+                            <p>라즈베리파이</p>
+                            <p>재고: 0000</p>
+                        </a>                       
+                    </li>
                 </ul>
-              </li>
-              <li><a href="#"><i class="fa fa-comments"></i><span>23</span></a></li>
-              <li><a href="#"><i class="fa fa-bell-o"></i><span>98</span></a></li>
-            </ul>
-          </div>
+            </div>
         </div>
-      </nav>
-  
-      
-       <script src='http://code.jquery.com/jquery-latest.js'></script>
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-      <script src='../static/js/bootstrap.js'></script>
-      <script>
         
-      $(function () {
+          
+        <div class="center_bottom">
+            <div class="bottom_title">
+                <p class = "rank_text">
+                    "OOO학생의"
+                </p>
+                <h2 class="bottom_txt">
+                   대여 내역
+                   <br>
+                   <br>
+                </h2>
+            </div>
 
+            <div class="jumbotron" style="background-color: rgb(255, 226, 255);">
+                <div class="jum_title">
+                    <ul>
+                        <li>라즈베리파이</li>
+                        <li>아두이노</li>
+                        <li>노트북</li>
+                    </ul>
+                </div>
 
-      (function () {  
-        // dropdown menu in the side nav
-        var slideNavDropdown = $('.side-nav-dropdown');
-
-        $('.side-nav .categories li').on('click', function () {
-
-          $(this).toggleClass('lol').siblings().removeClass('lol');
-
-          if ($(this).hasClass('lol')) {
-
-            $(this).find('.side-nav-dropdown').slideToggle('fast');
-
-            $(this).siblings().find('.side-nav-dropdown').slideUp('fast');
-
-          } else {
-
-            $(this).find('.side-nav-dropdown').slideUp('fast');
-
-          }
-
-        });
-
-        $('.side-nav .close-aside').on('click', function () {
-
-          $('#' + $(this).data('close')).addClass('show-side-nav');
-
-          contents.removeClass('margin');
-
-        });
-
-      }());
-      console.log(Chart.defaults.global);
-      });
-
-      </script>
+                <div class="jum_btn">
+                    <p><a class="btn btn-primary btn-lg" href="#" style="background-color: rgb(255, 21, 212); color: white; border-color: white;"role="button">대여내역 상세</a></p>
+                </div>
+            
+        </div>           
+    </div>
+</body>
+</html>
