@@ -1,0 +1,345 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700');
+
+/* 최종업데이트 2016-09-23 */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center, p,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
+	/* background: transparent; */
+}
+
+html {
+	overflow-y:scroll;
+	-webkit-text-size-adjust: 100%;
+}
+
+html, body {
+	width:100%;
+	font-size:15px; line-height:1.67em;
+	background-color: #fff;
+	/* word-break:break-all;
+	*word-break:break-all;
+	-ms-word-break:break-all;  */
+	margin:0 auto;
+}
+
+div {
+    display: block;
+}
+
+body {
+	font-size: 1.0em;
+	font-family: "Noto Sans KR", "sans-serif";
+	color: #4b4b4b;
+
+}
+
+@media all and (max-width:767px) {
+	html, body {font-size:13px; line-height:1.67em;}
+}
+
+header {
+    display: block;
+}
+
+nav {
+    display: block;
+}
+
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.fix_header {
+    background-color: #fff;
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99999;
+    border-bottom: 1px solid #eee;
+  }
+
+
+@media all and (max-width:1279px) {
+    .wide-inner {
+      margin-left: 30px;
+      margin-right: 30px;
+      width: auto;
+    }
+  }
+  
+.wide-inner {
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+.fix_header .header_top {
+    display: -ms-flex;
+    display: flex;
+    justify-content: space-between;
+    -ms-align-items: center;
+    align-items: center;
+    padding: 25px 0 20px;
+  }
+ 
+  
+  .header_top .logo {
+    color: rgb(255, 21, 212);
+  }
+
+
+  
+
+  .top_gnb_wrap .category_wrap {
+    white-space: nowrap;
+    overflow: auto;
+    padding-left: 20px;
+    display: table; margin-left: auto; margin-right: auto;  
+    background-color: rgb(255, 255, 255);
+  }
+
+  .top_gnb_wrap .category_wrap>a {
+    display: inline-block;
+    vertical-align:top;
+    line-height: 60px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-right: 10px;
+    margin-left: 10px;
+    font-size: 15pt;
+    background-color: rgb(255, 21, 212);
+    color: #eee;
+  }
+
+  @media all and (max-width:1023px) {
+    .top_menu_gnb {
+      display: block !important;
+      display: table; margin-left: auto; margin-right: auto;
+    }
+  }  
+
+  .rank_text {
+    text-align: center;
+    font-size: 24px;
+    line-height: 1em;
+ }
+
+ .center_middle .rank_list {
+    display: -ms-flex;
+    display: flex;
+    justify-content: center;
+    margin-top: 75px;
+ }
+ 
+  #container {
+    clear: both;
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto;
+  }
+
+  .center_top {
+    padding: 95px 0 130px;
+    overflow: hidden; 
+    position: relative;
+ }
+ 
+  .center_middle {
+    padding: 95px 0 50px;
+}
+
+.center_bottom {
+    padding: 75px 0 15px;
+    padding-top: 10%;
+    padding-bottom: 13.33%;
+ }
+
+ .center_middle .rank_text{
+  font-size: 1.5em;
+  -ms-word-break: keep-all;
+  word-break: keep-all;
+  line-height: 1.4em;
+}
+ .center_middle .rank_list>li img {
+    display: block;
+    border: 1px solid #ddd;
+    border-radius: 100%;
+ }
+ .center_middle .rank_list {
+      margin-top: 20px;
+   }
+
+   .center_middle .rank_list>li {
+      width: 25%;
+      margin: 0;
+      box-sizing: border-box;
+      padding: 10px;
+      margin-top: -1px;
+      margin-left: -1px;
+      list-style: none;
+   }
+
+
+.center_middle .rank_list{
+  flex-wrap: wrap;
+}
+
+
+.center_middle .rank_list>li{
+  width: 17%;
+  margin-bottom: 12px;
+}
+
+.center_middle .rank_list {
+  display: -ms-flex;
+  display: flex;
+  justify-content: center;
+  margin-top: 75px;
+}
+
+.center_middle .rank_list>li {
+  margin: 0 20px;
+  text-align: center;
+}
+
+.center_middle .rank_list>li img {
+border-radius: 12px;
+}
+
+.center_middle .rank_list>li p {
+  font-size: 13pt;
+  color: #313131;
+  margin-top: 12px;
+  font-weight: 500;
+}
+
+
+ .rank_test_hide {
+    font-size: 1.6em;
+    margin-bottom: 10px;
+ }
+
+ .rank_test_hide {
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 1.5em;
+    color: #2a2a2a;
+    text-align: center;
+    letter-spacing: -0.03em;
+     font-family:'Nanum Square', '나눔 고딕', 'Nanum Gothic', sans-serif;
+ }
+
+ .prod_scroll .top_text .left {
+   float:left;
+ }
+ .prod_scroll .top_text .align-r {
+   float:right;
+ }
+ .prod_scroll .m_prod_list {
+   border-bottom: 10px solid #f1f1f1;
+   padding: 0 20px 30px;
+ }
+ .m_outer { padding-bottom: 0; }
+ .m_outer .wide-inner.pad { 
+   margin-left: 0;
+   margin-right: 0;
+ }
+ .m_prod_banner {
+   margin: 0 20px;
+ }
+ .prod_scroll_wrap {
+   padding-top: 30px;
+ }
+
+ 
+
+ 
+
+ol, ul {
+	list-style: none;
+}
+
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+
+ .center_bottom .bottom_txt {
+    width: 604px;
+    margin: 0 auto 20px;
+  }
+
+  .bottom_txt {
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 1.5em;
+    color: #2a2a2a;
+    text-align: center;
+    letter-spacing: -0.03em;
+     font-family:'Nanum Square', '나눔 고딕', 'Nanum Gothic', sans-serif;
+ }
+
+ .jum_title {
+  display: table; margin-left: auto; margin-right: auto; padding: 50px;
+  font-size: x-large;
+ 
+ }
+ .jum_btn {
+    
+  display: table; margin-left: auto; margin-right: auto;
+  margin-top: 20px;
+ }
+
+
+ .jum_title>ul {
+
+    list-style:none;
+
+ }
+ 
+ a {
+    color: #000;
+    text-decoration: none;
+  }
+
+  a:-webkit-any-link {
+    color: -webkit-link;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+
+  img {max-width:100%;}
+
+
+  img, fieldset {
+    border:0px;
+  }
+
+  
