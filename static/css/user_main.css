@@ -147,19 +147,28 @@ p {
     justify-content: center;
     margin-top: 75px;
  }
+
+ .center_top .img {
+  width:100%;
+  height:100%;
+  object-fit:cover;
+ }
  
   #container {
     clear: both;
     overflow: hidden;
     position: relative;
     margin: 0 auto;
+    margin-left: 230px;
   }
 
   .center_top {
-    padding: 95px 0 130px;
     overflow: hidden; 
     position: relative;
- }
+    width:auto;
+    height: 380px;;
+    margin:0 auto;
+  }
  
   .center_middle {
     padding: 95px 0 50px;
@@ -297,7 +306,7 @@ li {
   }
 
   .bottom_txt {
-    font-size: 26px;
+    font-size: 27px;
     font-weight: 600;
     line-height: 1.5em;
     color: #2a2a2a;
