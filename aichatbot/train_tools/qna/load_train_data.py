@@ -47,7 +47,7 @@ train_file = './train_data.xlsx'
 db = None
 try:
     db = pymysql.connect(
-        host=DB_HOST,
+        host="127.0.0.1",
         user=DB_USER,
         passwd=DB_PASSWORD,
         db=DB_NAME,
