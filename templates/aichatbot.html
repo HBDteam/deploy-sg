@@ -3,14 +3,11 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Navvy the navigational ChatBot!</title>
+  <title>AI챗봇 성공이</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  
-  
       <link rel="stylesheet" href="../static/css/chatbot.css">
 
-  
 </head>
 
 <body>
@@ -18,20 +15,24 @@
   <!-- Currently BROKEN!
 Working prototype on meesrutten.me :) -->
 <main class="page__main">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gaegu&family=Gamja+Flower&display=swap" rel="stylesheet">
     <div class="block--background">
       <div class="chatbot__overview">
         <ul class="chatlist">
-          <li class="bot__output bot__output--standard">Hey, I'm your Temperature and Humidity ChatBot</li>
+          <li class="bot__output bot__output--standard">안녕! 나는 성결대 AI챗봇 성공이야😘</li>
         </ul>
      
       </div>
       <div class="chatbox-area">
         <form action="" id="chatform">
-            <textarea placeholder="Talk to me!" class="chatbox" name="chatbox" resize: "none" minlength="2"></textarea>
+            <textarea placeholder="성공이에게 질문해주세요" class="chatbox" name="chatbox" resize: "none" minlength="2"></textarea>
             <input class="submit-button" type="submit" value="send">
         </form>
       </div>
 			    <div class="block--background"></div>
+  </link>
 
 </main>
   
@@ -51,7 +52,7 @@ Working prototype on meesrutten.me :) -->
     input,
     previousInput,
     isReaction = false,
-    unkwnCommReaction = "I didn't quite get that.",
+    unkwnCommReaction = "성공이는 너가 무슨 말을 하는 지 잘 모르겠어..😢",
     chatbotButton = document.querySelector(".submit-button")
 
 sendForm.onkeydown = function(e){
@@ -98,6 +99,7 @@ var createBubble = function(input) {
 var checkInput = function(input) {
   hasCorrectInput = false;
   isReaction = false;
+
   //Checks all text values in possibleInput
   for(var textVal in possibleInput){
     //If user reacts with "yes" and the previous input was in textVal
@@ -112,7 +114,7 @@ var checkInput = function(input) {
     }
     if(input == "no" && previousInput == textVal){
       unkwnCommReaction = "For a list of commands type: Commands";
-      unknownCommand("I'm sorry to hear that :(")
+      unknownCommand("이게 아닌가보구나ㅠㅠ :(")
       unknownCommand(unkwnCommReaction);
       hasCorrectInput = true;
     }
@@ -252,51 +254,72 @@ function commandReset(e){
 
 var possibleInput = {
   // "hlep" : this.help(),
-  "help" : function(){
-    responseText("You can type a command in the chatbox")
-    responseText("Something like &quot;Navvy, please show me Mees&rsquo; best work&quot;")
-    responseText("Did you find a bug or problem? Tweet me @MeesRttn")
+  "도와줘" : function(){
+    responseText("밑의 입력칸에 성공이에게 물어보고 싶은걸 적어주세요!")
+    responseText("예를 들자면, '성공아 지금 비어있는 실습실 있어?' 이렇게요 ㅎㅎ")
+    responseText("만약 사용중에 문제가 있다면 @sunggong 으로 연락주세요😉")
     commandReset(0);
     return
     },
-  "best work" : function(){
-    responseText("I will show you Mees' best work!");
-    responseText("These are his <a href='#animation'>best animations</a>")
-    responseText("These are his <a href='#projects'>best projects</a>")
-    responseText("Would you like to see how I was built? (Yes/No)")
+  "bb" : function(){
+    responseText("칭찬해줘서 성공이는 행복해 ㅠ 나 더 잘해볼게 !!😆");
     commandReset(1);
     return
     },
   
 	"hii" : function(){
-    responseText("Hello, How can i help you?");
+    responseText("어떤걸 도와줄까?");
    
     commandReset(2);
     return
     },
-  "temperature" : function(){
+  "온도" : function(){
 		var weather= new XMLHttpRequest();
 		weather.open("GET", "https://api.thingspeak.com/channels/725914/feeds.json?api_key=R8UXP1FFMCLN5G4E", false);
         weather.send(null);
         var r =JSON.parse(weather.response);
  celcius = Math.round(r.feeds[r.channel.last_entry_id-1].field1);
 coverage = r.feeds[r.channel.last_entry_id-1].field2;
-    responseText("The temperature is "+celcius );
+if (celcius >27){
+    responseText("현재 온도는 "+celcius + "도야😊");
+    responseText("덥다 ㅠㅠ 더운 날씨 조심해! 선크림 꼭 발라주기~");
+  }
+if (celcius<=27 && celcius >22){
+    responseText("현재 온도는 "+celcius + "도야😊");
+    responseText("따듯한 날씨니까 얇은 긴팔을 입으면 좋을 것같아!");
+  }
+if (celcius<=22 && celcius >17){
+    responseText("현재 온도는 "+celcius + "도야😊");
+    responseText("니트입기 딱 좋은 온도다! ");
+}
+if (celcius<=17 && celcius >10){
+    responseText("현재 온도는 "+celcius + "도야😊");
+    responseText("겉옷 꼭 챙겨! 감기걸릴라 ~ ");
+}
+if (celcius<=10 && celcius >0){
+    responseText("현재 온도는 "+celcius + "도야😊");
+    responseText("추워추워 ~ ");
+}
+if (celcius <= 0){
+    responseText("현재 온도는 "+celcius + "도야😊");
+    responseText("흐 너무 춥다 ㅠㅠ 손발은 항상 따듯해야해!");
+}
     commandReset(2);
     return
     },
   
-	"humidity" : function(){
+	"습도" : function(){
 		var weather= new XMLHttpRequest();
 		weather.open("GET", "https://api.thingspeak.com/channels/725914/feeds.json?api_key=R8UXP1FFMCLN5G4E", false);
         weather.send(null);
         var r =JSON.parse(weather.response);
  celcius = Math.round(r.feeds[r.channel.last_entry_id-1].field1);
 coverage = r.feeds[r.channel.last_entry_id-1].field2;
-    responseText("The humidity is "+coverage);
+    responseText("현재 습도는 "+coverage + "% 야😉");
     commandReset(2);
     return
     },
+
   "experience" : function(){
     responseText("Mees has previously worked at:");
     responseText("Cobra Systems as web- developer / designer");
