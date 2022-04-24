@@ -1,7 +1,7 @@
 <html lang="ko">
   <head>
     <meta charset="UTF-8">
-    <title>Dashboard</title>
+    <title>관리자 메인</title>
     
    
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -22,9 +22,6 @@
           padding-left: 40px;
         }
       }
-      .main .page-header {
-        margin-top: 0;
-      }
       .sidebar {
         width:20%;
       }
@@ -32,6 +29,48 @@
         width:80%;
       }
     </style>
+    <script src='http://code.jquery.com/jquery-latest.js'></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src='../static/js/bootstrap.js'></script>
+    <script>
+    $(function () {
+
+
+    (function () {  
+      // dropdown menu in the side nav
+      var slideNavDropdown = $('.side-nav-dropdown');
+
+      $('.side-nav .categories li').on('click', function () {
+
+        $(this).toggleClass('lol').siblings().removeClass('lol');
+
+        if ($(this).hasClass('lol')) {
+
+          $(this).find('.side-nav-dropdown').slideToggle('fast');
+
+          $(this).siblings().find('.side-nav-dropdown').slideUp('fast');
+
+        } else {
+
+          $(this).find('.side-nav-dropdown').slideUp('fast');
+
+        }
+
+      });
+
+      $('.side-nav .close-aside').on('click', function () {
+
+        $('#' + $(this).data('close')).addClass('show-side-nav');
+
+        contents.removeClass('margin');
+
+      });
+
+    }());
+    console.log(Chart.defaults.global);
+    });
+
+    </script>
   </head>  
   <body style="background-color:white">
     <section id="contents">
@@ -77,21 +116,14 @@
       <ul class="categories">
         <li><i class="fa fa-home fa-fw"></i><a href="#">실습장비 관리</a>
           <ul class="side-nav-dropdown">
-            <li><a href="#">Lorem ipsum</a></li>
-            <li><a href="#">ipsum dolor</a></li>
-            <li><a href="#">dolor ipsum</a></li>
-            <li><a href="#">amet consectetur</a></li>
-            <li><a href="#">ipsum dolor sit</a></li>
+            <li><a href="./admin_equipment_register.html">실습장비 등록</a></li>
+            <li><a href="./admin_equipment_rental.html">실습장비 대여</a></li>
+            <li><a href="./admin_equipment_return.html">실습장비 반납</a></li>
+            <li><a href="./admin_equipment_manage.html">실습장비 관리</a></li>
+            <li><a href="./admin_equipment_detail.html">실습장비 현황</a></li>
           </ul>
         </li>
-        <li><i class="fa fa-support fa-fw"></i><a href="#">대여/반납 내역</a>
-          <ul class="side-nav-dropdown">
-            <li><a href="#">Lorem ipsum</a></li>
-            <li><a href="#">ipsum dolor</a></li>
-            <li><a href="#">dolor ipsum</a></li>
-            <li><a href="#">amet consectetur</a></li>
-            <li><a href="#">ipsum dolor sit</a></li>
-          </ul>
+        <li><i class="fa fa-support fa-fw"></i><a href="./admin_history.html">대여/반납 내역</a>
         </li>
         <li><i class="fa fa-envelope fa-fw"></i><a href="#"> Contact us</a>
           <ul class="side-nav-dropdown">
@@ -212,10 +244,10 @@
           </div>
           <div style="padding:50px">
             <div style=" float:left;">
-              <button class="btn btn-primary" style="width: 300px; height:250px; font-size:50px" onclick="location.href='./admin_equipment_rental.html'">대여하기</button>
+              <button type="button" class="btn btn-primary" style="width: 350px; height:90px; font-size:30px" onclick="location.href='./admin_equipment_rental.html'">대여처리</button>
             </div>
             <div style="float:right;">
-              <button class="btn btn-danger" style="width: 300px; height:250px;font-size:50px" onclick="location.href='./admin_equipment_return.html'">반납하기</button>
+              <button type="button" class="btn btn-danger" style="width: 350px; height:90px;font-size:30px" onclick="location.href='./admin_equipment_return.html'">반납처리</button>
             </div>
           </div>
         </div>
@@ -225,50 +257,4 @@
   <div>
   </div>
   </body>
-      
-       <script src='http://code.jquery.com/jquery-latest.js'></script>
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
-      <script src='../static/js/bootstrap.js'></script>
-      <script>
-        
-      $(function () {
-
-
-      (function () {  
-        // dropdown menu in the side nav
-        var slideNavDropdown = $('.side-nav-dropdown');
-
-        $('.side-nav .categories li').on('click', function () {
-
-          $(this).toggleClass('lol').siblings().removeClass('lol');
-
-          if ($(this).hasClass('lol')) {
-
-            $(this).find('.side-nav-dropdown').slideToggle('fast');
-
-            $(this).siblings().find('.side-nav-dropdown').slideUp('fast');
-
-          } else {
-
-            $(this).find('.side-nav-dropdown').slideUp('fast');
-
-          }
-
-        });
-
-        $('.side-nav .close-aside').on('click', function () {
-
-          $('#' + $(this).data('close')).addClass('show-side-nav');
-
-          contents.removeClass('margin');
-
-        });
-
-      }());
-      console.log(Chart.defaults.global);
-      });
-
-      </script>
- 
  </html> 
