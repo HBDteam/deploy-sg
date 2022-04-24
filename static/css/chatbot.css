@@ -2,7 +2,7 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-@import url("https://fonts.googleapis.com/css?family=Montserrat|Roboto");
+@import url("https://fonts.googleapis.com/css?family=Droid+Sans");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -32,6 +32,7 @@ footer, header, hgroup, menu, nav, section {
 
 body {
   line-height: 1;
+  
 }
 
 ol, ul {
@@ -59,10 +60,10 @@ table {
 
 body {
   overflow-x: hidden;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Gaegu', cursive;
   font-weight: 400;
-  font-size: 16px;
-  font-size: 1em;
+  font-size: 17px;
+  font-size: 1.1em;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   line-height: 1.45;
@@ -70,12 +71,12 @@ body {
 }
 
 .chatbot__overview {
-  background-color: #363636;
+  background-color: rgba(40,57,101,.9);
   display: flex;
   flex-flow: row nowrap;
   align-content: space-between;
-  min-height: 80vh;
-  max-height: 80vh;
+  min-height: 85vh;
+  max-height: 200vh;
   margin: 0 auto;
   padding: 1em;
   padding-bottom: 0;
@@ -93,18 +94,21 @@ body {
   max-height: 75vh;
   margin: 0 auto;
 }
+
+/* 수신 채팅박스 */
 .chatlist .userInput, .chatlist .bot__output {
   padding: 0.85em;
   margin: 0.5em;
   max-width: 100%;
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.826);
   border-radius: 5px;
   border-bottom: 1px solid #777;
 }
+/* 발신 채팅박스 */
 .chatlist .userInput {
   text-transform: lowercase;
   box-shadow: 1px 1px 2px #666;
-  border-top: 4px solid #CC8914;
+  border-top: 6px solid rgba(0, 0, 0, 0.9);
   opacity: 0;
   animation-name: animateBubble;
   animation-duration: 400ms;
@@ -115,7 +119,7 @@ body {
 .chatlist .bot__output {
   align-self: flex-start;
   box-shadow: -1px 1px 2px #666;
-  border-top: 4px solid #27ae60;
+  border-top: 6px solid rgba(113, 132, 182, 0.9);
   will-change: auto;
   height: auto;
   opacity: 0;
@@ -130,7 +134,7 @@ body {
 }
 .chatlist .bot__command {
   color: #f5f5f5;
-  color: #27ae60;
+  color: rgb(158, 156, 232);
   font-weight: 600;
   padding: 0.1em;
 }
@@ -171,7 +175,7 @@ body {
   }
 }
 .block--background {
-  background-color: #363636;
+  background-color: rgba(40,57,101,.9);
   width: 100vw;
   height: 100vh;
 }
@@ -200,9 +204,10 @@ body {
   width: 100%;
 }
 
+/* 입력칸 */
 textarea[name="chatbox"] {
   resize: none;
-  border: 2px solid #27ae60;
+  border: 2px solid #ffffff;
   border-right: 0;
   width: 70%;
   background-color: transparent;
@@ -211,12 +216,13 @@ textarea[name="chatbox"] {
   margin: 0;
   padding: 0.75em;
   border-radius: 8px 0px 0px 8px;
-  font-family: inherit;
+  font-family: 'Gaegu', cursive;
   font-size: 1em;
 }
+/* 입력칸 눌렀을 때 */
 textarea[name="chatbox"]:focus {
   outline: none;
-  border: 2px solid #4bd786;
+  border: 2px solid #ffffff;
 }
 
 ::-webkit-input-placeholder {
@@ -242,19 +248,19 @@ input[type="submit"] {
   border: 0;
   width: 25%;
   margin: 0;
-  background-color: #27ae60;
+  background-color: rgba(80, 97, 139, 0.9);
   color: #fff;
-  border: 2px solid #27ae60;
+  border: 2px solid rgb(255, 255, 255);
   border-left: 0;
   border-radius: 0 8px 8px 0;
-  font-family: inherit;
-  font-size: 1em;
+  font-family: 'Gaegu', cursive;
+  font-size: 1.2em;
   transition: 200ms all ease-in;
 }
 input[type="submit"]:hover {
-  background-color: #4bd786;
-  border-color: #4bd786;
-  color: #fff;
+  background-color: rgb(255, 255, 255);
+  border-color: rgb(255, 255, 255);
+  color: rgba(33, 50, 94, 0.9);
 }
 
 .input__nested-list {
