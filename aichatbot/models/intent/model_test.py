@@ -11,7 +11,7 @@ from uutils.Preprocess import Preprocess
 p = Preprocess(word2index_dic='/Users/jenny/success_gilyeon/aichatbot/train_tools/dict/chatbot_dict.bin',
                userdic='/Users/jenny/success_gilyeon/aichatbot/test/user_dic.tsv')
 
-query = "안녕"
+query = "배불러"
 
 pos = p.pos(query)
 keywords = p.get_keywords(pos, without_tag=True)
