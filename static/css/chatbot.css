@@ -66,7 +66,7 @@ body {
   font-size: 1.1em;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  line-height: 1.45;
+  line-height: 1.0;
   background-color: #363636;
 }
 
@@ -76,9 +76,9 @@ body {
   flex-flow: row nowrap;
   align-content: space-between;
   min-height: 85vh;
-  max-height: 200vh;
+  max-height: 100vh;
   margin: 0 auto;
-  padding: 1em;
+  padding: 0.8em;
   padding-bottom: 0;
 }
 
@@ -91,13 +91,13 @@ body {
   overflow-x: hidden;
   width: 100%;
   max-width: 35em;
-  max-height: 75vh;
+  max-height: 80vh;
   margin: 0 auto;
 }
 
 /* 수신 채팅박스 */
 .chatlist .userInput, .chatlist .bot__output {
-  padding: 0.85em;
+  padding: 0.8em;
   margin: 0.5em;
   max-width: 100%;
   background-color: rgba(255, 255, 255, 0.826);
@@ -188,7 +188,7 @@ body {
   margin: 0 auto;
   padding-top: 1em;
   font-size: 1em;
-  font-family: Helvetica;
+  font-family: 'Gaegu', cursive;
 }
 @media screen and (max-width: 29em) {
   #chatform {
@@ -214,7 +214,7 @@ textarea[name="chatbox"] {
   color: #fff;
   height: 3em;
   margin: 0;
-  padding: 0.75em;
+  padding: 0.8em;
   border-radius: 8px 0px 0px 8px;
   font-family: 'Gaegu', cursive;
   font-size: 1em;
