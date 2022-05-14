@@ -20,14 +20,4 @@ urlpatterns = [
     
     path('admin/', admin.site.urls),
     path('sign/', include('sign.urls')),
-    path('admin_equipment/', include('admin_equipment.urls')),
-    path('admin_equipment_detail/', include('admin_equipment_detail.urls')),
-    path('admin_equipment_history/', include('admin_equipment_history.urls')),
-    path('admin_equipment_manage/', include('admin_equipment_manage.urls')),
-    path('admin_main/', include('admin_main.urls')),
-    path('user_equipment/', include('user_equipment.urls')),
-    path('user_history/', include('user_history.urls')),
-    path('user_main/', include('user_main.urls')),
-    path('user_mypage/', include('user_mypage.urls')),
-    path('user_rental/', include('user_rental.urls'))
 ]
