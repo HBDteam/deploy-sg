@@ -170,15 +170,26 @@
           <tbody>
             {% for notebook in notebooks %}
             <tr>
-              <td>{{notebook.isRented}}</td>
-              <td>{{notebook.equipID}}</td>
-              <td>{{notebook.status}}</td>
+              {% if notebook.isRented == 0 %}
+              <td>대여가능</td>
+              {% else %}
+              <td>대여중</td>
+              {% endif %}
+              <td>{{notebook.equipID}}</td>          
+              {% if equip.status == 0 %}
+              <td>불량</td>
+              {% elif equip.status == 1 %}
+              <td>하</td>
+              {% elif equip.status == 2 %}
+              <td>중</td>
+              {% else %}
+              <td>상</td>
+              {% endif %}
               <td>{{notebook.equipInfo}}</td>
             </tr>
             {% endfor %}
           </tbody>
         </table>
-  
       </div>
     </div>
   
