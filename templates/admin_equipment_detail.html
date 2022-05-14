@@ -198,113 +198,18 @@
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td>노트북</td>
-                  <td>LG01</td>
-                  <td>2019-03-05</td>
-                  <td>대여가능</td>
-                  <td>상</td>
-                  <td>i5-1135G7,RAM:16GB,ssd:256GB</td>
-                  <td><button class="btn btn-primary">수정</button></td>
-                </tr>
-                <tr>
-                  <td>노트북</td>
-                  <td>LG02</td>
-                  <td>2019-03-05</td>
-                  <td>대여중</td>
-                  <td>중</td>
-                  <td>i5-1135G7,RAM:16GB,ssd:256GB</td>
-                  <td><button class="btn btn-primary">수정</button></td>
-                </tr>
-                <tr>
-                  <td>노트북</td>
-                  <td>LG03</td>
-                  <td>2019-03-05</td>
-                  <td>대여예약</td>
-                  <td>상</td>
-                  <td>i5-1135G7,RAM:16GB,ssd:256GB</td>
-                  <td><button class="btn btn-primary">수정</button></td>
-                </tr>
-                <tr>
-                  <td>노트북</td>
-                  <td>LG04</td>
-                  <td>2019-03-05</td>
-                  <td>대여가능</td>
-                  <td>수리중</td>
-                  <td>i5-1135G7,RAM:16GB,ssd:256GB</td>
-                  <td><button class="btn btn-primary">수정</button></td>
-                </tr>
-                <tr>
-                  <td>노트북</td>
-                  <td>LG05</td>
-                  <td>2019-03-05</td>
-                  <td>대여가능</td>
-                  <td>하</td>
-                  <td>i5-1135G7,RAM:16GB,ssd:256GB</td>
-                  <td><button class="btn btn-primary">수정</button></td>
-                </tr>
-                <tr>
-                  <td>노트북</td>
-                  <td>LG06</td>
-                  <td>2019-03-05</td>
-                  <td>대여가능</td>
-                  <td>상</td>
-                  <td>i5-1135G7,RAM:16GB,ssd:256GB</td>
-                  <td><button class="btn btn-primary">수정</button></td>
-                </tr>
-                <tr>
-                  <td>노트북</td>
-                  <td>Dell01</td>
-                  <td>2021-09-05</td>
-                  <td>대여중</td>
-                  <td>상</td>
-                  <td>i7-7700K,RAM:32GB,ssd:256GB</td>
-                  <td><button class="btn btn-primary">수정</button></td>
-                </tr>
-                <tr>
-                  <td>노트북</td>
-                  <td>Dell02</td>
-                  <td>2021-09-05</td>
-                  <td>대여예약</td>
-                  <td>상</td>
-                  <td>i7-7700K,RAM:32GB,ssd:256GB</td>
-                  <td><button class="btn btn-primary">수정</button></td>
-                </tr>
-                <tr>
-                  <td>라즈베리파이</td>
-                  <td>RP01</td>
-                  <td>2020-05-05</td>
-                  <td>대여가능</td>
-                  <td>중</td>
-                  <td></td>
-                  <td><button class="btn btn-primary">수정</button></td>
-                </tr>
-                <tr>
-                  <td>라즈베리파이</td>
-                  <td>RP02</td>
-                  <td>2020-05-05</td>
-                  <td>대여중</td>
-                  <td>상</td>
-                  <td></td>
-                  <td><button class="btn btn-primary">수정</button></td>
-                </tr><tr>
-                  <td>라즈베리파이</td>
-                  <td>RP03</td>
-                  <td>2020-05-05</td>
-                  <td>대여가능</td>
-                  <td>중</td>
-                  <td>카메라모듈 미포함</td>
-                  <td><button class="btn btn-primary">수정</button></td>
-                </tr>
-              </tr><tr>
-                <td>라즈베리파이</td>
-                <td>RP04</td>
-                <td>2020-05-05</td>
-                <td>대여예약</td>
-                <td>상</td>
-                <td></td>
+              {% for equip in equips %}
+              {% load util %}
+              <tr>
+                <td>{{equip.equipCode}}</td>
+                <td>{{equip.equipID}}</td>
+                <td>{{equip.receivedDate}}</td>
+                <td>{{transStrRented:equip.isRented}}</td>
+                <td>{{transStrStatus:equip.status}}</td>
+                <td>{{equip.equipInfo}}</td>
                 <td><button class="btn btn-primary">수정</button></td>
               </tr>
+              {% endfor %}
               </tbody>
             </table>
           </div>
