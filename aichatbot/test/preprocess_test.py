@@ -5,7 +5,7 @@ from uutils.Preprocess import Preprocess
 sent = "내일 오후 1시에 노트북 대여할래"
 
 # 전처리 객체 생성
-p = Preprocess(userdic='/Users/jenny/success_gilyeon/aichatbot/test/user_dic.tsv')
+p = Preprocess(userdic='user_dic.tsv')
 
 # 형태소 분석기 실행
 pos = p.pos(sent)

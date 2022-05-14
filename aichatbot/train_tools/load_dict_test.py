@@ -1,6 +1,6 @@
 import _pickle as pickle
 
-f = open('/Users/jenny/success_gilyeon/aichatbot/train_tools/dict/chatbot_dict.bin', "rb")
+f = open('chatbot_dict.bin', "rb")
 word_index = pickle.load(f)
 f.close()
 
