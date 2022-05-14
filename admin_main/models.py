@@ -10,10 +10,12 @@ class EquipCode(models.Model):
     equipName = models.CharField(max_length=20, null=False)
 
     def __str__(self):
-        return self.equipName
+        return f'[{self.equipCode}] {self.equipName}'
 
 
 # 각 장비의 정보 테이블
+
+
 class Equip(models.Model):
     equipCode = models.ForeignKey(EquipCode, on_delete=models.DO_NOTHING)
     equipID = models.CharField(primary_key=True, max_length=13, null=False)
@@ -23,4 +25,4 @@ class Equip(models.Model):
     equipInfo = models.TextField(default='')
 
     def __str__(self):
-        return self.equipID
+        return f'[{self.equipCode}] {self.equipInfo}'
