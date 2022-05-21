@@ -123,8 +123,10 @@
     <div class="mypage_top">
 
       <h2>
-        <strong class="name" style="font-size: pt;" style="font-weight: 500;">권유정</strong>
+        {% for User in Users %}
+        <strong class="name" style="font-size: pt;" style="font-weight: 500;">{{User.name}}</strong>
         님 안녕하세요
+        {% endfor %}
       </h2>
       <div class="btn_01">
         <a title="비밀번호변경 바로가기" class="btn_pw" href="">비밀번호변경</a>
@@ -138,18 +140,17 @@
     <div class = "mypage_middle">
       
         <dl >
+
+          {% for User in Users %}
+          <dt>학번</dt>
+          <dd>{{User.studentID}}</dd>
           <dt >Email</dt>
           <dd >
-            "shr2008@naver.com"
+            {{User.email}}
           </dd>
           <dt >휴대폰번호</dt>
-          <dd >010-9557-9748</dd>
-          <dt>주소</dt>
-          <dd>
-            인천 서구 건지로 404 211동 502호 (가좌동, 가좌한신휴플러스)
-          </dd>
-          <dt>학번</dt>
-          <dd>20190811</dd>
+          <dd >{{User.phoneNum}}</dd>
+          {% endfor %}
         </dl>
       </div>
 
