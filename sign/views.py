@@ -1,40 +1,52 @@
+from django.http import HttpResponse
+from django.shortcuts import render
+from django.contrib.auth.hashers import make_password, check_password
 from .models import User, Manager
 from django.shortcuts import render, redirect
-
+from argon2 import PasswordHasher
 '''
     sign.html에서 onclick 시 ajax 통신으로 post/get을 구현 할 예정임.
 '''
-
-
-# load sign page
-def sign(request):
-    # /sign GET 요청이 오면 sign.html 페이지를 로드한다.
-    return render(request, 'sign.html')
-
 # sign up
 def signup(request):
     if request.method == 'POST':
-        # 비밀번호가 동일한 지 검사한다.
-        if request.POST['pass'] == request.POST['confirm']:
-            # 동일하다면 User 테이블에 사용자를 추가한다.
-            user = User(studentID=request.POST['user'], password=request.POST['pass'], name=request.POST['name'], email=request.POST['email'], phoneNum=request.POST['phone'], isEnrolled=request.POST['isEnrolled'])
+        if request.POST['password1'] == request.POST['password2']:
+            user = User(
+                        studentID=request.POST['username'],
+                        password=PasswordHasher().hash(request.POST['password1']).encode('utf-8'),
+                        name=request.POST['name'],
+                        email=request.POST['email'],
+                        phoneNum=request.POST['phone'],
+                        isEnrolled=request.POST['isEnrolled'])
             user.save()
-        else:
-            # error
-            return 0
-    return render(render, 'sign.html')
+            return render(request, 'sign.html')
+    return render(request, 'sign.html')
 
 # sign in
 def signin(request):
-    if request.method == 'POST':
-        userid = request.POST['user']
-        userpass = request.POST['pass']
-        # 테이블에서 해당 아이디와 비밀번호에 해당되는 행을 가져온다.
-        queryset = User.objects.filter(studentID=userid, password=userpass)
-        # 존재하면 다음 페이지로 redirect
-        if queryset.exists() == True:
-            return redirect('/user_main')
-        # 존재하지 않으면 에러 메시지를 전달하고, 첫 화면으로 돌아간다.
+    if request.method == 'GET':
+        return render(request, 'sign.html')
+    elif request.method == 'POST':
+        username = request.POST.get('username',None) # 사용자가 입력한 id 가져오기
+        password = request.POST.get('password',None) # 사용자가 입력한 pwd 가져오기 
+        res_data = {} # front로 보낼 데이터
+        if not (username and password):
+            res_data['error'] = '모든 값을 입력해주세요.'
+            return render(request, 'sign.html')
         else:
-            return render(request, 'sign.html', {'error':'아이디와 비밀번호가 일치하지 않습니다.'})
-    return render(render, 'sign.html')
+            # 사용자, 관리자 체크하기
+            if User.objects.filter(studentID=username).exists() == True: # 사용자
+                login_user = User.objects.get(studentID=username)
+                if PasswordHasher().verify(login_user.password.decode('utf-8'),password):
+                    user_id = login_user.studentID
+                    request.session['user'] = user_id
+                    return redirect('/user_main') # 사용자 페이지로 이동
+                else:
+                    print('실패')
+            elif Manager.objects.filter(mID= username).exists() == True:
+                manager_user =  Manager.objects.get(mID= username)
+                if PasswordHasher().verify(manager_user.mPassword.decode('utf-8'),password):
+                    user_id = manager_user.mID
+                    request.session['user'] = user_id
+                    return redirect('/admin_main') # 사용자 페이지로 이동
+    else: return redirect('sign.html')
