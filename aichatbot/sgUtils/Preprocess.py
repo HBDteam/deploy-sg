@@ -1,11 +1,11 @@
 from konlpy.tag import Komoran
-import _pickle as pickle
-# 형태소 분석기 코모란 사용
+import pickle
+import jpype
+
 
 class Preprocess:
-    def __init__(self, word2index_dic='', userdic=None):   # 생성자
-        # 형태소 분석기 초기화
-        # 형태소 분석기 인스턴스 객체 생성
+    def __init__(self, word2index_dic='', userdic=None):
+        # 단어 인덱스 사전 불러오기
         if(word2index_dic != ''):
             f = open(word2index_dic, "rb")
             self.word_index = pickle.load(f)
@@ -13,26 +13,32 @@ class Preprocess:
         else:
             self.word_index = None
 
-        # userdic 인자에는 사용자 저의 사전 파일 경로 입력
-        self.komoran = Komoran(userdic = userdic)
+        # 형태소 분석기 초기화
+        self.komoran = Komoran(userdic=userdic)
 
         # 제외할 품사
-        # 관계언, 기호, 어미, 접미사 제거
+        # 참조 : https://docs.komoran.kr/firststep/postypes.html
+        # 관계언 제거, 기호 제거
+        # 어미 제거
+        # 접미사 제거
         self.exclusion_tags = [
-            'JKS','JKC','JKG', 'JKO','JKB','JKV','JKQ','JK','JC','SF','SP','SS','SE','SO',
-            'EP','EF','EC','ETN','ETM','XSN','XSV','XSA'
+            'JKS', 'JKC', 'JKG', 'JKO', 'JKB', 'JKV', 'JKQ',
+            'JX', 'JC',
+            'SF', 'SP', 'SS', 'SE', 'SO',
+            'EP', 'EF', 'EC', 'ETN', 'ETM',
+            'XSN', 'XSV', 'XSA'
         ]
 
-        # 형태소 분석기 POS 태그 (나중에 형태소 분석기 바꾸게 되면 여기만 바꾸면 됨)
+    # 형태소 분석기 POS 태거
     def pos(self, sentence):
+        jpype.attachThreadToJVM()
         return self.komoran.pos(sentence)
 
-        # 불용어 제거 후 필요한 품사 정보만 가져오기
+    # 불용어 제거 후, 필요한 품사 정보만 가져오기
     def get_keywords(self, pos, without_tag=False):
-        f = lambda x:x in self.exclusion_tags # 품사 제거한거
+        f = lambda x: x in self.exclusion_tags
         word_list = []
-
-        for p in pos :
+        for p in pos:
             if f(p[1]) is False:
                 word_list.append(p if without_tag is False else p[0])
         return word_list
@@ -50,5 +56,4 @@ class Preprocess:
                 # 해당 단어가 사전에 없는 경우, OOV 처리
                 w2i.append(self.word_index['OOV'])
         return w2i
-        
-    
+

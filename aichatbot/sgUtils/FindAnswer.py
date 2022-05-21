@@ -39,7 +39,7 @@ class FindAnswer:
         for word, tag in ner_predicts:
 
             # 변환해야하는 태그가 있는 경우 추가
-            if tag == 'B_FOOD' or tag == 'B_DT' or tag == 'B_TI':
+            if tag == 'FOOD' or tag == 'B_DT' or tag == 'B_TI' or tag == 'EQUIP' :
                 answer = answer.replace(tag, word)
 
         answer = answer.replace('{', '')
