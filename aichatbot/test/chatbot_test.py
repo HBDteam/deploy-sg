@@ -1,7 +1,15 @@
-from config.DatabaseConfig import *
-from sgUtils.Database import Database
-from sgUtils.Preprocess import Preprocess
+import os
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "config.settings")
 
+import django
+django.setup()
+
+
+import sys
+sys.path.append('../')
+from sgUtils.sgDatabase import Database
+from sgUtils.Preprocess import Preprocess
+from sgConfig.DatabaseConfig import *
 
 # 전처리 객체 생성
 p = Preprocess(word2index_dic='../train_tools/chatbot_dict.bin',
@@ -9,7 +17,7 @@ p = Preprocess(word2index_dic='../train_tools/chatbot_dict.bin',
 
 # 질문/답변 학습 디비 연결 객체 생성
 db = Database(
-    host=DB_HOST, user=DB_USER, password=DB_PASSWORD, db_name=DB_NAME
+    host=DB_HOST, user=DB_USER, password=DB_PASSWORD, db_name=DB_NAME, port = DB_PORT
 )
 db.connect()    # 디비 연결
 

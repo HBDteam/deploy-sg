@@ -1,12 +1,12 @@
 import _pickle as pickle
-from uutils.Preprocess import Preprocess
+from sgUtils.Preprocess import Preprocess
 
 # 단어 사전 불러오기
 f = open('../train_tools/chatbot_dict.bin', "rb")
 word_index = pickle.load(f)
 f.close()
 
-sent = "얼른 세원이오빠 보고싶어 ㅠㅠ "
+sent = "노트북 ㅊ최고사양으로 주세요 "
 
 # 전처리 객체 생성
 p = Preprocess(userdic='user_dic.tsv')

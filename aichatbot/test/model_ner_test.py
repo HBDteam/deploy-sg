@@ -4,7 +4,7 @@ import tensorflow as tf
 import numpy as np
 from tensorflow.keras.models import Model, load_model
 from tensorflow.keras import preprocessing
-from sgModel.ner.NerModel import NerModel
+from ner.NerModel import NerModel
 from sgUtils.Preprocess import Preprocess
 
 # import 문제로 ner폴더의 h5파일 test로 옮김

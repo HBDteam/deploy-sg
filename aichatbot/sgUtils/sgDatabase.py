@@ -8,10 +8,11 @@ class Database:
     database 제어
     '''
 
-    def __init__(self, host, user, password, db_name, charset='utf8'):
+    def __init__(self, host, user, password, db_name, port, charset='utf8'):
         self.host = host
         self.user = user
         self.password = password
+        self.port = port
         self.charset = charset
         self.db_name = db_name
         self.conn = None
@@ -26,6 +27,7 @@ class Database:
             user=self.user,
             password=self.password,
             db=self.db_name,
+            port= self.port,
             charset=self.charset
         )
 
