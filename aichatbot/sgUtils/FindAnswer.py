@@ -4,10 +4,9 @@ class FindAnswer:
 
     # 검색 쿼리 생성
     def _make_query(self, intent_name, ner_tags):
-        sql = "select * from chatbot_train_data"
+        sql = "select * from chattrain"
         if intent_name != None and ner_tags == None:
             sql = sql + " where intent='{}' ".format(intent_name)
-
         elif intent_name != None and ner_tags != None:
             where = ' where intent="%s" ' % intent_name
             if (len(ner_tags) > 0):
@@ -19,13 +18,14 @@ class FindAnswer:
 
         # 동일한 답변이 2개 이상인 경우, 랜덤으로 선택
         sql = sql + " order by rand() limit 1"
+
         return sql
 
     # 답변 검색
     def search(self, intent_name, ner_tags):
         # 의도명, 개체명으로 답변 검색
         sql = self._make_query(intent_name, ner_tags)
-        answer = self.db.select_one(sql)
+        answer = self.db.select_one(sql)    # 고쳐야됨
 
         # 검색되는 답변이 없으면 의도명만 검색
         if answer is None:
