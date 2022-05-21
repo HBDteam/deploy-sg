@@ -1,19 +1,19 @@
-import os
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "config.settings")
+from models import ChatTrain
 
 import django
 django.setup()
 
 
 import sys
+import os
 sys.path.append('../')
 from sgUtils.sgDatabase import Database
 from sgUtils.Preprocess import Preprocess
-from sgConfig.DatabaseConfig import *
+#from sgConfig.DatabaseConfig import *
 
 # 전처리 객체 생성
-p = Preprocess(word2index_dic='../train_tools/chatbot_dict.bin',
-               userdic='user_dic.tsv')
+p = Preprocess(word2index_dic='./train_tools/chatbot_dict.bin',
+               userdic='./test/user_dic.tsv')
 
 # 질문/답변 학습 디비 연결 객체 생성
 db = Database(
@@ -29,13 +29,13 @@ query = "노트북 주문할게요"
 
 # 의도 파악
 from models.intent.IntentModel import IntentModel
-intent = IntentModel(model_name='../sgModel/intent/intent_model.h5', proprocess=p)
+intent = IntentModel(model_name='./sgModel/intent/intent_model.h5', proprocess=p)
 predict = intent.predict_class(query)
 intent_name = intent.labels[predict]
 
 # 개체명 인식
 from models.ner.NerModel import NerModel
-ner = NerModel(model_name='../sgModel/ner/ner_model.h5', proprocess=p)
+ner = NerModel(model_name='./sgModel/ner/ner_model.h5', proprocess=p)
 predicts = ner.predict(query)
 ner_tags = ner.predict_tags(query)
 
