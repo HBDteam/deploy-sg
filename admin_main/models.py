@@ -10,7 +10,7 @@ class EquipCode(models.Model):
     equipName = models.CharField(max_length=20, null=False)
 
     def __str__(self):
-        return f'[{self.equipCode}] {self.equipName}'
+        return self.equipName
 
 
 # 각 장비의 정보 테이블
