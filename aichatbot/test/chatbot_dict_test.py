@@ -1,3 +1,5 @@
+import sys
+sys.path.append('../')
 import _pickle as pickle
 from sgUtils.Preprocess import Preprocess
 
