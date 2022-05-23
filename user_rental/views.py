@@ -1,4 +1,4 @@
-from .models import Renting
+from .models import Renting, User
 from django.shortcuts import render, redirect
 from .import views
 #
@@ -22,5 +22,19 @@ def rental(request):
         post.returningDate = request.POST['returndate']
         post.serialnum = request.POST['senum']
         post.save()
+
+
+
     return redirect('../equipinfo', {'alert':'정상적으로 신청이 접수되었습니다'})
+
+
+def retalform(request):
+
+    Users = User.objects.filter(studentID="20190811")
+   
+
+    context = {'Users' : Users}
+    
+    
+    return render(request, 'user_rental.html', context)
 

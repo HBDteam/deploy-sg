@@ -21,7 +21,7 @@ def user_history(request):
 
 
     returningdate = userid.values('returningDate')
-    now = int(datetime.today().strftime('%Y%m%d'))
+    
 
     print(returningdate)
     print(now)
@@ -59,11 +59,13 @@ def user_history(request):
     for i in range(len(equip_list)):
         NOW_userID_list[i]['equipInfo'] = equip_list[i]['equipInfo']
 
+
     print(NOW_userID_list)
 
+    now = int(datetime.today().strftime('%Y%m%d'))
     
     
-    context = {'NOW_userID_list' : NOW_userID_list }
+    context = {'NOW_userID_list' : NOW_userID_list , 'now' : now}
     
     
 

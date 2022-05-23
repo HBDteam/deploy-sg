@@ -1,6 +1,7 @@
 from .models import Equip, EquipCode, User, Renting
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
+from datetime import datetime
 
 #
 
@@ -20,6 +21,7 @@ def user_main(request):
     for i in range(len(equip_list)):
         NOW_userID_list[i]['equipInfo'] = equip_list[i]['equipInfo']
 
+    now = int(datetime.today().strftime('%Y%m%d'))
     
 
     context = {'Users' : Users, 'NOW_userID_list' : NOW_userID_list}
