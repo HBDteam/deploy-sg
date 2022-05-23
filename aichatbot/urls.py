@@ -4,6 +4,6 @@ from . import views
 
 urlpatterns = [
     
-    path('aiAnswer/', views.aiAnswer),
-
+    path('', views.aichatbot),
+    path('aiAnswer/', views.aiAnswer_ajax)
 ]
