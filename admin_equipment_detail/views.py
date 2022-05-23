@@ -7,6 +7,15 @@ from .models import Equip, EquipCode
 
 
 def adminEquipDetail(request):
-    equips = Equip.objects.all()
-    context = {'equips': equips}
-    return render(request, 'admin_equipment_detail.html', context)
+    if request.method == 'GET':
+        equipcode = request.GET.get('equipCode')
+        if equipcode is None:
+            equips = equips = Equip.objects.all()
+        else:
+            equips = Equip.objects.filter(equipCode=equipcode)
+        context = {'equips': equips}
+        return render(request, 'admin_equipment_detail.html', context)
+    elif request.method == 'POST':
+        equips = Equip.objects.all()
+        context = {'equips': equips}
+        return render(request, 'admin_equipment_detail.html', context)

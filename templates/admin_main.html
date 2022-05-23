@@ -14,9 +14,6 @@
     <link href="https://fonts.googleapis.com/css?family=Droid+Sans" rel="stylesheet">
     
     <style>
-      .main {
-         padding: 20px;
-      }
       @media (min-width: 768px) {
         .main {
           padding-right: 40px;
@@ -27,8 +24,23 @@
         width:20%;
       }
       .main_contents{
-        width:80%;
-        position: fixed;
+        margin:0 auto;
+        text-align: center;
+      }
+      .buttondiv{
+        padding-left: 50px;
+        padding-right: 50px;
+        padding-bottom: 80px;
+      }
+      .chart{
+        margin:50px;
+        font-size: 30px;
+        color:#002a71;
+      }
+      .chart_title{
+        margin: 50px;
+        font-size: 40px;
+       
       }
     </style>
 
@@ -97,7 +109,7 @@
                         <a class="nav-link" href="./admin_equipment_register.html">실습장비 등록</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="./admin_equipment_detail.html">실습장비 관리</a>
+                        <a class="nav-link" href="http://127.0.0.1:8000/admin_equipment_detail/">실습장비 관리</a>
                       </li>
                       <li class="nav-item">
                         <a class="nav-link" href="./admin_equipment_rental.html">실습장비 대여</a>
@@ -137,13 +149,23 @@
         </form>
       </div>
     </nav>
+    <div class="container-fluid" style="margin-top: 15px;">
+      <div>
+        <span class="chart_title">인기 검색 키워드</span>
+        <span class="chart">아두이노키트</span>
+        <span class="chart">웹캠</span>
+        <span class="chart">졸업작품</span>
+      </div>
+      <small style="margin-left:60px;color:grey">업데이트: 2022년 5월 23일 17:00</small>
+    </div>
+    <hr>
     <div class="container-fluid main_contents">
-      <div class="row">
-        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+      <div style="margin-top:30px">
+        <div style="padding:20px">
           <h2 class="sub-header">오늘의 알림</h2>
           <div class="table-responsive">
             <table class="table table-striped table-hover">
-            <thead>
+            <thead style="background-color: #002a71;color: white;">
               <tr>
                 <th>순번</th>
                 <th>업무</th>
@@ -183,7 +205,8 @@
             </tbody>
             </table>
           </div>
-          <div style="padding:50px;">
+          <hr>
+          <div class="buttondiv">
             <div style=" float:left;">
               <button type="button" class="btn btn-outline-primary" style="width: 350px; height:90px;font-size:30px" onclick="location.href='http://127.0.0.1:8000/admin_main/admin_renting/'">대여처리</button>
             </div>
@@ -199,5 +222,3 @@
   </div>
   </body>
  </html> 
-<script>
-</script>

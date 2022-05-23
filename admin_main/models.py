@@ -25,4 +25,4 @@ class Equip(models.Model):
     equipInfo = models.TextField(default='')
 
     def __str__(self):
-        return f'[{self.equipCode}] {self.equipInfo}'
+        return self.equipID
