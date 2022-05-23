@@ -5,127 +5,60 @@
   <title>실습장비</title>
 
 
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
-  <link href="https://fonts.googleapis.com/css?family=Droid+Sans" rel="stylesheet">
-
   <link rel="stylesheet" href="/static/css/user_equipment.css">
+  <link rel="stylesheet" href="../static/css/user_main_sidevar.css">
 
 
-<style>
-  .be_table > p{
-    margin: 45px 100px;
-    font-size: 15pt;
-  }
 
-</style>
-<body>
-  <aside class="side-nav" id="show-side-navigation1">
+<body id="body-pd">
 
-    <div class="heading">
-      <img src="/static/img/default_profile.PNG">
-      <div class="info">
-        <h3><a href="#">컴공이</a></h3>
-        <p>20190899</p>
-      </div>
-    </div>
+  <div class="l-navbar" id="navbar">
+    <nav class="nav">
+        <div>
+            <div class="nav__brand">
+                <ion-icon name="menu-outline" class="nav__toggle" id="nav-toggle"></ion-icon>
+                <a href="#" class="nav__logo">Please, SungGong!</a>
+            </div>
+            <div class="nav__list">
 
-    <ul class="categories">
-      <li><i class="fa fa-home fa-fw"></i><a href="#">실습장비 관리</a>
-        <ul class="side-nav-dropdown">
-          <li><a href="#">Lorem ipsum</a></li>
-          <li><a href="#">ipsum dolor</a></li>
-          <li><a href="#">dolor ipsum</a></li>
-          <li><a href="#">amet consectetur</a></li>
-          <li><a href="#">ipsum dolor sit</a></li>
-        </ul>
-      </li>
-      <li><i class="fa fa-support fa-fw"></i><a href="#">대여/반납 내역</a>
-        <ul class="side-nav-dropdown">
-          <li><a href="#">Lorem ipsum</a></li>
-          <li><a href="#">ipsum dolor</a></li>
-          <li><a href="#">dolor ipsum</a></li>
-          <li><a href="#">amet consectetur</a></li>
-          <li><a href="#">ipsum dolor sit</a></li>
-        </ul>
-      </li>
-      <li><i class="fa fa-envelope fa-fw"></i><a href="#"> Contact us</a>
-        <ul class="side-nav-dropdown">
-          <li><a href="#">Lorem ipsum</a></li>
-          <li><a href="#">ipsum dolor</a></li>
-          <li><a href="#">dolor ipsum</a></li>
-          <li><a href="#">amet consectetur</a></li>
-          <li><a href="#">ipsum dolor sit</a></li>
-        </ul>
-      </li>
-      <li><i class="fa fa-users fa-fw"></i><a href="#"> Our team</a>
-        <ul class="side-nav-dropdown">
-          <li><a href="#">Lorem ipsum</a></li>
-          <li><a href="#">ipsum dolor</a></li>
-          <li><a href="#">dolor ipsum</a></li>
-          <li><a href="#">amet consectetur</a></li>
-          <li><a href="#">ipsum dolor sit</a></li>
-        </ul>
-      </li>
-      <li><i class="fa fa-bolt fa-fw"></i><a href="#"> Testimonials</a>
-        <ul class="side-nav-dropdown">
-          <li><a href="#">Lorem ipsum</a></li>
-          <li><a href="#">ipsum dolor</a></li>
-          <li><a href="#">dolor ipsum</a></li>
-          <li><a href="#">amet consectetur</a></li>
-          <li><a href="#">ipsum dolor sit</a></li>
-        </ul>
-      </li>
-      <li><i class="fa fa-envelope-open-o fa-fw"></i><a href="#"> Messages <span class="num dang">56</span></a></li>
-      <li><i class="fa fa-wrench fa-fw"></i><a href="#"> Settings <span class="num prim">6</span></a>
-        <ul class="side-nav-dropdown">
-          <li><a href="#">Lorem ipsum</a></li>
-          <li><a href="#">ipsum dolor</a></li>
-          <li><a href="#">dolor ipsum</a></li>
-          <li><a href="#">amet consectetur</a></li>
-          <li><a href="#">ipsum dolor sit</a></li>
-        </ul>
-      </li>
-      <li><i class="fa fa-laptop fa-fw"></i><a href="#"> About UI &amp; UX <span class="num succ">43</span></a></li>
-      <li><i class="fa fa-comments-o fa-fw"></i><a href="#"> Something else</a></li>
-    </ul>
-  </aside>
-  <section id="contents">
-    <nav class="navbar navbar-default navbar-fixed-top">
-      <div class="container-fluid">
-        <div class="navbar-header" style="margin-left: 230px;">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-            data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-            <i class="fa fa-align-right"></i>
-          </button>
+                <a href="#" class="nav__link">
+                    <ion-icon name="person-circle-outline" class="nav__icon"></ion-icon>
+                    <span class="nav_name">MYPAGE</span>
+                </a>
 
-          
-          <a class="navbar-brand" href="#"><span class="main-color">실습장비 & 실습실대여</span></a>
+                <div href="#" class="nav__link collapse">
+                    <ion-icon name="construct-outline" class="nav__icon"></ion-icon>
+                    <span class="nav_name">PRODUCT</span>
 
+                    <ion-icon name="chevron-down-outline" class="collapse__link"></ion-icon>
+
+                    <ul class="collapse__menu">
+                        <a href="#" class="collapse__sublink">Equipment</a>
+                        <a href="#" class="collapse__sublink">Lab</a>
+                    </ul>
+                </div>
+
+                <a href="#" class="nav__link">
+                    <ion-icon name="receipt-outline" class="nav__icon"></ion-icon>
+                    <span class="nav_name">HISTORY</span>
+                </a>
+
+                <a href="#" class="nav__link">
+                    <ion-icon name="notifications-outline" class="nav__icon"></ion-icon>
+                    <span class="nav_name">NOTICE</span>
+                </a>
+                
+                
+            </div>
+            <a href="#" class="nav__link">
+                <ion-icon name="log-out-outline" class="nav__icon"></ion-icon>
+                <span class="nav_name">LOG OUT</span>
+            </a>
         </div>
-        <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
-          <ul class="nav navbar-nav">
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                aria-expanded="false">My profile <span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li><a href="#"><i class="fa fa-user-o fw"></i> My account</a></li>
-                <li><a href="#"><i class="fa fa-envelope-o fw"></i> My inbox</a></li>
-                <li><a href="#"><i class="fa fa-question-circle-o fw"></i> Help</a></li>
-                <li role="separator" class="divider"></li>
-                <li><a href="#"><i class="fa fa-sign-out"></i> Log out</a></li>
-              </ul>
-            </li>
-            <li><a href="#"><i class="fa fa-comments"></i><span>23</span></a></li>
-            <li><a href="#"><i class="fa fa-bell-o"></i><span>98</span></a></li>
-          </ul>
-        </div>
-      </div>
     </nav>
-  </section>
+  </div>
+  
+
 
   <div id="contents-main">
     <div class="main_top">
@@ -157,25 +90,281 @@
     <!--노트북-->
     <div class="be_table" id="notebook">
       <p>노트북</p>
-      <div class = "main_table" style="margin: 45px 100px;" >
-        <table class="table table-bordered">
-          <thead>
-            <tr style="background-color:rgba(255, 153, 0); color: white;">
-              <th scope="col" style=" text-align: center;">대여가능여부</th>
-              <th scope="col" style=" text-align: center;">대여품명</th>
-              <th scope="col" style=" text-align: center;">장비상태</th>              
-              <th scope="col" style=" text-align: center;">정보</th>
-            </tr>
+      <div class="table-wrap">
+        <table class="table">
+        <thead class="thead-primary">
+        <tr>
+        <th>대여가능여부</th>
+        <th>대여품명</th>
+        <th>장비상태</th>
+        <th>정보</th>
+        <th>대여신청하기</th>
+        </tr>
+        </thead>
+        <tbody>
+  
+          {% for notebook in notebooks %}
+          <tr>
+            {% if notebook.isRented == 0 %}
+            <td>대여가능</td>
+            {% else %}
+            <td>대여중</td>
+            {% endif %}
+            <td>{{notebook.equipID}}</td>          
+            {% if equip.status == 0 %}
+            <td>불량</td>
+            {% elif equip.status == 1 %}
+            <td>하</td>
+            {% elif equip.status == 2 %}
+            <td>중</td>
+            {% else %}
+            <td>상</td>
+            {% endif %}
+            <td>{{notebook.equipInfo}}</td>
+            <td><a href="#" class="btn btn-primary">대여 신청</a></td>
+          </tr>
+          {% endfor %}
+        </tbody>
+        </table>
+        </div>
+    </div>
+  
+    <!--라즈베리파이-->
+    <div class="be_table" id="raspberrypi_equip">
+      <p>라즈베리파이</p>
+      <div class="table-wrap">
+        <table class="table">
+        <thead class="thead-primary">
+        <tr>
+        <th>대여가능여부</th>
+        <th>대여품명</th>
+        <th>장비상태</th>
+        <th>정보</th>
+        <th>대여신청하기</th>
+        </tr>
+        </thead>
+        <tbody>
+  
+          {% for raspberrypi in raspberrypis %}
+          <tr>
+            {% if raspberrypi.isRented == 0 %}
+            <td>대여가능</td>
+            {% else %}
+            <td>대여중</td>
+            {% endif %}
+            <td>{{raspberrypi.equipID}}</td>          
+            {% if equip.status == 0 %}
+            <td>불량</td>
+            {% elif equip.status == 1 %}
+            <td>하</td>
+            {% elif equip.status == 2 %}
+            <td>중</td>
+            {% else %}
+            <td>상</td>
+            {% endif %}
+            <td>{{raspberrypi.equipInfo}}</td>
+            <td><a href="#" class="btn btn-primary">대여 신청</a></td>
+          </tr>
+          {% endfor %}
+        </tbody>
+        </table>
+        </div>
+
+    </div>
+    
+    <!--아두이노키트-->
+    <div class="be_table" id="arduino_equip">
+      <p>아두이노키트</p>
+      <div class="table-wrap">
+        <table class="table">
+        <thead class="thead-primary">
+        <tr>
+        <th>대여가능여부</th>
+        <th>대여품명</th>
+        <th>장비상태</th>
+        <th>정보</th>
+        <th>대여신청하기</th>
+        </tr>
+        </thead>
+        <tbody>
+  
+          {% for arduino in arduinos %}
+          <tr>
+            {% if arduino.isRented == 0 %}
+            <td>대여가능</td>
+            {% else %}
+            <td>대여중</td>
+            {% endif %}
+            <td>{{arduino.equipID}}</td>          
+            {% if equip.status == 0 %}
+            <td>불량</td>
+            {% elif equip.status == 1 %}
+            <td>하</td>
+            {% elif equip.status == 2 %}
+            <td>중</td>
+            {% else %}
+            <td>상</td>
+            {% endif %}
+            <td>{{arduino.equipInfo}}</td>
+            <td><a href="#" class="btn btn-primary">대여 신청</a></td>
+          </tr>
+          {% endfor %}
+        </tbody>
+        </table>
+        </div>
+    </div>
+    
+    <!--웹캠-->
+    <div class="be_table" id="webcam_equip">
+      <p>웹캠</p>
+      <div class="table-wrap">
+        <table class="table">
+        <thead class="thead-primary">
+        <tr>
+        <th>대여가능여부</th>
+        <th>대여품명</th>
+        <th>장비상태</th>
+        <th>정보</th>
+        <th>대여신청하기</th>
+        </tr>
+        </thead>
+        <tbody>
+  
+          {% for webcam in webcams %}
+          <tr>
+            {% if webcam.isRented == 0 %}
+            <td>대여가능</td>
+            {% else %}
+            <td>대여중</td>
+            {% endif %}
+            <td>{{webcam.equipID}}</td>          
+            {% if equip.status == 0 %}
+            <td>불량</td>
+            {% elif equip.status == 1 %}
+            <td>하</td>
+            {% elif equip.status == 2 %}
+            <td>중</td>
+            {% else %}
+            <td>상</td>
+            {% endif %}
+            <td>{{webcam.equipInfo}}</td>
+            <td><a href="#" class="btn btn-primary">대여 신청</a></td>
+          </tr>
+          {% endfor %}
+        </tbody>
+        </table>
+        </div>
+
+    </div>
+    
+    <!--졸업작품물품-->
+    <div class="be_table" id="gradue_equip">
+      <p>졸업작품물품</p>
+      <div class="table-wrap">
+        <table class="table">
+        <thead class="thead-primary">
+        <tr>
+        <th>대여가능여부</th>
+        <th>대여품명</th>
+        <th>장비상태</th>
+        <th>정보</th>
+        <th>대여신청하기</th>
+        </tr>
+        </thead>
+        <tbody>
+  
+          {% for jol in jols %}
+          <tr>
+            {% if jol.isRented == 0 %}
+            <td>대여가능</td>
+            {% else %}
+            <td>대여중</td>
+            {% endif %}
+            <td>{{jol.equipID}}</td>          
+            {% if equip.status == 0 %}
+            <td>불량</td>
+            {% elif equip.status == 1 %}
+            <td>하</td>
+            {% elif equip.status == 2 %}
+            <td>중</td>
+            {% else %}
+            <td>상</td>
+            {% endif %}
+            <td>{{jol.equipInfo}}</td>
+            <td><a href="#" class="btn btn-primary">대여 신청</a></td>
+          </tr>
+          {% endfor %}
+        </tbody>
+        </table>
+        </div>
+    </div>
+    
+    <!--케이블-->
+    <div class="be_table" id="cable_equip">
+      <p>케이블</p>
+      <div class="table-wrap">
+        <table class="table">
+        <thead class="thead-primary">
+        <tr>
+        <th>대여가능여부</th>
+        <th>대여품명</th>
+        <th>장비상태</th>
+        <th>정보</th>
+        <th>대여신청하기</th>
+        </tr>
+        </thead>
+        <tbody>
+  
+          {% for cable in cables %}
+          <tr>
+            {% if cable.isRented == 0 %}
+            <td>대여가능</td>
+            {% else %}
+            <td>대여중</td>
+            {% endif %}
+            <td>{{cable.equipID}}</td>          
+            {% if equip.status == 0 %}
+            <td>불량</td>
+            {% elif equip.status == 1 %}
+            <td>하</td>
+            {% elif equip.status == 2 %}
+            <td>중</td>
+            {% else %}
+            <td>상</td>
+            {% endif %}
+            <td>{{cable.equipInfo}}</td>
+            <td><a href="#" class="btn btn-primary">대여 신청</a></td>
+          </tr>
+          {% endfor %}
+        </tbody>
+        </table>
+        </div>
+    </div>
+    
+    <!--태블릿-->
+    <div class="be_table" id="tablet_equip">
+      <p>태블릿</p>
+        <div class="table-wrap">
+          <table class="table">
+          <thead class="thead-primary">
+          <tr>
+          <th>대여가능여부</th>
+          <th>대여품명</th>
+          <th>장비상태</th>
+          <th>정보</th>
+          <th>대여신청하기</th>
+          </tr>
           </thead>
           <tbody>
-            {% for notebook in notebooks %}
+    
+            {% for tablet in tablets %}
             <tr>
-              {% if notebook.isRented == 0 %}
+              {% if tablet.isRented == 0 %}
               <td>대여가능</td>
               {% else %}
               <td>대여중</td>
               {% endif %}
-              <td>{{notebook.equipID}}</td>          
+              <td>{{tablet.equipID}}</td>          
               {% if equip.status == 0 %}
               <td>불량</td>
               {% elif equip.status == 1 %}
@@ -185,180 +374,13 @@
               {% else %}
               <td>상</td>
               {% endif %}
-              <td>{{notebook.equipInfo}}</td>
-            </tr>
-            {% endfor %}
-          </tbody>
-        </table>
-      </div>
-    </div>
-  
-    <!--라즈베리파이-->
-    <div class="be_table" id="raspberrypi_equip">
-      <p>라즈베리파이</p>
-      <div class = "main_table" style="margin: 45px 100px;" >
-        <table class="table table-bordered">
-          <thead>
-            <tr style="background-color:rgba(255, 153, 0); color: white;">
-              <th scope="col" style=" text-align: center;">대여가능여부</th>
-              <th scope="col" style=" text-align: center;">대여품명</th>
-              <th scope="col" style=" text-align: center;">장비상태</th>
-              <th scope="col" style=" text-align: center;">정보</th>
-            </tr>
-          </thead>
-          <tbody>
-            {% for raspberrypi in raspberrypis %}
-            <tr>
-              <td>{{raspberrypi.isRented}}</td>
-              <td>{{raspberrypi.equipID}}</td>
-              <td>{{raspberrypi.status}}</td>
-              <td>{{raspberrypi.equipInfo}}</td>
-            </tr>
-            {% endfor %}
-          </tbody>
-        </table>
-  
-      </div>
-
-    </div>
-    
-    <!--아두이노키트-->
-    <div class="be_table" id="arduino_equip">
-      <p>아두이노키트</p>
-      <div class = "main_table" style="margin: 45px 100px;">
-        <table class="table table-bordered">
-          <thead>
-            <tr style="background-color:rgba(255, 153, 0); color: white;">
-              <th scope="col" style=" text-align: center;">대여가능여부</th>
-              <th scope="col" style=" text-align: center;">대여품명</th>
-              <th scope="col" style=" text-align: center;">장비상태</th>
-              <th scope="col" style=" text-align: center;">정보</th>
-            </tr>
-          </thead>
-          <tbody>
-            {% for arduino in arduinos %}
-            <tr>
-              <td>{{arduino.isRented}}</td>
-              <td>{{arduino.equipID}}</td>
-              <td>{{arduino.status}}</td>
-              <td>{{arduino.equipInfo}}</td>
-            </tr>
-            {% endfor %}
-          </tbody>
-        </table>
-  
-      </div>
-    </div>
-    
-    <!--웹캠-->
-    <div class="be_table" id="webcam_equip">
-      <p>웹캠</p>
-      <div class = "main_table" style="margin: 45px 100px;">
-        <table class="table table-bordered">
-          <thead>
-            <tr style="background-color:rgba(255, 153, 0); color: white;">
-              <th scope="col" style=" text-align: center;">대여가능여부</th>
-              <th scope="col" style=" text-align: center;">대여품명</th>
-              <th scope="col" style=" text-align: center;">장비상태</th>
-              <th scope="col" style=" text-align: center;">정보</th>
-            </tr>
-          </thead>
-          <tbody>
-            {% for webcam in webcams %}
-            <tr>
-              <td>{{webcam.isRented}}</td>
-              <td>{{webcam.equipID}}</td>
-              <td>{{webcam.status}}</td>
-              <td>{{webcam.equipInfo}}</td>
-            </tr>
-            {% endfor %}
-          </tbody>
-        </table>
-  
-      </div>
-
-    </div>
-    
-    <!--졸업작품물품-->
-    <div class="be_table" id="gradue_equip">
-      <p>졸업작품물품</p>
-      <div class = "main_table" style="margin: 45px 100px;">
-        <table class="table table-bordered">
-          <thead>
-            <tr style="background-color:rgba(255, 153, 0); color: white;">
-              <th scope="col" style=" text-align: center;">대여가능여부</th>
-              <th scope="col" style=" text-align: center;">대여품명</th>
-              <th scope="col" style=" text-align: center;">장비상태</th>
-              <th scope="col" style=" text-align: center;">정보</th>
-            </tr>
-          </thead>
-          <tbody>
-            {% for jol in jols %}
-            <tr>
-              <td>{{jol.isRented}}</td>
-              <td>{{jol.equipID}}</td>
-              <td>{{jol.status}}</td>
-              <td>{{jol.equipInfo}}</td>
-            </tr>
-            {% endfor %}
-          </tbody>
-        </table>
-  
-      </div>
-    </div>
-    
-    <!--케이블-->
-    <div class="be_table" id="cable_equip">
-      <p>케이블</p>
-      <div class = "main_table" style="margin: 45px 100px;" href="#cable_equip">
-        <table class="table table-bordered">
-          <thead>
-            <tr style="background-color:rgba(255, 153, 0); color: white;">
-              <th scope="col" style=" text-align: center;">대여가능여부</th>
-              <th scope="col" style=" text-align: center;">대여품명</th>
-              <th scope="col" style=" text-align: center;">장비상태</th>
-              <th scope="col" style=" text-align: center;">정보</th>
-            </tr>
-          </thead>
-          <tbody>
-            {% for cable in cables %}
-            <tr>
-              <td>{{cable.isRented}}</td>
-              <td>{{cable.equipID}}</td>
-              <td>{{cable.status}}</td>
-              <td>{{cable.equipInfo}}</td>
-            </tr>
-            {% endfor %}
-          </tbody>
-        </table>
-  
-      </div>
-    </div>
-    
-    <!--태블릿-->
-    <div class="be_table" id="tablet_equip">
-      <p>태블릿</p>
-      <div class = "main_table" style="margin: 45px 100px;">
-        <table class="table table-bordered">
-          <thead>
-            <tr style="background-color:rgba(255, 153, 0); color: white;">
-              <th scope="col" style=" text-align: center;">대여가능여부</th>
-              <th scope="col" style=" text-align: center;">대여품명</th>
-              <th scope="col" style=" text-align: center;">장비상태</th>
-              <th scope="col" style=" text-align: center;">정보</th>
-            </tr>
-          </thead>
-          <tbody>
-            {% for tablet in tablets %}
-            <tr>
-              <td>{{tablet.isRented}}</td>
-              <td>{{tablet.equipID}}</td>
-              <td>{{tablet.status}}</td>
               <td>{{tablet.equipInfo}}</td>
+              <td><a href="#" class="btn btn-primary">대여 신청</a></td>
             </tr>
             {% endfor %}
           </tbody>
-        </table>
+          </table>
+          
   
       </div>
     </div>
@@ -366,142 +388,138 @@
     <!--태블릿PC-->
     <div class="be_table" id="tabletpc_equip">
       <p>태블릿PC</p>
-      <div class = "main_table" style="margin: 45px 100px;">
-        <table class="table table-bordered">
-          <thead>
-            <tr style="background-color:rgba(255, 153, 0); color: white;">
-              <th scope="col" style=" text-align: center;">대여가능여부</th>
-              <th scope="col" style=" text-align: center;">대여품명</th>
-              <th scope="col" style=" text-align: center;">장비상태</th>
-              <th scope="col" style=" text-align: center;">정보</th>
-            </tr>
-          </thead>
-          <tbody>
-            {% for tabletpc in tabletpcs %}
-            <tr>
-              <td>{{tabletpc.isRented}}</td>
-              <td>{{tabletpc.equipID}}</td>
-              <td>{{tabletpc.status}}</td>
-              <td>{{tabletpc.equipInfo}}</td>
-            </tr>
-            {% endfor %}
-          </tbody>
-        </table>
+      <div class="table-wrap">
+        <table class="table">
+        <thead class="thead-primary">
+        <tr>
+        <th>대여가능여부</th>
+        <th>대여품명</th>
+        <th>장비상태</th>
+        <th>정보</th>
+        <th>대여신청하기</th>
+        </tr>
+        </thead>
+        <tbody>
   
-      </div>
+          {% for tabletpc in tabletpcs %}
+          <tr>
+            {% if tabletpc.isRented == 0 %}
+            <td>대여가능</td>
+            {% else %}
+            <td>대여중</td>
+            {% endif %}
+            <td>{{tabletpc.equipID}}</td>          
+            {% if equip.status == 0 %}
+            <td>불량</td>
+            {% elif equip.status == 1 %}
+            <td>하</td>
+            {% elif equip.status == 2 %}
+            <td>중</td>
+            {% else %}
+            <td>상</td>
+            {% endif %}
+            <td>{{tabletpc.equipInfo}}</td>
+            <td><a href="#" class="btn btn-primary">대여 신청</a></td>
+          </tr>
+          {% endfor %}
+        </tbody>
+        </table>
+        </div>
     </div>
     
     <!--CD롬-->
     <div class="be_table" id="cdrom_equip">
       <p>CD롬</p>
-      <div class = "main_table" style="margin: 45px 100px;">
-        <table class="table table-bordered">
-          <thead>
-            <tr style="background-color:rgba(255, 153, 0); color: white;">
-              <th scope="col" style=" text-align: center;">대여가능여부</th>
-              <th scope="col" style=" text-align: center;">대여품명</th>
-              <th scope="col" style=" text-align: center;">장비상태</th>
-              <th scope="col" style=" text-align: center;">정보</th>
-            </tr>
-          </thead>
-          <tbody>
-            {% for cdrom in cdroms %}
-            <tr>
-              <td>{{cdrom.isRented}}</td>
-              <td>{{cdrom.equipID}}</td>
-              <td>{{cdrom.status}}</td>
-              <td>{{cdrom.equipInfo}}</td>
-            </tr>
-            {% endfor %}
-          </tbody>
-        </table>
+      <div class="table-wrap">
+        <table class="table">
+        <thead class="thead-primary">
+        <tr>
+        <th>대여가능여부</th>
+        <th>대여품명</th>
+        <th>장비상태</th>
+        <th>정보</th>
+        <th>대여신청하기</th>
+        </tr>
+        </thead>
+        <tbody>
   
-      </div>
+          {% for cdrom in cdroms %}
+          <tr>
+            {% if cdrom.isRented == 0 %}
+            <td>대여가능</td>
+            {% else %}
+            <td>대여중</td>
+            {% endif %}
+            <td>{{cdrom.equipID}}</td>          
+            {% if equip.status == 0 %}
+            <td>불량</td>
+            {% elif equip.status == 1 %}
+            <td>하</td>
+            {% elif equip.status == 2 %}
+            <td>중</td>
+            {% else %}
+            <td>상</td>
+            {% endif %}
+            <td>{{cdrom.equipInfo}}</td>
+            <td><a href="#" class="btn btn-primary">대여 신청</a></td>
+          </tr>
+          {% endfor %}
+        </tbody>
+        </table>
+        </div>
 
     </div>
     
     <!--실습실-->
     <div class="be_table" id="lab_equip">
       <p>실습실</p>
-      <div class = "main_table" style="margin: 45px 100px;">
-        <table class="table table-bordered">
-          <thead>
-            <tr style="background-color:rgba(255, 153, 0); color: white;">
-              <th scope="col" style=" text-align: center;">대여가능여부</th>
-              <th scope="col" style=" text-align: center;">대여품명</th>
-              <th scope="col" style=" text-align: center;">장비상태</th>
-              <th scope="col" style=" text-align: center;">정보</th>
-            </tr>
-          </thead>
-          <tbody>
-            {% for lab in labs %}
-            <tr>
-              <td>{{lab.isRented}}</td>
-              <td>{{lab.equipID}}</td>
-              <td>{{lab.status}}</td>
-              <td>{{lab.equipInfo}}</td>
-            </tr>
-            {% endfor %}
-          </tbody>
-        </table>
+      <div class="table-wrap">
+        <table class="table">
+        <thead class="thead-primary">
+        <tr>
+        <th>대여가능여부</th>
+        <th>대여품명</th>
+        <th>장비상태</th>
+        <th>정보</th>
+        <th>대여신청하기</th>
+        </tr>
+        </thead>
+        <tbody>
   
-      </div>
+          {% for lab in labs %}
+          <tr>
+            {% if lab.isRented == 0 %}
+            <td>대여가능</td>
+            {% else %}
+            <td>대여중</td>
+            {% endif %}
+            <td>{{lab.equipID}}</td>          
+            {% if equip.status == 0 %}
+            <td>불량</td>
+            {% elif equip.status == 1 %}
+            <td>하</td>
+            {% elif equip.status == 2 %}
+            <td>중</td>
+            {% else %}
+            <td>상</td>
+            {% endif %}
+            <td>{{lab.equipInfo}}</td>
+            <td><a href="#" class="btn btn-primary">대여 신청</a></td>
+          </tr>
+          {% endfor %}
+        </tbody>
+        </table>
+        </div>
     </div>
   
+    
+   
   
   </div>
+  <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
+  <!-- JS -->
+  <script src="../static/js/user_main_sidevar.js"></script>
 
-
+ 
 </body>
-
-
-
-<script src='http://code.jquery.com/jquery-latest.js'></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
-  integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
-<script src='../static/js/bootstrap.js'></script>
-<script>
-
-  $(function () {
-
-
-    (function () {
-      // dropdown menu in the side nav
-      var slideNavDropdown = $('.side-nav-dropdown');
-
-      $('.side-nav .categories li').on('click', function () {
-
-        $(this).toggleClass('lol').siblings().removeClass('lol');
-
-        if ($(this).hasClass('lol')) {
-
-          $(this).find('.side-nav-dropdown').slideToggle('fast');
-
-          $(this).siblings().find('.side-nav-dropdown').slideUp('fast');
-
-        } else {
-
-          $(this).find('.side-nav-dropdown').slideUp('fast');
-
-        }
-
-      });
-
-      $('.side-nav .close-aside').on('click', function () {
-
-        $('#' + $(this).data('close')).addClass('show-side-nav');
-
-        contents.removeClass('margin');
-
-      });
-
-    }());
-    console.log(Chart.defaults.global);
-  });
-
-
-        
-
-
-</script>
+</html>
