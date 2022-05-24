@@ -34,51 +34,12 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
     <script src='../static/js/bootstrap.js'></script>
-    <script>
-      
-    $(function () {
-
-
-    (function () {  
-      // dropdown menu in the side nav
-      var slideNavDropdown = $('.side-nav-dropdown');
-
-      $('.side-nav .categories li').on('click', function () {
-
-        $(this).toggleClass('lol').siblings().removeClass('lol');
-
-        if ($(this).hasClass('lol')) {
-
-          $(this).find('.side-nav-dropdown').slideToggle('fast');
-
-          $(this).siblings().find('.side-nav-dropdown').slideUp('fast');
-
-        } else {
-
-          $(this).find('.side-nav-dropdown').slideUp('fast');
-
-        }
-
-      });
-
-      $('.side-nav .close-aside').on('click', function () {
-
-        $('#' + $(this).data('close')).addClass('show-side-nav');
-
-        contents.removeClass('margin');
-
-      });
-
-    }());
-    console.log(Chart.defaults.global);
-    });
-    </script>
     
   </head>
   <body style="background-color:white">
     <nav class="navbar navbar-expand-lg navbar-dark ">
   
-      <a class="navbar-brand" href="#">성공아 부탁해</a>
+      <a class="navbar-brand" href="http://127.0.0.1:8000/admin_main/">성공아 부탁해</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -94,13 +55,13 @@
                 <div class="row">
                     <ul class="nav flex-column">
                       <li class="nav-item">
-                        <a class="nav-link" href="./admin_equipment_register.html">실습장비 등록</a>
+                        <a class="nav-link" href="http://127.0.0.1:8000/admin_equipment/">실습장비 등록</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="./admin_equipment_detail.html">실습장비 관리</a>
+                        <a class="nav-link" href="http://127.0.0.1:8000/admin_equipment_detail/">실습장비 관리</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="./admin_equipment_rental.html">실습장비 대여</a>
+                        <a class="nav-link" href="http://127.0.0.1:8000/admin_main/admin_renting/">실습장비 대여</a>
                       </li>
                       <li class="nav-item">
                         <a class="nav-link" href="./admin_equipment_return.html">실습장비 반납</a>
@@ -178,7 +139,6 @@
             </div>
           </li>
         </ul>
-        
         <form class="form-inline my-2 my-lg-0">
           <!-- <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"> -->
           <button class="btn btn-outline-light my-2 my-sm-0" type="submit">로그아웃</button>
@@ -221,7 +181,7 @@
                 <td>상</td>
                 {% endif %}
                 <td>{{equip.equipInfo}}</td>
-                <td><button class="btn btn-primary" onclick="modify()">수정</button></td>
+                <td><button class="btn btn-primary" onclick="location.href='http://127.0.0.1:8000/admin_equipment_manage/?equipid={{ equip.equipID }}'">수정</button></td>
               </tr>
               {% endfor %}
               </tbody>

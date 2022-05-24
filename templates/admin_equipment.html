@@ -1,7 +1,7 @@
 <html lang="ko">
   <head>
     <meta charset="UTF-8">
-    <title>장비 정보 수정</title>
+    <title>신규 장비 등록</title>
     
    
       <link rel="stylesheet" href="../static/css/test.css">
@@ -21,18 +21,6 @@
           width:80%;
         }
       </style>
-      <script>
-        $(document).ready(function(){
-          $("#categoryCheck").change(function(){
-            if($("#categoryCheck").is(":checked")){
-              $("#inputCategory").attr('disabled',false);
-            }
-            else{
-              $("#inputCategory").attr('disabled',true);
-            }
-          });
-        });
-      </script>
   </head>
   <body style="background-color: white;">
     <nav class="navbar navbar-expand-lg navbar-dark ">
@@ -100,20 +88,13 @@
       <hr>
     </div>
     <div class="container main_contents">
-      {% for equip_info in equip_infos%}
-      <form name="modifyFrm" action="http://127.0.0.1:8000/admin_equipment_manage/modify/" method="POST" accept-charset="utf-8">
+      <form name="modifyFrm" action="http://127.0.0.1:8000/admin_equipment/" method="POST" accept-charset="utf-8">
         {% csrf_token %}
         <div class="form-row">
           <div class="form-group col-md-6">
-            <label for="inputCategory">카테고리 : {{ equip_info.equipCode }}</label>
-              <div style="float:right;margin-right:200px">
-                <input class="form-check-input" type="checkbox" id="categoryCheck">
-                <label class="form-check-label" for="categoryCheck">
-                  변경
-                </label>
-              </div>
-            <select disabled id="inputCategory" class="form-control" name="equipCode">
-              <option disabled selected>카테고리 변경</option>
+            <label for="inputCategory">카테고리</label>
+            <select id="inputCategory" class="form-control" name="equipCode">
+              <option disabled selected>카테고리 선택</option>
               {% for category in categories %}
               <option value="{{ category.equipCode }}">{{ category.equipName }}</option>
               {% endfor %}
@@ -121,12 +102,12 @@
           </div>
           <div class="form-group col-md-6">
             <label for="inputEquipID">장비 ID</label>
-            <input type="text" name="equipID" class="form-control" id="inputEquipID" value="{{ equip_info.equipID }}">
+            <input type="text" name="equipID" class="form-control" id="inputEquipID" value="">
           </div>
         </div>
         <div class="form-group">
           <label for="datePicker">입고날짜(yyyy-mm-dd)</label>
-          <input type="text" name="receivedDate" class="form-control" value="{{ equip_info.receivedDate|date:'Y-m-d' }}">
+          <input type="text" name="receivedDate" class="form-control" value="">
         </div>
         <div class="form-row">
         <fieldset class="form-group col-md-6">
@@ -162,11 +143,10 @@
       </div>
         <div class="mb-3">
           <label for="infoTextarea">기기 정보</label>
-          <textarea class="form-control" name="equipInfo" id="infoTextarea">{{ equip_info.equipInfo }}</textarea>
+          <textarea class="form-control" name="equipInfo" id="infoTextarea"></textarea>
         </div>
-        <button type="submit" class="btn btn-primary">수정</button>
+        <button type="submit" class="btn btn-primary">저장</button>
       </form>
-      {% endfor %}
     </div>
   </body>
 </html>
