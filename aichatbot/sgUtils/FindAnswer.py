@@ -24,8 +24,12 @@ class FindAnswer:
     # 답변 검색
     def search(self, intent_name, ner_tags):
         # 의도명, 개체명으로 답변 검색
+        print("search sql======================111111" + sql)
         sql = self._make_query(intent_name, ner_tags)
-        answer = self.db.select_one(sql)    # 고쳐야됨
+        print("search sql======================2222222" + sql)
+        #answer = self.db.select_one(sql)    # 고쳐야됨
+        answer = self.db.cursor.execute(sql)
+        print("search answer======================" + answer)
 
         # 검색되는 답변이 없으면 의도명만 검색
         if answer is None:
