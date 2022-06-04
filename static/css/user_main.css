@@ -3,46 +3,18 @@
 
 /* 최종업데이트 2016-09-23 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, font, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center, p,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	vertical-align: baseline;
-	/* background: transparent; */
-}
 
 html {
 	overflow-y:scroll;
 	-webkit-text-size-adjust: 100%;
 }
 
-html, body {
-	width:100%;
-	font-size:15px; line-height:1.67em;
-	background-color: #fff;
-	/* word-break:break-all;
-	*word-break:break-all;
-	-ms-word-break:break-all;  */
-	margin:0 auto;
-}
+
 
 div {
     display: block;
 }
 
-body {
-	font-size: 1.0em;
-	font-family: "Noto Sans KR", "sans-serif";
-	color: #4b4b4b;
-
-}
 
 @media all and (max-width:767px) {
 	html, body {font-size:13px; line-height:1.67em;}
@@ -150,23 +122,19 @@ p {
 
  .center_top .img {
   width:100%;
-  height:100%;
+  height: 420px;
   object-fit:cover;
  }
  
   #container {
-    clear: both;
-    overflow: hidden;
-    position: relative;
-    margin: 0 auto;
-    margin-left: 230px;
+
   }
 
   .center_top {
     overflow: hidden; 
     position: relative;
     width:auto;
-    height: 380px;;
+    height: 420px;
     margin:0 auto;
   }
  
@@ -176,7 +144,7 @@ p {
 
 .center_bottom {
     padding: 75px 0 15px;
-    padding-top: 10%;
+    padding-top: 6%;
     padding-bottom: 13.33%;
  }
 
@@ -316,15 +284,117 @@ li {
  }
 
  .jum_title {
-  display: table; margin-left: auto; margin-right: auto; padding: 50px;
+  display: table; margin-left: auto; margin-right: auto; padding: 30px;
   font-size: x-large;
  
+ }
+ 
+ .jumbotron{
+   background-color: rgb(233, 233, 233);
  }
  .jum_btn {
     
   display: table; margin-left: auto; margin-right: auto;
-  margin-top: 20px;
+  padding-bottom: 30px;
  }
+
+ 
+.frame {
+  width: 90%;
+  margin: 40px auto;
+  text-align: center;
+}
+button {
+  margin: 20px;
+}
+ .custom-btn {
+  width: 130px;
+  height: 40px;
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px 25px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+   box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+  outline: none;
+}
+ .btn-12{
+  position: relative;
+  right: 20px;
+  bottom: 20px;
+  border:none;
+  box-shadow: none;
+  width: 130px;
+  height: 40px;
+  line-height: 42px;
+  -webkit-perspective: 230px;
+  perspective: 230px;
+}
+.btn-12 span {
+  background: rgba(255, 153, 0);
+background: linear-gradient(0deg,  rgb(255, 181, 70) 0%,rgb(255, 123, 0));
+  display: block;
+  position: absolute;
+  width: 130px;
+  height: 40px;
+  box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+  border-radius: 5px;
+  margin:0;
+  text-align: center;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+.btn-12 span:nth-child(1) {
+  box-shadow:
+   -7px -7px 20px 0px #fff9,
+   -4px -4px 5px 0px #fff9,
+   7px 7px 20px 0px #0002,
+   4px 4px 5px 0px #0001;
+  -webkit-transform: rotateX(90deg);
+  -moz-transform: rotateX(90deg);
+  transform: rotateX(90deg);
+  -webkit-transform-origin: 50% 50% -20px;
+  -moz-transform-origin: 50% 50% -20px;
+  transform-origin: 50% 50% -20px;
+}
+.btn-12 span:nth-child(2) {
+  -webkit-transform: rotateX(0deg);
+  -moz-transform: rotateX(0deg);
+  transform: rotateX(0deg);
+  -webkit-transform-origin: 50% 50% -20px;
+  -moz-transform-origin: 50% 50% -20px;
+  transform-origin: 50% 50% -20px;
+}
+.btn-12:hover span:nth-child(1) {
+  box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+  -webkit-transform: rotateX(0deg);
+  -moz-transform: rotateX(0deg);
+  transform: rotateX(0deg);
+}
+.btn-12:hover span:nth-child(2) {
+  box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+  color: transparent;
+  -webkit-transform: rotateX(-90deg);
+  -moz-transform: rotateX(-90deg);
+  transform: rotateX(-90deg);
+}
+
 
 
  .jum_title>ul {
@@ -338,13 +408,10 @@ li {
     text-decoration: none;
   }
 
-  a:-webkit-any-link {
-    color: -webkit-link;
-    cursor: pointer;
-    text-decoration: underline;
-  }
 
-  img {max-width:100%;}
+  img {
+    max-width:100%;
+  }
 
 
   img, fieldset {

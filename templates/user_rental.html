@@ -4,16 +4,17 @@
   <meta charset="UTF-8">
   <title>대여/신청페이지</title>
 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-  <link href="https://fonts.googleapis.com/css?family=Droid+Sans" rel="stylesheet">
+  <link rel="stylesheet" href="../static/css/user_equipment.css">
+  <link rel="stylesheet" href="../static/css/user_main_sidevar.css">
 
-  <link rel="stylesheet" href="/static/css/user_mypage.css">
-  <link rel="stylesheet" href="/static/css/user_equipment.css">
+  <link rel="stylesheet" href="../static/css/user_main.css">
+
+  <link rel="stylesheet" href="../static/css/user_mypage.css">
   
 
 
@@ -24,7 +25,6 @@
     .container{
       place-items: center;
       min-height: 100vh;
-      padding-left: 230px;
     }
 
 label {
@@ -65,108 +65,52 @@ body {
   </style>
 </head>
 
-<body>
-  <aside class="side-nav" id="show-side-navigation1">
+<body id="body-pd">
+  <div class="l-navbar" id="navbar">
+    <nav class="nav">
+        <div>
+            <div class="nav__brand">
+                <ion-icon name="menu-outline" class="nav__toggle" id="nav-toggle"></ion-icon>
+                <a href="#" class="nav__logo">Please, SungGong!</a>
+            </div>
+            <div class="nav__list">
 
-    <div class="heading">
-      <img src="/static/img/default_profile.PNG">
-      <div class="info">
-        <h3><a href="#">컴공이</a></h3>
-        <p>20190899</p>
-      </div>
-    </div>
+                <a href="#" class="nav__link">
+                    <ion-icon name="person-circle-outline" class="nav__icon"></ion-icon>
+                    <span class="nav_name">MYPAGE</span>
+                </a>
 
-    <ul class="categories">
-      <li><i class="fa fa-home fa-fw"></i><a href="#">실습장비 관리</a>
-        <ul class="side-nav-dropdown">
-          <li><a href="#">Lorem ipsum</a></li>
-          <li><a href="#">ipsum dolor</a></li>
-          <li><a href="#">dolor ipsum</a></li>
-          <li><a href="#">amet consectetur</a></li>
-          <li><a href="#">ipsum dolor sit</a></li>
-        </ul>
-      </li>
-      <li><i class="fa fa-support fa-fw"></i><a href="#">대여/반납 내역</a>
-        <ul class="side-nav-dropdown">
-          <li><a href="#">Lorem ipsum</a></li>
-          <li><a href="#">ipsum dolor</a></li>
-          <li><a href="#">dolor ipsum</a></li>
-          <li><a href="#">amet consectetur</a></li>
-          <li><a href="#">ipsum dolor sit</a></li>
-        </ul>
-      </li>
-      <li><i class="fa fa-envelope fa-fw"></i><a href="#"> Contact us</a>
-        <ul class="side-nav-dropdown">
-          <li><a href="#">Lorem ipsum</a></li>
-          <li><a href="#">ipsum dolor</a></li>
-          <li><a href="#">dolor ipsum</a></li>
-          <li><a href="#">amet consectetur</a></li>
-          <li><a href="#">ipsum dolor sit</a></li>
-        </ul>
-      </li>
-      <li><i class="fa fa-users fa-fw"></i><a href="#"> Our team</a>
-        <ul class="side-nav-dropdown">
-          <li><a href="#">Lorem ipsum</a></li>
-          <li><a href="#">ipsum dolor</a></li>
-          <li><a href="#">dolor ipsum</a></li>
-          <li><a href="#">amet consectetur</a></li>
-          <li><a href="#">ipsum dolor sit</a></li>
-        </ul>
-      </li>
-      <li><i class="fa fa-bolt fa-fw"></i><a href="#"> Testimonials</a>
-        <ul class="side-nav-dropdown">
-          <li><a href="#">Lorem ipsum</a></li>
-          <li><a href="#">ipsum dolor</a></li>
-          <li><a href="#">dolor ipsum</a></li>
-          <li><a href="#">amet consectetur</a></li>
-          <li><a href="#">ipsum dolor sit</a></li>
-        </ul>
-      </li>
-      <li><i class="fa fa-envelope-open-o fa-fw"></i><a href="#"> Messages <span class="num dang">56</span></a></li>
-      <li><i class="fa fa-wrench fa-fw"></i><a href="#"> Settings <span class="num prim">6</span></a>
-        <ul class="side-nav-dropdown">
-          <li><a href="#">Lorem ipsum</a></li>
-          <li><a href="#">ipsum dolor</a></li>
-          <li><a href="#">dolor ipsum</a></li>
-          <li><a href="#">amet consectetur</a></li>
-          <li><a href="#">ipsum dolor sit</a></li>
-        </ul>
-      </li>
-      <li><i class="fa fa-laptop fa-fw"></i><a href="#"> About UI &amp; UX <span class="num succ">43</span></a></li>
-      <li><i class="fa fa-comments-o fa-fw"></i><a href="#"> Something else</a></li>
-    </ul>
-  </aside>
-  <section id="contents">
-    <nav class="navbar navbar-default navbar-fixed-top">
-      <div class="container-fluid">
-        <div class="navbar-header" style="margin-left: 230px;">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-            data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-            <i class="fa fa-align-right"></i>
-          </button>
-          <a class="navbar-brand" href="#"><span class="main-color">마이페이지</span></a>
+                <div href="#" class="nav__link collapse">
+                    <ion-icon name="construct-outline" class="nav__icon"></ion-icon>
+                    <span class="nav_name">PRODUCT</span>
 
+                    <ion-icon name="chevron-down-outline" class="collapse__link"></ion-icon>
+
+                    <ul class="collapse__menu">
+                        <a href="#" class="collapse__sublink">Equipment</a>
+                        <a href="#" class="collapse__sublink">Lab</a>
+                    </ul>
+                </div>
+
+                <a href="#" class="nav__link">
+                    <ion-icon name="receipt-outline" class="nav__icon"></ion-icon>
+                    <span class="nav_name">HISTORY</span>
+                </a>
+
+                <a href="#" class="nav__link">
+                    <ion-icon name="notifications-outline" class="nav__icon"></ion-icon>
+                    <span class="nav_name">NOTICE</span>
+                </a>
+                
+                
+            </div>
+            <a href="#" class="nav__link">
+                <ion-icon name="log-out-outline" class="nav__icon"></ion-icon>
+                <span class="nav_name">LOG OUT</span>
+            </a>
         </div>
-        <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
-          <ul class="nav navbar-nav">
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                aria-expanded="false">My profile <span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li><a href="#"><i class="fa fa-user-o fw"></i> My account</a></li>
-                <li><a href="#"><i class="fa fa-envelope-o fw"></i> My inbox</a></li>
-                <li><a href="#"><i class="fa fa-question-circle-o fw"></i> Help</a></li>
-                <li role="separator" class="divider"></li>
-                <li><a href="#"><i class="fa fa-sign-out"></i> Log out</a></li>
-              </ul>
-            </li>
-            <li><a href="#"><i class="fa fa-comments"></i><span>23</span></a></li>
-            <li><a href="#"><i class="fa fa-bell-o"></i><span>98</span></a></li>
-          </ul>
-        </div>
-      </div>
     </nav>
-  </section>
+</div>
 
   <div class="container">
     <div class="input-form-backgroud row">
@@ -246,7 +190,9 @@ body {
 
     
   </div>
-
+  <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
+  <!-- JS -->
+  <script src="../static/js/user_main_sidevar.js"></script>
  
 
 </body>

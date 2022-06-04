@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Song+Myung&display=swap');* {
-    padding: 0;
-    margin: 0;
+    
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -8,8 +7,8 @@
     outline: none;
   }
   
-  body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,textarea,p,blockquote,th,td,input,select,textarea,button,figure,section {margin:0;padding:0;  }
-  article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, main, address { display: block; }
+  
+ 
 
   ::-webkit-scrollbar {
     background: transparent;
@@ -319,9 +318,11 @@
   }
 
   .main{
-      margin-left: 230px;
+      
       position:relative;
       height: 100%;
+
+      padding: 10px 300px 20px 34px;
       
       
   }
@@ -363,15 +364,22 @@
     margin-left: 80px;
     margin-right: 80px;
     margin-top: 30px;
-    padding: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .mypage_top h2 {
   width: 300px;
   display: inline;
-  padding-right: 350px;
+  margin-left: 30px;
+  margin-right: 500px;
 }
 
+.b_effect {
+
+  padding: 10px 550px 20px 550px;
+
+}
 
 
 .mypage_middle {
@@ -387,7 +395,7 @@
 
 .btn_01 {
     display: inline-block;
-    margin: 0 0 3px 10px;
+    margin: 0 0 3px 15px;
     font-size: 14px;
 }
 
