@@ -7,6 +7,7 @@
 
   <link rel="stylesheet" href="/static/css/user_equipment.css">
   <link rel="stylesheet" href="../static/css/user_main_sidevar.css">
+  <link rel="stylesheet" href="../static/css/user_main.css">
 
 
 
@@ -17,11 +18,11 @@
         <div>
             <div class="nav__brand">
                 <ion-icon name="menu-outline" class="nav__toggle" id="nav-toggle"></ion-icon>
-                <a href="http://127.0.0.1:8000/user_main/" class="nav__logo">Please, SungGong!</a>
+                <a href="http://127.0.0.1:8000/" class="nav__logo">Please, SungGong!</a>
             </div>
             <div class="nav__list">
 
-              <a href="http://127.0.0.1:8000/user_main/" class="nav__link">
+              <a href="http://127.0.0.1:8000/" class="nav__link">
                 <ion-icon name="storefront-outline" class="nav__icon"></ion-icon>
                 <span class="nav_name">HOME</span>
             </a>
@@ -126,7 +127,7 @@
             <td>상</td>
             {% endif %}
             <td>{{notebook.equipInfo}}</td>
-            <td><a href="http://127.0.0.1:8000/rental/" data-code = "0" class="btn btn-primary">대여 신청</a></td>
+            <td><a onclick="location.href='http://127.0.0.1:8000/rental/?equipid={{notebook.equipID}}'" class="btn btn-primary">대여 신청</a></td>
           </tr>
           {% endfor %}
         </tbody>
@@ -168,7 +169,7 @@
             <td>상</td>
             {% endif %}
             <td>{{raspberrypi.equipInfo}}</td>
-            <td><a href="#" class="btn btn-primary">대여 신청</a></td>
+            <td><a onclick="location.href='http://127.0.0.1:8000/rental/?equipid={{raspberrypi.equipID}}'" class="btn btn-primary">대여 신청</a></td>
           </tr>
           {% endfor %}
         </tbody>
@@ -211,7 +212,7 @@
             <td>상</td>
             {% endif %}
             <td>{{arduino.equipInfo}}</td>
-            <td><a href="#" class="btn btn-primary">대여 신청</a></td>
+            <td><a onclick="location.href='http://127.0.0.1:8000/rental/?equipid={{arduino.equipID}}'" class="btn btn-primary">대여 신청</a></td>
           </tr>
           {% endfor %}
         </tbody>
@@ -253,7 +254,7 @@
             <td>상</td>
             {% endif %}
             <td>{{webcam.equipInfo}}</td>
-            <td><a href="#" class="btn btn-primary">대여 신청</a></td>
+            <td><a onclick="location.href='http://127.0.0.1:8000/rental/?equipid={{webcam.equipID}}'" class="btn btn-primary">대여 신청</a></td>
           </tr>
           {% endfor %}
         </tbody>
@@ -296,7 +297,7 @@
             <td>상</td>
             {% endif %}
             <td>{{jol.equipInfo}}</td>
-            <td><a href="#" class="btn btn-primary">대여 신청</a></td>
+            <td><a onclick="location.href='http://127.0.0.1:8000/rental/?equipid={{jol.equipID}}'" class="btn btn-primary">대여 신청</a></td>
           </tr>
           {% endfor %}
         </tbody>
@@ -338,7 +339,7 @@
             <td>상</td>
             {% endif %}
             <td>{{cable.equipInfo}}</td>
-            <td><a href="#" class="btn btn-primary">대여 신청</a></td>
+            <td><a onclick="location.href='http://127.0.0.1:8000/rental/?equipid={{cable.equipID}}'" class="btn btn-primary">대여 신청</a></td>
           </tr>
           {% endfor %}
         </tbody>
@@ -380,7 +381,7 @@
               <td>상</td>
               {% endif %}
               <td>{{tablet.equipInfo}}</td>
-              <td><a href="#" class="btn btn-primary">대여 신청</a></td>
+              <td><a onclick="location.href='http://127.0.0.1:8000/rental/?equipid={{tablet.equipID}}'" class="btn btn-primary">대여 신청</a></td>
             </tr>
             {% endfor %}
           </tbody>
@@ -424,7 +425,7 @@
             <td>상</td>
             {% endif %}
             <td>{{tabletpc.equipInfo}}</td>
-            <td><a href="#" class="btn btn-primary">대여 신청</a></td>
+            <td><a onclick="location.href='http://127.0.0.1:8000/rental/?equipid={{tabletpc.equipID}}'" class="btn btn-primary">대여 신청</a></td>
           </tr>
           {% endfor %}
         </tbody>
@@ -466,7 +467,7 @@
             <td>상</td>
             {% endif %}
             <td>{{cdrom.equipInfo}}</td>
-            <td><a href="#" class="btn btn-primary">대여 신청</a></td>
+            <td><a onclick="location.href='http://127.0.0.1:8000/rental/?equipid={{cdrom.equipID}}'" class="btn btn-primary">대여 신청</a></td>
           </tr>
           {% endfor %}
         </tbody>
@@ -509,7 +510,7 @@
             <td>상</td>
             {% endif %}
             <td>{{lab.equipInfo}}</td>
-            <td><a href="#" class="btn btn-primary">대여 신청</a></td>
+            <td><a onclick="location.href='http://127.0.0.1:8000/rental/?equipid={{lab.equipID}}'" class="btn btn-primary">대여 신청</a></td>
           </tr>
           {% endfor %}
         </tbody>
@@ -518,8 +519,16 @@
     </div>
   
     
-   
   
+  
+  </div>
+
+  <div class="button-container" id="scrollDownPc" class="hidden-md hidden-sm hidden-xs" >
+    <a class="button1" href="http://127.0.0.1:8000/user_main/">
+      <span class="content">성공AI</span>
+      <span class="effect circle-1"></span>
+      <span class="effect circle-2"></span>
+    </a>
   </div>
   <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
   <!-- JS -->

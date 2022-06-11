@@ -1,4 +1,4 @@
-from .models import Renting, User
+from .models import Renting, User, EquipCode, Equip
 from django.shortcuts import render, redirect
 from .import views
 #
@@ -10,17 +10,25 @@ from .import views
 #신청서 작성
 def rental(request):
     if(request.method == "GET"):
-        return render(request, 'user_rental.html' )
+
+        Users = User.objects.filter(studentID="20190811")  
+
+        equipid = request.GET.get('equipid')
+        pr_equipids = Equip.objects.filter(equipID = equipid)
+
+        context = {'Users' : Users, 'pr_equipids': pr_equipids}
+
+
+        return render(request, 'user_rental.html', context)
 
     elif(request.method == "POST"):
         post = Renting()
-        #post.userID = request.POST['userid']
-        #post.userName = request.POST['username']
-        #post.userPhoneNum = request.POST['phonenum']
-        #post.equipID = request.POST['equipid']
+        #post.userID = Users.values('studentID')
+        #post.userName = Users.values('name')
+        #post.userPhoneNum = Users.values('phoneNum')
+        #post.equipID = equipid
         post.rentingDate = request.POST['rentdate']
         post.returningDate = request.POST['returndate']
-        post.serialnum = request.POST['senum']
         post.save()
 
 
@@ -28,13 +36,4 @@ def rental(request):
     return redirect('../equipinfo', {'alert':'정상적으로 신청이 접수되었습니다'})
 
 
-def retalform(request):
-
-    Users = User.objects.filter(studentID="20190811")
-   
-
-    context = {'Users' : Users}
-    
-    
-    return render(request, 'user_rental.html', context)
 
