@@ -1,13 +1,6 @@
-/* Mirtech Co. */ 
-/* mir_home_sub_mylibrary css - copyright all mirtech */
 
-/* 인코딩 설정 */
 @charset "utf-8";
 
-
-
-
-/* 대여현황 ************************************************************************************** */
 .my_borrow_box{
 	margin-bottom: 10px;
 	overflow:hidden;
@@ -36,15 +29,9 @@
 
 
 
-
-
-
-
 body{
 	background: #ffffff;
 }
-
-
 
 
 
@@ -198,7 +185,7 @@ h4 .small, h4 small, h5 .small, h5 small, h6 .small, h6 small{font-size: 70%;}
 
 
 
-/* 아코디언 리스트 **********************************************************************************/
+
 .panel .panel-heading h4.panel-title{font-size:13px;}
 
 	
@@ -226,7 +213,6 @@ table.table thead tr th{
 
 
 
-/* label 설정 */
 span.label{margin: 0 5px 0 0;}
 
 .label_color01{background-color: #144d78;}
@@ -235,7 +221,6 @@ span.label{margin: 0 5px 0 0;}
 
 
 	
-/* 리스트 설정  **********************************************************************************/
 h4.sub_title{
 	padding:10px 0 10px 0;
 	font-weight:bold; 
@@ -315,7 +300,6 @@ ul.list3{
 
 
 
-/* 기본 폼 설정 **********************************************************************************/
 .form-group,
 .form-inline{margin-bottom:10px;}
 	.form-group .col-sm-2{
@@ -381,10 +365,8 @@ ul.list3{
 
 	.oveflow-hidden{overflow:hidden;}
 	
-/* textarea 설정 */
 textarea.form-control{resize:vertical;}
 
-/* 필수값 */			
 span.input_required {
     margin-left: 5px;
     font-size: 20px;
@@ -404,14 +386,12 @@ span.input_required {
 	
 
 
-/* 기본 정렬 설정 **************************************************************************************/	
 .text-left{text-align: left !important;}
 .text-right{text-align: right !important;}
 .text-center{text-align: center !important;}
 
 
 
-/* 컨텐츠 박스  ***************************************************************************************/
 .box_content{
 	padding:5px 15px 5px;
 	margin-bottom:15px;
@@ -425,7 +405,6 @@ span.input_required {
 		line-height:25px;
 		}
 		
-/* pc 설정    **********************************************************************************/
 @media (min-width: 768px){
 	.box_content .form-inline .form-group{
 		margin-right:10px;
@@ -433,7 +412,6 @@ span.input_required {
 }
 
 
-/* 헬퍼 텍스트 설정 *********************************************************************************/
 p.text-muted,
 p.text-primary,
 p.text-success,
@@ -447,7 +425,6 @@ p.text-danger{
 p.text-danger{color:#c81919;}
 
 
-/* 기본 텍스트 스타일 설정 ****************************************************************************/
 .text_color_red{color:#d02f43;}
 .text_color_blue{color:#2e67bc;}
 .text_color_green{color:#4a9155;}
@@ -456,14 +433,12 @@ p.text-danger{color:#c81919;}
 .text_color_orange{color:#ff7800;}
 
 
-/* 경보 박스 설정 **********************************************************************************/
 .alert-success,
 .alert-info,
 .alert-warning,
 .alert-danger{margin:0 0 15px;}
 
 
-/* 패널 설정 **********************************************************************************/
 .panel{margin-bottom:15px;}
 
 .panel .panel-heading{
@@ -489,7 +464,6 @@ p.text-danger{color:#c81919;}
 .panel label{font-size: 14px;}
 
 
-/* 리스트 설정 **********************************************************************************/		
 dl.list_line{
 	margin:0; 
 	padding-left:0;
@@ -541,33 +515,22 @@ dl.list_line{
 
 
 		
-/* 오시는길 **********************************************************************************/
-.map{
-	margin-top:30px;
-	}
-		
-.map ul li{
-	line-height:26px;
-	}		
 
 
 
-
-	/* table 기본 스타일 */
 	#table_box thead tr th {
 		background-color:#f2f2f2;
 		font-weight: bold;
 		color:#666666;
 		}	
 	
-	/* tbody */
 	#table_box tbody th {
 		width:150px;
 		}
 		#table_box tbody th.non_width {
 			width:auto;
 			}
-	/* th */
+
 	#table_box th {
 		border: 1px solid #D0D0D0; 
 		padding: 5px;
@@ -576,13 +539,13 @@ dl.list_line{
 		font-weight: normal;
 		}			
 	
-	/* tr */
+
 	#table_box tr.talign_center td {
 		text-align: center;	
 		padding: 0px;
 		}
 	
-	/* td */		
+		
 	#table_box td {
 		border: 1px solid #D0D0D0; 
 		padding: 5px;
@@ -596,11 +559,11 @@ dl.list_line{
 			width: 100%;
 			height: 200px;
 			}
-		#table_box .check{  /* 라디오 버튼, 체크박스용 */
+		#table_box .check{ 
 			width:20px;
 			}					
 
-		/* input */
+
 		#table_box input {
 			width: 100%;
 			}
