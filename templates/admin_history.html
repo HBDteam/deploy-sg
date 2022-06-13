@@ -1,162 +1,204 @@
 <html lang="ko">
   <head>
     <meta charset="UTF-8">
-    <title>Dashboard</title>
+    <title>장비 대여 기록</title>
     
    
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="../static/css/test.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     
     <link href="https://fonts.googleapis.com/css?family=Droid+Sans" rel="stylesheet">
     
-    <link rel="stylesheet" href="../static/css/admin_main.css">
-    
-    
-    
-    
-       <aside class="side-nav" id="show-side-navigation1">
+    <style>
+      @media (min-width: 768px) {
+        .main {
+          padding-right: 40px;
+          padding-left: 40px;
+        }
+      }
+      .sidebar {
+        width:20%;
+      }
+      .main_contents{
+        margin:0 auto;
+        text-align: center;
+      }
+      .buttondiv{
+        padding-left: 50px;
+        padding-right: 50px;
+        padding-bottom: 80px;
+      }
+      .chart{
+        margin:50px;
+        font-size: 30px;
+        color:#002a71;
+      }
+      .chart_title{
+        margin: 50px;
+        font-size: 40px;
+       
+      }
+    </style>
 
-      <div class="heading">
-        <img src="../static/img/skulogo.PNG">
-        <div class="info">
-          <h3><a href="#">컴퓨터공학과 조교</a></h3>
-          <p>2022-1학기</p>
-        </div>
-      </div>
-
-      <div class="search">
-      </div>
-      <ul class="categories">
-        <li><i class="fa fa-home fa-fw"></i><a href="#">실습장비 관리</a>
-          <ul class="side-nav-dropdown">
-            <li><a href="#">Lorem ipsum</a></li>
-            <li><a href="#">ipsum dolor</a></li>
-            <li><a href="#">dolor ipsum</a></li>
-            <li><a href="#">amet consectetur</a></li>
-            <li><a href="#">ipsum dolor sit</a></li>
-          </ul>
-        </li>
-        <li><i class="fa fa-support fa-fw"></i><a href="#">대여/반납 내역</a>
-          <ul class="side-nav-dropdown">
-            <li><a href="#">Lorem ipsum</a></li>
-            <li><a href="#">ipsum dolor</a></li>
-            <li><a href="#">dolor ipsum</a></li>
-            <li><a href="#">amet consectetur</a></li>
-            <li><a href="#">ipsum dolor sit</a></li>
-          </ul>
-        </li>
-        <li><i class="fa fa-envelope fa-fw"></i><a href="#"> Contact us</a>
-          <ul class="side-nav-dropdown">
-            <li><a href="#">Lorem ipsum</a></li>
-            <li><a href="#">ipsum dolor</a></li>
-            <li><a href="#">dolor ipsum</a></li>
-            <li><a href="#">amet consectetur</a></li>
-            <li><a href="#">ipsum dolor sit</a></li>
-          </ul>
-        </li>
-        <li><i class="fa fa-users fa-fw"></i><a href="#"> Our team</a>
-          <ul class="side-nav-dropdown">
-            <li><a href="#">Lorem ipsum</a></li>
-            <li><a href="#">ipsum dolor</a></li>
-            <li><a href="#">dolor ipsum</a></li>
-            <li><a href="#">amet consectetur</a></li>
-            <li><a href="#">ipsum dolor sit</a></li>
-          </ul>
-        </li>
-        <li><i class="fa fa-bolt fa-fw"></i><a href="#"> Testimonials</a>
-          <ul class="side-nav-dropdown">
-            <li><a href="#">Lorem ipsum</a></li>
-            <li><a href="#">ipsum dolor</a></li>
-            <li><a href="#">dolor ipsum</a></li>
-            <li><a href="#">amet consectetur</a></li>
-            <li><a href="#">ipsum dolor sit</a></li>
-          </ul>
-        </li>
-        <li><i class="fa fa-envelope-open-o fa-fw"></i><a href="#"> Messages <span class="num dang">56</span></a></li>
-        <li><i class="fa fa-wrench fa-fw"></i><a href="#"> Settings <span class="num prim">6</span></a>
-          <ul class="side-nav-dropdown">
-            <li><a href="#">Lorem ipsum</a></li>
-            <li><a href="#">ipsum dolor</a></li>
-            <li><a href="#">dolor ipsum</a></li>
-            <li><a href="#">amet consectetur</a></li>
-            <li><a href="#">ipsum dolor sit</a></li>
-          </ul>
-        </li>
-        <li><i class="fa fa-laptop fa-fw"></i><a href="#"> About UI &amp; UX <span class="num succ">43</span></a></li>
-        <li><i class="fa fa-comments-o fa-fw"></i><a href="#"> Something else</a></li>
-      </ul>
-    </aside>
-    <section id="contents">
-      <nav class="navbar navbar-default">
-        <div class="container-fluid">
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-              <i class="fa fa-align-right"></i>
-            </button>
-            <a class="navbar-brand" href="#"><span class="main-color">대여/반납 내역 페이지</span></a>
-          </div>
-          <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">My profile <span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                  <li><a href="#"><i class="fa fa-user-o fw"></i> My account</a></li>
-                  <li><a href="#"><i class="fa fa-envelope-o fw"></i> My inbox</a></li>
-                  <li><a href="#"><i class="fa fa-question-circle-o fw"></i> Help</a></li>
-                  <li role="separator" class="divider"></li>
-                  <li><a href="#"><i class="fa fa-sign-out"></i> Log out</a></li>
-                </ul>
-              </li>
-              <li><a href="#"><i class="fa fa-comments"></i><span>23</span></a></li>
-              <li><a href="#"><i class="fa fa-bell-o"></i><span>98</span></a></li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-  
-      
-       <script src='http://code.jquery.com/jquery-latest.js'></script>
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
-      <script src='../static/js/bootstrap.js'></script>
-      <script>
-        
-      $(function () {
+    <script src='http://code.jquery.com/jquery-latest.js'></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src='../static/js/bootstrap.js'></script>
+    <script>
+    $(function () {
 
 
-      (function () {  
-        // dropdown menu in the side nav
-        var slideNavDropdown = $('.side-nav-dropdown');
+    (function () {  
+      // dropdown menu in the side nav
+      var slideNavDropdown = $('.side-nav-dropdown');
 
-        $('.side-nav .categories li').on('click', function () {
+      $('.side-nav .categories li').on('click', function () {
 
-          $(this).toggleClass('lol').siblings().removeClass('lol');
+        $(this).toggleClass('lol').siblings().removeClass('lol');
 
-          if ($(this).hasClass('lol')) {
+        if ($(this).hasClass('lol')) {
 
-            $(this).find('.side-nav-dropdown').slideToggle('fast');
+          $(this).find('.side-nav-dropdown').slideToggle('fast');
 
-            $(this).siblings().find('.side-nav-dropdown').slideUp('fast');
+          $(this).siblings().find('.side-nav-dropdown').slideUp('fast');
 
-          } else {
+        } else {
 
-            $(this).find('.side-nav-dropdown').slideUp('fast');
+          $(this).find('.side-nav-dropdown').slideUp('fast');
 
-          }
+        }
 
-        });
-
-        $('.side-nav .close-aside').on('click', function () {
-
-          $('#' + $(this).data('close')).addClass('show-side-nav');
-
-          contents.removeClass('margin');
-
-        });
-
-      }());
-      console.log(Chart.defaults.global);
       });
 
-      </script>
+      $('.side-nav .close-aside').on('click', function () {
+
+        $('#' + $(this).data('close')).addClass('show-side-nav');
+
+        contents.removeClass('margin');
+
+      });
+
+    }());
+    console.log(Chart.defaults.global);
+    });
+
+    </script>
+  </head>  
+  <body style="background-color:white">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+  
+      <a class="navbar-brand" href="http://127.0.0.1:8000/admin_main/">성공아 부탁해</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              실습장비 관리
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <div class="container">
+                <div class="row">
+                    <ul class="nav flex-column">
+                      <li class="nav-item">
+                        <a class="nav-link" href="http://127.0.0.1:8000/admin_equipment/">실습장비 등록</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="http://127.0.0.1:8000/admin_equipment_detail/">실습장비 관리</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="http://127.0.0.1:8000/admin_main/admin_renting/">실습장비 대여</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="./admin_equipment_return.html">실습장비 반납</a>
+                      </li>
+                    </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              대여 내역
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <div class="container">
+                <div class="row">
+                    <ul class="nav flex-column">
+                      <li class="nav-item">
+                        <a class="nav-link" href="http://127.0.0.1:8000/admin_equipment_history/">대여 내역</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="./admin_schedule.html">대여/반납 일정</a>
+                      </li>
+                    </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+        
+        <form class="form-inline my-2 my-lg-0">
+          <!-- <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"> -->
+          <button class="btn btn-outline-light my-2 my-sm-0" type="submit">로그아웃</button>
+        </form>
+      </div>
+    </nav>
+    <div class="container-fluid main_contents">
+      <div style="margin-top:30px">
+        <div style="padding:20px">
+          <h2 class="sub-header">장비 대여 기록</h2>
+          <div class="table-responsive">
+            <table class="table table-striped table-hover">
+            <thead style="background-color: #002a71;color: white;">
+              <tr>
+                <th></th>
+                <th>장비명</th>
+                <th>대여자명</th>
+                <th>대여자학번</th>
+                <th>연락처</th>
+                <th>대여날짜</th>
+                <th>반납날짜</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for isRenting in isRentings %}
+              <tr>
+                <td>대여 중</td>
+                <td>{{isRenting.equipID}}</td>
+                <td>{{isRenting.userName}}</td>
+                <td>{{isRenting.userID}}</td>
+                <td>{{isRenting.userPhoneNum}}</td>
+                <td>{{isRenting.rentingDate}}</td>
+                <td>{{isRenting.returningDate}}</td>
+              </tr>
+              {% endfor %}
+              {% for isReturned in isReturneds %}
+              <tr>
+                <td>반납 완료</td>
+                <td>{{isReturned.equipID}}</td>
+                <td>{{isReturned.userName}}</td>
+                <td>{{isReturned.userID}}</td>
+                <td>{{isReturned.userPhoneNum}}</td>
+                <td>{{isReturned.rentingDate}}</td>
+                <td>{{isReturned.returningDate}}</td>
+              </tr>
+              {% endfor %}
+            </tbody>
+            </table>
+          </div>
+          <hr>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+  </div>
+  </body>
+ </html> 
