@@ -6,7 +6,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 TEMPLATE_DIR = os.path.join(BASE_DIR, 'templates')
 
 
-SECRET_KEY = 'django-insecure-4gahey=5csw-5bdt=z864_n7bet@plu*vq2@*@w8jq8*e77kd&'
+SECRET_KEY = ''
 
 DEBUG = True
 
@@ -21,17 +21,19 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'feat_admin',
+    'feat_user',
     'sign',
-    'admin_main',
-    'admin_equipment',
-    'admin_equipment_manage',
-    'admin_equipment_detail',
-    'admin_equipment_history',
-    'user_main',
-    'user_mypage',
-    'user_history',
-    'user_equipment',
-    'user_rental',
+    'feat_admin.admin_main',
+    'feat_admin.admin_equipment',
+    'feat_admin.admin_equipment_manage',
+    'feat_admin.admin_equipment_detail',
+    'feat_admin.admin_equipment_history',
+    'feat_user.user_main',
+    'feat_user.user_mypage',
+    'feat_user.user_history',
+    'feat_user.user_equipment',
+    'feat_user.user_rental',
     'aichatbot'
 ]
 
@@ -63,7 +65,8 @@ TEMPLATES = [
     },
 ]
 
-ASGI_APPLICATION = 'success.asgi.application'
+WSGI_APPLICATION = 'success.wsgi.application'
+#ASGI_APPLICATION = 'success.asgi.application'
 
 
 DATABASES = {

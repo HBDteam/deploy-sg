@@ -5,6 +5,6 @@ urlpatterns = [
     
     path('admin/', admin.site.urls),
     path('sign/', include('sign.urls')),
-    path('admin_main/', include('admin_main.urls')),
-    path('user_main/',include('user_main.urls'))
+    path('feat_admin/admin_main/', include('feat_admin.admin_main.urls')),
+    path('feat_user/user_main/',include('feat_user.user_main.urls'))
 ]

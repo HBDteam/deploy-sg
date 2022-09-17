@@ -2,3 +2,5 @@ django
 mysqlclient
 argon2-cffi
 pytz
+config
+django-config
