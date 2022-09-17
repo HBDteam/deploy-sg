@@ -8,3 +8,6 @@ COPY . /backend/
 RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
 
+WORKDIR /backend
+
+CMD python manage.py runserver

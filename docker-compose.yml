@@ -3,6 +3,8 @@ version: "3"
 services:
 
   frontend:
+    #restart: unless-stopped
+    container_name: frontend
     build: ./frontend
     command: ["npm", "start"]
     ports:
@@ -10,7 +12,7 @@ services:
     volumes:
       - ./frontend:/app
 
-      
+
   backend:
     #restart: unless-stopped
     container_name: backend
@@ -20,7 +22,6 @@ services:
       - 8000:8000
     volumes:
       - backend:/var/lib/backend/data
-    command: python manage.py runserver
     tty: true
 
 
