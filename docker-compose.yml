@@ -12,19 +12,19 @@ services:
     volumes:
       - ./frontend:/app
 
-
   backend:
-    #restart: unless-stopped
-    container_name: backend
+    image: django
     build:
       context: ./backend
+    command: python manage.py runserver 0.0.0.0:8000
     ports:
       - 8000:8000
     volumes:
-      - backend:/var/lib/backend/data
-    tty: true
+      - ./backend:/var/lib/backend/data
+    expose:
+      - 8001
 
-
+    
 volumes:
     backend:
 
