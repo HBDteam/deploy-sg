@@ -2,16 +2,6 @@ version: "3"
 
 services:
 
-  frontend:
-    #restart: unless-stopped
-    container_name: frontend
-    build: ./frontend
-    command: ["npm", "start"]
-    ports:
-      - 3000:3000
-    volumes:
-      - ./frontend:/app
-
   backend:
     image: django
     container_name: backend
