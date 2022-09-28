@@ -2,7 +2,7 @@ from email.encoders import encode_quopri
 from tkinter import W
 
 from feat_admin.admin_main.models import EquipCode
-from user_equipment.views import equipinfo
+from feat_user.user_equipment.views import equipinfo
 from .models import User, Renting, Equip
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
