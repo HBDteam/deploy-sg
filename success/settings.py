@@ -6,7 +6,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 TEMPLATE_DIR = os.path.join(BASE_DIR, 'templates')
 
 
-SECRET_KEY = ''
+SECRET_KEY = 'django-insecure-4gahey=5csw-5bdt=z864_n7bet@plu*vq2@*@w8jq8*e77kd&'
 
 DEBUG = True
 
