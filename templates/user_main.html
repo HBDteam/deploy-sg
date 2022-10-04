@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>사용자메인</title>
     <!-- CSS -->
-    <link rel="stylesheet" href="../static/css/user_main_sidevar.css">
-    <link rel="stylesheet" href="../static/css/user_main.css">
+    <link rel="stylesheet" href="../../static/css/user_main_sidevar.css">
+    <link rel="stylesheet" href="../../static/css/user_main.css">
     <style>
         
         </style>
@@ -18,32 +18,32 @@
             <div>
                 <div class="nav__brand">
                     <ion-icon name="menu-outline" class="nav__toggle" id="nav-toggle"></ion-icon>
-                    <a href="http://127.0.0.1:8000/" class="nav__logo">Please, SungGong!</a>
+                    <a href="http://127.0.0.1:8000/feat_user/" class="nav__logo">Please, SungGong!</a>
                 </div>
                 <div class="nav__list">
-                    <a href="http://127.0.0.1:8000/" class="nav__link">
+                    <a href="http://127.0.0.1:8000/feat_user/" class="nav__link">
                         <ion-icon name="storefront-outline" class="nav__icon"></ion-icon>
                         <span class="nav_name">HOME</span>
                     </a>
 
-                    <a href="http://127.0.0.1:8000/user_mypage/" class="nav__link">
+                    <a href="http://127.0.0.1:8000/feat_user/user_mypage/" class="nav__link">
                         <ion-icon name="person-circle-outline" class="nav__icon"></ion-icon>
                         <span class="nav_name">MYPAGE</span>
                     </a>
 
-                    <div href="http://127.0.0.1:8000/equipinfo/" class="nav__link collapse">
+                    <div href="http://127.0.0.1:8000/feat_user/equipinfo/" class="nav__link collapse">
                         <ion-icon name="construct-outline" class="nav__icon"></ion-icon>
                         <span class="nav_name">PRODUCT</span>
 
                         <ion-icon name="chevron-down-outline" class="collapse__link"></ion-icon>
 
                         <ul class="collapse__menu">
-                            <a href="http://127.0.0.1:8000/equipinfo/#notebook_equip" class="collapse__sublink">Equipment</a>
-                            <a href="http://127.0.0.1:8000/equipinfo/#lab_equip" class="collapse__sublink">Lab</a>
+                            <a href="http://127.0.0.1:8000/feat_user/equipinfo/#notebook_equip" class="collapse__sublink">Equipment</a>
+                            <a href="http://127.0.0.1:8000/feat_user/equipinfo/#lab_equip" class="collapse__sublink">Lab</a>
                         </ul>
                     </div>
 
-                    <a href="http://127.0.0.1:8000/user_history/" class="nav__link">
+                    <a href="http://127.0.0.1:8000/feat_user/user_history/" class="nav__link">
                         <ion-icon name="receipt-outline" class="nav__icon"></ion-icon>
                         <span class="nav_name">HISTORY</span>
                     </a>
@@ -66,7 +66,7 @@
 
     <div id="container" class="main_container">
         <div class = "center_top">
-          <img src="../static/img/user_main_title.PNG" alt>
+          <img src="../../static/img/user_main_title.PNG" alt>
 
         </div>
         <div class = "center_middle">
@@ -78,29 +78,29 @@
                 <p class="rank_test_hide">인기 카테고리</p>
                 <ul class="rank_list">
                     <li>
-                        <a href = "http://127.0.0.1:8000/equipinfo/#raspberrypi_equip">
-                            <img src="../static/img/rasberrypi_img.PNG" alt>
+                        <a href = "http://127.0.0.1:8000/feat_user/equipinfo/#raspberrypi_equip">
+                            <img src="../../static/img/rasberrypi_img.PNG" alt>
                             <p>라즈베리파이</p>
                             <p>재고: 03개</p>
                         </a>                      
                     </li>
                     <li>
-                        <a href = "http://127.0.0.1:8000/equipinfo/#arduino_equip">
-                            <img src="../static/img/arduino_img.PNG" alt>
+                        <a href = "http://127.0.0.1:8000/feat_user/equipinfo/#arduino_equip">
+                            <img src="../../static/img/arduino_img.PNG" alt>
                             <p>아두이노</p>
                             <p>재고: 08개</p>
                         </a>                       
                     </li>
                     <li>
-                        <a href = "http://127.0.0.1:8000/equipinfo/#notebook_equip">
-                            <img src="../static/img/lggram_img.PNG" alt>
+                        <a href = "http://127.0.0.1:8000/feat_user/equipinfo/#notebook_equip">
+                            <img src="../../static/img/lggram_img.PNG" alt>
                             <p>노트북</p>
                             <p>재고: 10개</p>
                         </a>                       
                     </li>
                     <li>
-                        <a href = "http://127.0.0.1:8000/equipinfo/#cable_equip">
-                            <img src="../static/img/hdmi_img.PNG" alt>
+                        <a href = "http://127.0.0.1:8000/feat_user/equipinfo/#cable_equip">
+                            <img src="../../static/img/hdmi_img.PNG" alt>
                             <p>케이블</p>
                             <p>재고: 06개</p>
                         </a>                       
@@ -149,7 +149,7 @@
         
         <!-- ai -->
         <div class="button-container" id="scrollDownPc" class="hidden-md hidden-sm hidden-xs" >
-            <a class="button1" href="http://127.0.0.1:8000/user_main/">
+            <a class="button1" href="http://127.0.0.1:8000/feat_user/user_main/">
               <span class="content">성공AI</span>
               <span class="effect circle-1"></span>
               <span class="effect circle-2"></span>
@@ -163,11 +163,11 @@
     <!-- IONICONS -->
     <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
     <!-- JS -->
-    <script src="../static/js/user_main_sidevar.js"></script>
+    <script src="../../static/js/user_main_sidevar.js"></script>
 
     <script>
         function user_history()  {
-         window.location.href = 'http://127.0.0.1:8000/user_history/'
+         window.location.href = 'http://127.0.0.1:8000/feat_user/user_history/'
         }
     </script>
 </body>
