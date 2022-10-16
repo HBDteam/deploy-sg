@@ -21,6 +21,8 @@ class Renting(models.Model):
     userPhoneNum = models.CharField(max_length=11, null=True)
     rentingDate = models.DateField(null=True)
     returningDate = models.DateField(null=True)
+    userID_no = models.CharField(max_length=8, null=True)
+    equipID_no = models.CharField(max_length=13, null=True)
 
     def __str__(self):
         return f'[{self.serialnum}]'
