@@ -165,7 +165,9 @@ body {
 
           
           <div class="mb-4"></div>
-          <button class="btn btn-primary btn-lg btn-block" type="submit" style="margin: 0 auto;">신청 완료</button>
+          <button onclick="alert('신청이 완료되었습니다.'); setTimeout('move_page()', 10);" class="btn btn-primary btn-lg btn-block" type="submit" style="margin: 0 auto;">신청 완료
+          </button>
+          
         </form>
       </div>
     </div>
@@ -190,7 +192,14 @@ body {
   <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
   <!-- JS -->
   <script src="../../static/js/user_main_sidevar.js"></script>
+  <script>
+    
   
+    function move_page(){
+    location.href="http://127.0.0.1:8000/feat_user/user_main/"  // 페이지 이동
+    }
+  
+  </script>
  
 
 </body>

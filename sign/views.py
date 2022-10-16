@@ -3,7 +3,11 @@ from django.shortcuts import render
 from django.contrib.auth.hashers import make_password, check_password
 from .models import User, Manager
 from django.shortcuts import render, redirect
+from django.contrib.auth.models import User as UUser# 추가
+
 from argon2 import PasswordHasher
+from django.contrib import auth # 추가
+
 '''
     sign.html에서 onclick 시 ajax 통신으로 post/get을 구현 할 예정임.
 '''
@@ -39,14 +43,28 @@ def signin(request):
                 login_user = User.objects.get(studentID=username)
                 if PasswordHasher().verify(login_user.password.decode('utf-8'),password):
                     user_id = login_user.studentID
+                    password = login_user.password
                     request.session['user'] = user_id
-                    return redirect('/user_main') # 사용자 페이지로 이동
+                    if UUser.objects.filter(username=user_id).exists() == True:
+                        user = UUser.objects.get(username=user_id)
+                        auth.login(request, user)
+                        return redirect('/feat_user/user_main/') # 사용자 페이지로 이동
+                    else:
+                        user = UUser.objects.create_user(user_id,login_user.password.decode('utf-8'))
+                        auth.login(request, user)
+                        return redirect('/feat_user/user_main/') # 사용자 페이지로 이동
                 else:
                     print('실패')
             elif Manager.objects.filter(mID= username).exists() == True:
                 manager_user =  Manager.objects.get(mID= username)
                 if PasswordHasher().verify(manager_user.mPassword.decode('utf-8'),password):
                     user_id = manager_user.mID
-                    request.session['user'] = user_id
-                    return redirect('/admin_main') # 사용자 페이지로 이동
+                    if UUser.objects.filter(username=user_id).exists() == True:
+                        user = UUser.objects.get(username=user_id)
+                        auth.login(request, user)
+                        return redirect('/feat_admin/admin_main') # 사용자 페이지로 이동
+                    else:
+                        user = UUser.objects.create_user(user_id,manager_user.mPassword.decode('utf-8'))
+                        auth.login(request, user)
+                        return redirect('/feat_admin/admin_main') # 사용자 페이지로 이동
     else: return redirect('sign.html')
