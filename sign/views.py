@@ -59,6 +59,12 @@ def signin(request):
                 manager_user =  Manager.objects.get(mID= username)
                 if PasswordHasher().verify(manager_user.mPassword.decode('utf-8'),password):
                     user_id = manager_user.mID
-                    request.session['user'] = user_id
-                    return redirect('/admin_main') # 사용자 페이지로 이동
+                    if UUser.objects.filter(username=user_id).exists() == True:
+                        user = UUser.objects.get(username=user_id)
+                        auth.login(request, user)
+                        return redirect('/feat_admin/admin_main') # 사용자 페이지로 이동
+                    else:
+                        user = UUser.objects.create_user(user_id,manager_user.mPassword.decode('utf-8'))
+                        auth.login(request, user)
+                        return redirect('/feat_admin/admin_main') # 사용자 페이지로 이동
     else: return redirect('sign.html')
