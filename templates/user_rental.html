@@ -127,21 +127,22 @@ body {
             
             {% for user in Users %}
               <div class="col-md-6 mb-3">             
-                <label for="userid" style="text-decoration:underline overline">학번 : {{user.studentID}} </label>
+                <label name="userid" for="userid" style="text-decoration:underline overline">학번 : {{user.studentID}} </label>
               </div>
               <div class="col-md-6 mb-3">
-                <label for="username" style="text-decoration:underline overline">이름 : {{user.name}} </label>
+                <label name="username" for="username" style="text-decoration:underline overline">이름 : {{user.name}} </label>
               </div>
             
             <div class="col-md-6 mb-3">
-              <label for="phonenum" style="text-decoration:underline overline">전화번호 : {{user.phoneNum}}</label>
+              <label name="phonenum" for="phonenum" style="text-decoration:underline overline">전화번호 : {{user.phoneNum}}</label>
             </div>
             </div>
             {% endfor %}
           
           <div class="mb-3">
             {% for pr_equipid in pr_equipids%}
-            <label for="equipid" style="text-decoration:underline overline">대여품목 : {{pr_equipid.equipID}}</label> 
+            <label for="equipid" style="text-decoration:underline overline">대여품목 : {{pr_equipid.equipID}}</label>
+            <input type="hidden" name="equipids" value="{{pr_equipid.equipID}}">
             {% endfor %}
           </div>
       

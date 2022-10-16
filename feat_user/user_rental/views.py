@@ -6,31 +6,44 @@ from .import views
 
 #신청서 작성
 def rental(request):
+    login_user_ID = request.user.username
+    Users = User.objects.filter(studentID=login_user_ID)
+    post = Renting()
+    post.userPhoneNum = Users.values('phoneNum')
+    post.userName = Users.values('name')
+    post.userID_no = Users.values('studentID')
+    
+
     if(request.method == "GET"):
-
-        Users = User.objects.filter(studentID="20190811")  
-
+        
         equipid = request.GET.get('equipid')
-        pr_equipids = Equip.objects.filter(equipID = equipid)
-
-        context = {'Users' : Users, 'pr_equipids': pr_equipids}
-
-
+        pr_equipids = Equip.objects.filter(equipID = equipid) 
+        context = {'Users' : Users, 'pr_equipids': pr_equipids }
         return render(request, 'user_rental.html', context)
 
-    elif(request.method == "POST"):
-        post = Renting()
-        #post.userID = Users.values('studentID')
-        #post.userName = Users.values('name')
-        #post.userPhoneNum = Users.values('phoneNum')
-        #post.equipID = equipid
+    if(request.method == "POST"):     
+        #post.userID = request.POST['userid']  
         post.rentingDate = request.POST['rentdate']
         post.returningDate = request.POST['returndate']
-        post.save()
+        post.equipID_no = request.POST.get("equipids", "")
+        #post.returningDate = request.POST['equipid']
+        #print(a)
+        #post.userID = request.POST['studentID']
+        
+        
+        post.save()   
+
+        return redirect('../equipinfo', {'alert':'정상적으로 신청이 접수되었습니다'})
 
 
+    
+        
+    
+    
+    
 
-    return redirect('../equipinfo', {'alert':'정상적으로 신청이 접수되었습니다'})
+    
+    
 
 
 
