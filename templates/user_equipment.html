@@ -144,7 +144,7 @@
             <td style="background-color:#707070">상</td>
             {% endif %}
             <td style="background-color:#585858">{{notebook.equipInfo}}</td>
-            <td style="background-color:#707070"><a class="btn btn-primary2">대여불가</a></td>
+            <td style="background-color:#707070"><a onclick="alert('대여 불가합니다.')"; class="btn btn-primary2">대여불가</a></td>
           </tr>
           {% endif %}
         {% endfor %}
@@ -204,7 +204,7 @@
           <td style="background-color:#707070">상</td>
           {% endif %}
           <td style="background-color:#585858">{{raspberrypi.equipInfo}}</td>
-          <td style="background-color:#707070"><a class="btn btn-primary2">대여불가</a></td>
+          <td style="background-color:#707070"><a onclick="alert('대여 불가합니다.')"; class="btn btn-primary2">대여불가</a></td>
         </tr>
         {% endif %}
       {% endfor %}
@@ -265,7 +265,7 @@
           <td style="background-color:#707070">상</td>
           {% endif %}
           <td style="background-color:#585858">{{arduino.equipInfo}}</td>
-          <td style="background-color:#707070"><a class="btn btn-primary2">대여불가</a></td>
+          <td style="background-color:#707070"><a onclick="alert('대여 불가합니다.')"; class="btn btn-primary2">대여불가</a></td>
         </tr>
         {% endif %}
       {% endfor %}
@@ -325,7 +325,7 @@
           <td style="background-color:#707070">상</td>
           {% endif %}
           <td style="background-color:#585858">{{webcam.equipInfo}}</td>
-          <td style="background-color:#707070"><a class="btn btn-primary2">대여불가</a></td>
+          <td style="background-color:#707070"><a onclick="alert('대여 불가합니다.')"; class="btn btn-primary2">대여불가</a></td>
         </tr>
         {% endif %}
       {% endfor %}
@@ -365,7 +365,7 @@
             <td>상</td>
             {% endif %}
             <td>{{jol.equipInfo}}</td>
-            <td><a class="btn btn-primary">대여 신청</a></td>
+            <td><a onclick="location.href='http://127.0.0.1:8000/feat_user/user_rental/?equipid={{jol.equipID}}'" class="btn btn-primary">대여 신청</a></td>
           </tr>
           {% endif %}
         {% endfor %}
@@ -385,7 +385,7 @@
           <td style="background-color:#707070">상</td>
           {% endif %}
           <td style="background-color:#585858">{{jol.equipInfo}}</td>
-          <td style="background-color:#707070"><a class="btn btn-primary2">대여불가</a></td>
+          <td style="background-color:#707070"><a onclick="alert('대여 불가합니다.')"; class="btn btn-primary2">대여불가</a></td>
         </tr>
         {% endif %}
       {% endfor %}
@@ -444,7 +444,7 @@
           <td style="background-color:#707070">상</td>
           {% endif %}
           <td style="background-color:#585858">{{cable.equipInfo}}</td>
-          <td style="background-color:#707070"><a class="btn btn-primary2">대여불가</a></td>
+          <td style="background-color:#707070"><a onclick="alert('대여 불가합니다.')"; class="btn btn-primary2">대여불가</a></td>
         </tr>
         {% endif %}
       {% endfor %}
@@ -503,7 +503,7 @@
                 <td style="background-color:#707070">상</td>
                 {% endif %}
                 <td style="background-color:#585858">{{tablet.equipInfo}}</td>
-                <td style="background-color:#707070"><a class="btn btn-primary2">대여불가</a></td>
+                <td style="background-color:#707070"><a onclick="alert('대여 불가합니다.')"; class="btn btn-primary2">대여불가</a></td>
               </tr>
               {% endif %}
             {% endfor %}
@@ -564,7 +564,7 @@
                 <td style="background-color:#707070">상</td>
                 {% endif %}
                 <td style="background-color:#585858">{{tabletpc.equipInfo}}</td>
-                <td style="background-color:#707070"><a class="btn btn-primary2">대여불가</a></td>
+                <td style="background-color:#707070"><a onclick="alert('대여 불가합니다.')"; class="btn btn-primary2">대여불가</a></td>
               </tr>
               {% endif %}
             {% endfor %}
@@ -623,7 +623,7 @@
                 <td style="background-color:#707070">상</td>
                 {% endif %}
                 <td style="background-color:#585858">{{cdrom.equipInfo}}</td>
-                <td style="background-color:#707070"><a class="btn btn-primary2">대여불가</a></td>
+                <td style="background-color:#707070"><a onclick="alert('대여 불가합니다.')"; class="btn btn-primary2">대여불가</a></td>
               </tr>
               {% endif %}
             {% endfor %}
@@ -683,7 +683,7 @@
                 <td style="background-color:#707070">상</td>
                 {% endif %}
                 <td style="background-color:#585858">{{lab.equipInfo}}</td>
-                <td style="background-color:#707070"><a class="btn btn-primary2">대여불가</a></td>
+                <td style="background-color:#707070"><a onclick="alert('대여 불가합니다.')"; class="btn btn-primary2">대여불가</a></td>
               </tr>
               {% endif %}
             {% endfor %}
