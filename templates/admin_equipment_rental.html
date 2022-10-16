@@ -207,7 +207,7 @@
         $("#myModal").modal('show');
         $.ajax({
         type:'POST',
-        url:'/admin_main/rent_detail_ajax/',
+        url:'/feat_admin/admin_main/rent_detail_ajax/',
         data: {'select_equipID': select_equipID, 'select_userName': select_userName, 'select_rentingDate': select_rentingDate, 'select_returningDate': select_returningDate  },
         success:function(res){
           console.log(res.studentID);
