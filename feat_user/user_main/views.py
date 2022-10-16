@@ -8,11 +8,11 @@ from datetime import datetime
 
 
 def user_main(request):
+    login_user_ID = request.user.username
+    Users = User.objects.filter(studentID=login_user_ID)
 
-    Users = User.objects.filter(studentID="20190811")
 
-
-    NOW_userID = Renting.objects.filter(userID="20190811")
+    NOW_userID = Renting.objects.filter(userID=login_user_ID)
     equipid = NOW_userID.values('equipID')
     equip = Equip.objects.filter(equipID__in=equipid)
     NOW_userID_list = list(NOW_userID.values())
