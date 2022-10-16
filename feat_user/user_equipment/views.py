@@ -2,6 +2,7 @@ from .models import Equip, EquipCode
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 
+import operator
 
 def equipinfo(request):
     notebooks = Equip.objects.filter(equipCode=0) #노트북
@@ -14,7 +15,10 @@ def equipinfo(request):
     tabletpcs = Equip.objects.filter(equipCode=7) #태블릿 PC
     webcams = Equip.objects.filter(equipCode=8) #웹캠
     tablets = Equip.objects.filter(equipCode=9) #태블릿
+
     
+
+   
     context = {'notebooks': notebooks, 'cables': cables, 'cdroms': cdroms, 'arduinos': arduinos, 'raspberrypis': raspberrypis, 'jols': jols, 'labs': labs, 'tabletpcs': tabletpcs, 'webcams': webcams, 'tablets': tablets}
     
     
