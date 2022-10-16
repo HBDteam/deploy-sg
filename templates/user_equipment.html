@@ -110,26 +110,45 @@
         <tbody>
   
           {% for notebook in notebooks %}
-          <tr>
             {% if notebook.isRented == 0 %}
-            <td>대여가능</td>
-            {% else %}
-            <td>대여중</td>
+            <tr>         
+              <td>대여가능</td>       
+              <td>{{notebook.equipID}}</td>          
+              {% if equip.status == 0 %}
+              <td>불량</td>
+              {% elif equip.status == 1 %}
+              <td>하</td>
+              {% elif equip.status == 2 %}
+              <td>중</td>
+              {% else %}
+              <td>상</td>
+              {% endif %}
+              <td>{{notebook.equipInfo}}</td>
+              <td><a onclick="location.href='http://127.0.0.1:8000/feat_user/user_rental/?equipid={{notebook.equipID}}'" class="btn btn-primary">대여 신청</a></td>
+            </tr>
             {% endif %}
-            <td>{{notebook.equipID}}</td>          
-            {% if equip.status == 0 %}
-            <td>불량</td>
-            {% elif equip.status == 1 %}
-            <td>하</td>
-            {% elif equip.status == 2 %}
-            <td>중</td>
-            {% else %}
-            <td>상</td>
-            {% endif %}
-            <td>{{notebook.equipInfo}}</td>
-            <td><a onclick="location.href='http://127.0.0.1:8000/feat_user/rental/?equipid={{notebook.equipID}}'" class="btn btn-primary">대여 신청</a></td>
-          </tr>
           {% endfor %}
+
+          {% for notebook in notebooks %}
+          {% if notebook.isRented == 1 %}
+          <tr>         
+            <td style="background-color:#707070">대여중</td>       
+            <td style="background-color:#585858">{{notebook.equipID}}</td>          
+            {% if equip.status == 0 %}
+            <td style="background-color:#707070">불량</td>
+            {% elif equip.status == 1 %}
+            <td style="background-color:#707070">하</td>
+            {% elif equip.status == 2 %}
+            <td style="background-color:#707070">중</td>
+            {% else %}
+            <td style="background-color:#707070">상</td>
+            {% endif %}
+            <td style="background-color:#585858">{{notebook.equipInfo}}</td>
+            <td style="background-color:#707070"><a class="btn btn-primary2">대여불가</a></td>
+          </tr>
+          {% endif %}
+        {% endfor %}
+            
         </tbody>
         </table>
         </div>
@@ -150,14 +169,10 @@
         </tr>
         </thead>
         <tbody>
-  
           {% for raspberrypi in raspberrypis %}
-          <tr>
-            {% if raspberrypi.isRented == 0 %}
-            <td>대여가능</td>
-            {% else %}
-            <td>대여중</td>
-            {% endif %}
+          {% if raspberrypi.isRented == 0 %}
+          <tr>         
+            <td>대여가능</td>       
             <td>{{raspberrypi.equipID}}</td>          
             {% if equip.status == 0 %}
             <td>불량</td>
@@ -169,9 +184,30 @@
             <td>상</td>
             {% endif %}
             <td>{{raspberrypi.equipInfo}}</td>
-            <td><a onclick="location.href='http://127.0.0.1:8000/feat_user/rental/?equipid={{raspberrypi.equipID}}'" class="btn btn-primary">대여 신청</a></td>
+            <td><a onclick="location.href='http://127.0.0.1:8000/feat_user/user_rental/?equipid={{notebook.equipID}}'" class="btn btn-primary">대여 신청</a></td>
           </tr>
-          {% endfor %}
+          {% endif %}
+        {% endfor %}
+
+        {% for raspberrypi in raspberrypis %}
+        {% if raspberrypi.isRented == 1 %}
+        <tr>         
+          <td style="background-color:#707070">대여중</td>       
+          <td style="background-color:#585858">{{raspberrypi.equipID}}</td>          
+          {% if equip.status == 0 %}
+          <td style="background-color:#707070">불량</td>
+          {% elif equip.status == 1 %}
+          <td style="background-color:#707070">하</td>
+          {% elif equip.status == 2 %}
+          <td style="background-color:#707070">중</td>
+          {% else %}
+          <td style="background-color:#707070">상</td>
+          {% endif %}
+          <td style="background-color:#585858">{{raspberrypi.equipInfo}}</td>
+          <td style="background-color:#707070"><a class="btn btn-primary2">대여불가</a></td>
+        </tr>
+        {% endif %}
+      {% endfor %}
         </tbody>
         </table>
         </div>
@@ -195,12 +231,9 @@
         <tbody>
   
           {% for arduino in arduinos %}
-          <tr>
-            {% if arduino.isRented == 0 %}
-            <td>대여가능</td>
-            {% else %}
-            <td>대여중</td>
-            {% endif %}
+          {% if arduino.isRented == 0 %}
+          <tr>         
+            <td>대여가능</td>       
             <td>{{arduino.equipID}}</td>          
             {% if equip.status == 0 %}
             <td>불량</td>
@@ -212,9 +245,30 @@
             <td>상</td>
             {% endif %}
             <td>{{arduino.equipInfo}}</td>
-            <td><a onclick="location.href='http://127.0.0.1:8000/feat_user/rental/?equipid={{arduino.equipID}}'" class="btn btn-primary">대여 신청</a></td>
+            <td><a onclick="location.href='http://127.0.0.1:8000/feat_user/user_rental/?equipid={{arduino.equipID}}'" class="btn btn-primary">대여 신청</a></td>
           </tr>
-          {% endfor %}
+          {% endif %}
+        {% endfor %}
+
+        {% for arduino in arduinos %}
+        {% if arduino.isRented == 1 %}
+        <tr>         
+          <td style="background-color:#707070">대여중</td>       
+          <td style="background-color:#585858">{{arduino.equipID}}</td>          
+          {% if equip.status == 0 %}
+          <td style="background-color:#707070">불량</td>
+          {% elif equip.status == 1 %}
+          <td style="background-color:#707070">하</td>
+          {% elif equip.status == 2 %}
+          <td style="background-color:#707070">중</td>
+          {% else %}
+          <td style="background-color:#707070">상</td>
+          {% endif %}
+          <td style="background-color:#585858">{{arduino.equipInfo}}</td>
+          <td style="background-color:#707070"><a class="btn btn-primary2">대여불가</a></td>
+        </tr>
+        {% endif %}
+      {% endfor %}
         </tbody>
         </table>
         </div>
@@ -237,12 +291,9 @@
         <tbody>
   
           {% for webcam in webcams %}
-          <tr>
-            {% if webcam.isRented == 0 %}
-            <td>대여가능</td>
-            {% else %}
-            <td>대여중</td>
-            {% endif %}
+          {% if webcam.isRented == 0 %}
+          <tr>         
+            <td>대여가능</td>       
             <td>{{webcam.equipID}}</td>          
             {% if equip.status == 0 %}
             <td>불량</td>
@@ -254,9 +305,30 @@
             <td>상</td>
             {% endif %}
             <td>{{webcam.equipInfo}}</td>
-            <td><a onclick="location.href='http://127.0.0.1:8000/feat_user/rental/?equipid={{webcam.equipID}}'" class="btn btn-primary">대여 신청</a></td>
+            <td><a onclick="location.href='http://127.0.0.1:8000/feat_user/user_rental/?equipid={{webcam.equipID}}'" class="btn btn-primary">대여 신청</a></td>
           </tr>
-          {% endfor %}
+          {% endif %}
+        {% endfor %}
+
+        {% for webcam in webcams %}
+        {% if webcam.isRented == 1 %}
+        <tr>         
+          <td style="background-color:#707070">대여중</td>       
+          <td style="background-color:#585858">{{webcam.equipID}}</td>          
+          {% if equip.status == 0 %}
+          <td style="background-color:#707070">불량</td>
+          {% elif equip.status == 1 %}
+          <td style="background-color:#707070">하</td>
+          {% elif equip.status == 2 %}
+          <td style="background-color:#707070">중</td>
+          {% else %}
+          <td style="background-color:#707070">상</td>
+          {% endif %}
+          <td style="background-color:#585858">{{webcam.equipInfo}}</td>
+          <td style="background-color:#707070"><a class="btn btn-primary2">대여불가</a></td>
+        </tr>
+        {% endif %}
+      {% endfor %}
         </tbody>
         </table>
         </div>
@@ -278,14 +350,10 @@
         </tr>
         </thead>
         <tbody>
-  
           {% for jol in jols %}
-          <tr>
-            {% if jol.isRented == 0 %}
-            <td>대여가능</td>
-            {% else %}
-            <td>대여중</td>
-            {% endif %}
+          {% if jol.isRented == 0 %}
+          <tr>         
+            <td>대여가능</td>       
             <td>{{jol.equipID}}</td>          
             {% if equip.status == 0 %}
             <td>불량</td>
@@ -297,9 +365,30 @@
             <td>상</td>
             {% endif %}
             <td>{{jol.equipInfo}}</td>
-            <td><a onclick="location.href='http://127.0.0.1:8000/feat_user/rental/?equipid={{jol.equipID}}'" class="btn btn-primary">대여 신청</a></td>
+            <td><a class="btn btn-primary">대여 신청</a></td>
           </tr>
-          {% endfor %}
+          {% endif %}
+        {% endfor %}
+
+        {% for jol in jols %}
+        {% if jol.isRented == 1 %}
+        <tr>         
+          <td style="background-color:#707070">대여중</td>       
+          <td style="background-color:#585858">{{jol.equipID}}</td>          
+          {% if equip.status == 0 %}
+          <td style="background-color:#707070">불량</td>
+          {% elif equip.status == 1 %}
+          <td style="background-color:#707070">하</td>
+          {% elif equip.status == 2 %}
+          <td style="background-color:#707070">중</td>
+          {% else %}
+          <td style="background-color:#707070">상</td>
+          {% endif %}
+          <td style="background-color:#585858">{{jol.equipInfo}}</td>
+          <td style="background-color:#707070"><a class="btn btn-primary2">대여불가</a></td>
+        </tr>
+        {% endif %}
+      {% endfor %}
         </tbody>
         </table>
         </div>
@@ -320,14 +409,10 @@
         </tr>
         </thead>
         <tbody>
-  
           {% for cable in cables %}
-          <tr>
-            {% if cable.isRented == 0 %}
-            <td>대여가능</td>
-            {% else %}
-            <td>대여중</td>
-            {% endif %}
+          {% if cable.isRented == 0 %}
+          <tr>         
+            <td>대여가능</td>       
             <td>{{cable.equipID}}</td>          
             {% if equip.status == 0 %}
             <td>불량</td>
@@ -339,9 +424,30 @@
             <td>상</td>
             {% endif %}
             <td>{{cable.equipInfo}}</td>
-            <td><a onclick="location.href='http://127.0.0.1:8000/feat_user/rental/?equipid={{cable.equipID}}'" class="btn btn-primary">대여 신청</a></td>
+            <td><a onclick="location.href='http://127.0.0.1:8000/feat_user/user_rental/?equipid={{cable.equipID}}'" class="btn btn-primary">대여 신청</a></td>
           </tr>
-          {% endfor %}
+          {% endif %}
+        {% endfor %}
+
+        {% for cable in cables %}
+        {% if cable.isRented == 1 %}
+        <tr>         
+          <td style="background-color:#707070">대여중</td>       
+          <td style="background-color:#585858">{{cable.equipID}}</td>          
+          {% if equip.status == 0 %}
+          <td style="background-color:#707070">불량</td>
+          {% elif equip.status == 1 %}
+          <td style="background-color:#707070">하</td>
+          {% elif equip.status == 2 %}
+          <td style="background-color:#707070">중</td>
+          {% else %}
+          <td style="background-color:#707070">상</td>
+          {% endif %}
+          <td style="background-color:#585858">{{cable.equipInfo}}</td>
+          <td style="background-color:#707070"><a class="btn btn-primary2">대여불가</a></td>
+        </tr>
+        {% endif %}
+      {% endfor %}
         </tbody>
         </table>
         </div>
@@ -362,27 +468,44 @@
           </tr>
           </thead>
           <tbody>
-    
-            {% for tablet in tablets %}
-            <tr>
-              {% if tablet.isRented == 0 %}
-              <td>대여가능</td>
-              {% else %}
-              <td>대여중</td>
+              {% for tablet in tablets %}
+                {% if tablet.isRented == 0 %}
+                <tr>         
+                  <td>대여가능</td>       
+                  <td>{{tablet.equipID}}</td>          
+                  {% if equip.status == 0 %}
+                  <td>불량</td>
+                  {% elif equip.status == 1 %}
+                  <td>하</td>
+                  {% elif equip.status == 2 %}
+                  <td>중</td>
+                  {% else %}
+                  <td>상</td>
+                  {% endif %}
+                  <td>{{tablet.equipInfo}}</td>
+                  <td><a onclick="location.href='http://127.0.0.1:8000/feat_user/user_rental/?equipid={{tablet.equipID}}'" class="btn btn-primary">대여 신청</a></td>
+                </tr>
+                {% endif %}
+              {% endfor %}
+
+              {% for tablet in tablets %}
+              {% if tablet.isRented == 1 %}
+              <tr>         
+                <td style="background-color:#707070">대여중</td>       
+                <td style="background-color:#585858">{{tablet.equipID}}</td>          
+                {% if equip.status == 0 %}
+                <td style="background-color:#707070">불량</td>
+                {% elif equip.status == 1 %}
+                <td style="background-color:#707070">하</td>
+                {% elif equip.status == 2 %}
+                <td style="background-color:#707070">중</td>
+                {% else %}
+                <td style="background-color:#707070">상</td>
+                {% endif %}
+                <td style="background-color:#585858">{{tablet.equipInfo}}</td>
+                <td style="background-color:#707070"><a class="btn btn-primary2">대여불가</a></td>
+              </tr>
               {% endif %}
-              <td>{{tablet.equipID}}</td>          
-              {% if equip.status == 0 %}
-              <td>불량</td>
-              {% elif equip.status == 1 %}
-              <td>하</td>
-              {% elif equip.status == 2 %}
-              <td>중</td>
-              {% else %}
-              <td>상</td>
-              {% endif %}
-              <td>{{tablet.equipInfo}}</td>
-              <td><a onclick="location.href='http://127.0.0.1:8000/feat_user/rental/?equipid={{tablet.equipID}}'" class="btn btn-primary">대여 신청</a></td>
-            </tr>
             {% endfor %}
           </tbody>
           </table>
@@ -406,28 +529,45 @@
         </tr>
         </thead>
         <tbody>
-  
           {% for tabletpc in tabletpcs %}
-          <tr>
-            {% if tabletpc.isRented == 0 %}
-            <td>대여가능</td>
-            {% else %}
-            <td>대여중</td>
-            {% endif %}
-            <td>{{tabletpc.equipID}}</td>          
-            {% if equip.status == 0 %}
-            <td>불량</td>
-            {% elif equip.status == 1 %}
-            <td>하</td>
-            {% elif equip.status == 2 %}
-            <td>중</td>
-            {% else %}
-            <td>상</td>
-            {% endif %}
-            <td>{{tabletpc.equipInfo}}</td>
-            <td><a onclick="location.href='http://127.0.0.1:8000/feat_user/rental/?equipid={{tabletpc.equipID}}'" class="btn btn-primary">대여 신청</a></td>
-          </tr>
-          {% endfor %}
+                {% if tabletpc.isRented == 0 %}
+                <tr>         
+                  <td>대여가능</td>       
+                  <td>{{tabletpc.equipID}}</td>          
+                  {% if equip.status == 0 %}
+                  <td>불량</td>
+                  {% elif equip.status == 1 %}
+                  <td>하</td>
+                  {% elif equip.status == 2 %}
+                  <td>중</td>
+                  {% else %}
+                  <td>상</td>
+                  {% endif %}
+                  <td>{{tabletpc.equipInfo}}</td>
+                  <td><a onclick="location.href='http://127.0.0.1:8000/feat_user/user_rental/?equipid={{tabletpc.equipID}}'" class="btn btn-primary">대여 신청</a></td>
+                </tr>
+                {% endif %}
+              {% endfor %}
+
+              {% for tabletpc in tabletpcs %}
+              {% if tabletpc.isRented == 1 %}
+              <tr>         
+                <td style="background-color:#707070">대여중</td>       
+                <td style="background-color:#585858">{{tabletpc.equipID}}</td>          
+                {% if equip.status == 0 %}
+                <td style="background-color:#707070">불량</td>
+                {% elif equip.status == 1 %}
+                <td style="background-color:#707070">하</td>
+                {% elif equip.status == 2 %}
+                <td style="background-color:#707070">중</td>
+                {% else %}
+                <td style="background-color:#707070">상</td>
+                {% endif %}
+                <td style="background-color:#585858">{{tabletpc.equipInfo}}</td>
+                <td style="background-color:#707070"><a class="btn btn-primary2">대여불가</a></td>
+              </tr>
+              {% endif %}
+            {% endfor %}
         </tbody>
         </table>
         </div>
@@ -448,28 +588,45 @@
         </tr>
         </thead>
         <tbody>
-  
           {% for cdrom in cdroms %}
-          <tr>
-            {% if cdrom.isRented == 0 %}
-            <td>대여가능</td>
-            {% else %}
-            <td>대여중</td>
-            {% endif %}
-            <td>{{cdrom.equipID}}</td>          
-            {% if equip.status == 0 %}
-            <td>불량</td>
-            {% elif equip.status == 1 %}
-            <td>하</td>
-            {% elif equip.status == 2 %}
-            <td>중</td>
-            {% else %}
-            <td>상</td>
-            {% endif %}
-            <td>{{cdrom.equipInfo}}</td>
-            <td><a onclick="location.href='http://127.0.0.1:8000/feat_user/rental/?equipid={{cdrom.equipID}}'" class="btn btn-primary">대여 신청</a></td>
-          </tr>
-          {% endfor %}
+                {% if cdrom.isRented == 0 %}
+                <tr>         
+                  <td>대여가능</td>       
+                  <td>{{cdrom.equipID}}</td>          
+                  {% if equip.status == 0 %}
+                  <td>불량</td>
+                  {% elif equip.status == 1 %}
+                  <td>하</td>
+                  {% elif equip.status == 2 %}
+                  <td>중</td>
+                  {% else %}
+                  <td>상</td>
+                  {% endif %}
+                  <td>{{cdrom.equipInfo}}</td>
+                  <td><a onclick="location.href='http://127.0.0.1:8000/feat_user/user_rental/?equipid={{cdrom.equipID}}'" class="btn btn-primary">대여 신청</a></td>
+                </tr>
+                {% endif %}
+              {% endfor %}
+
+              {% for cdrom in cdroms %}
+              {% if cdrom.isRented == 1 %}
+              <tr>         
+                <td style="background-color:#707070">대여중</td>       
+                <td style="background-color:#585858">{{cdrom.equipID}}</td>          
+                {% if equip.status == 0 %}
+                <td style="background-color:#707070">불량</td>
+                {% elif equip.status == 1 %}
+                <td style="background-color:#707070">하</td>
+                {% elif equip.status == 2 %}
+                <td style="background-color:#707070">중</td>
+                {% else %}
+                <td style="background-color:#707070">상</td>
+                {% endif %}
+                <td style="background-color:#585858">{{cdrom.equipInfo}}</td>
+                <td style="background-color:#707070"><a class="btn btn-primary2">대여불가</a></td>
+              </tr>
+              {% endif %}
+            {% endfor %}
         </tbody>
         </table>
         </div>
@@ -491,28 +648,45 @@
         </tr>
         </thead>
         <tbody>
-  
           {% for lab in labs %}
-          <tr>
-            {% if lab.isRented == 0 %}
-            <td>대여가능</td>
-            {% else %}
-            <td>대여중</td>
-            {% endif %}
-            <td>{{lab.equipID}}</td>          
-            {% if equip.status == 0 %}
-            <td>불량</td>
-            {% elif equip.status == 1 %}
-            <td>하</td>
-            {% elif equip.status == 2 %}
-            <td>중</td>
-            {% else %}
-            <td>상</td>
-            {% endif %}
-            <td>{{lab.equipInfo}}</td>
-            <td><a onclick="location.href='http://127.0.0.1:8000/feat_user/rental/?equipid={{lab.equipID}}'" class="btn btn-primary">대여 신청</a></td>
-          </tr>
-          {% endfor %}
+                {% if lab.isRented == 0 %}
+                <tr>         
+                  <td>대여가능</td>       
+                  <td>{{lab.equipID}}</td>          
+                  {% if equip.status == 0 %}
+                  <td>불량</td>
+                  {% elif equip.status == 1 %}
+                  <td>하</td>
+                  {% elif equip.status == 2 %}
+                  <td>중</td>
+                  {% else %}
+                  <td>상</td>
+                  {% endif %}
+                  <td>{{lab.equipInfo}}</td>
+                  <td><a onclick="location.href='http://127.0.0.1:8000/feat_user/user_rental/?equipid={{lab.equipID}}'" class="btn btn-primary">대여 신청</a></td>
+                </tr>
+                {% endif %}
+              {% endfor %}
+
+              {% for lab in labs %}
+              {% if lab.isRented == 1 %}
+              <tr>         
+                <td style="background-color:#707070">대여중</td>       
+                <td style="background-color:#585858">{{lab.equipID}}</td>          
+                {% if equip.status == 0 %}
+                <td style="background-color:#707070">불량</td>
+                {% elif equip.status == 1 %}
+                <td style="background-color:#707070">하</td>
+                {% elif equip.status == 2 %}
+                <td style="background-color:#707070">중</td>
+                {% else %}
+                <td style="background-color:#707070">상</td>
+                {% endif %}
+                <td style="background-color:#585858">{{lab.equipInfo}}</td>
+                <td style="background-color:#707070"><a class="btn btn-primary2">대여불가</a></td>
+              </tr>
+              {% endif %}
+            {% endfor %}
         </tbody>
         </table>
         </div>

@@ -8346,6 +8346,22 @@
       background: rgba(255, 153, 0);
       border-color: rgba(255, 153, 0);
       color: #fff; }
+
+      .btn.btn-primary2{
+        background: #707070;
+        border-color: white;
+        color: #fff; }
+
+        .btn.btn-primary2:hover, .btn.btn-primary:focus {
+          border-color: black !important;
+          background: black !important; }
+        .btn.btn-primary2.btn-link {
+          background: transparent;
+          color: #fff;
+          border: none;
+          -webkit-box-shadow: none;
+          box-shadow: none; }
+
       .btn.btn-primary:hover, .btn.btn-primary:focus {
         border-color: #5305c8 !important;
         background: #5305c8 !important; }
