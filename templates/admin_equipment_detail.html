@@ -72,7 +72,7 @@
             </div>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="http://127.0.0.1:8000/feat_admin/admin_equipment_history/7">대여 내역</a>
+            <a class="nav-link" href="http://127.0.0.1:8000/feat_admin/admin_equipment_history/">대여 내역</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -161,7 +161,7 @@
                 <td>상</td>
                 {% endif %}
                 <td>{{equip.equipInfo}}</td>
-                <td><button class="btn btn-primary" onclick="location.href='http://127.0.0.1:8000/admin_equipment_manage/?equipid={{ equip.equipID }}'">수정</button></td>
+                <td><button class="btn btn-primary" onclick="location.href='http://127.0.0.1:8000/feat_admin/admin_equipment_manage/?equipid={{ equip.equipID }}'">수정</button></td>
               </tr>
               {% endfor %}
               </tbody>
