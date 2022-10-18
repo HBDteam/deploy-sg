@@ -194,7 +194,7 @@
           $(".modal-body").append(`<p>대여자 이름: ${res.studentName}</p>`);
           $(".modal-body").append(`<p>대여자 이메일: ${res.studentEmail}</p>`);
           $(".modal-body").append(`<p>대여자 핸드폰 번호: ${res.studentPhonenum}</p>`);
-          $(".modal-body").append(`<p>장비 코드: ${select_equipID}</p>`);
+          $(".modal-body").append(`<p class="equipid">장비 코드: ${select_equipID}</p>`);
           $(".modal-body").append(`<p>대여 날짜: ${select_rentingDate}</p>`);
           $(".modal-body").append(`<p>반납 날짜: ${select_returningDate}</p>`);
           $(".modal-body").append(`<input id="qrscan" name='qrscan'  type="text" class="input" data-type="text">`);
@@ -204,6 +204,22 @@
         }
         });
 
+        /*$("#savebtn").click(function(){
+          var EqID = select_equipID;
+          $.ajax({
+          type:'POST',
+          url:'/feat_admin/admin_main/return_ajax/',
+          data: {'select_equipID': select_equipID},
+          success:function(res){
+            console.log(res.studentID);
+          },
+          error : function(xhr,errmsg,err) {
+          console.log(xhr.status + ": " + xhr.responseText); 
+          }
+          });
+          alert('반납이 완료되었습니다.')
+          $("#myModal").modal('hide');
+        });*/
 
     });
     $("#closebtn").click(function(){
@@ -212,6 +228,6 @@
 
     $("#savebtn").click(function(){
       alert('반납이 완료되었습니다.')
-        $("#myModal").modal('hide');
+      $("#myModal").modal('hide');
     });
 </script>
