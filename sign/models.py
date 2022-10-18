@@ -11,6 +11,9 @@ class User(models.Model):
     phoneNum = models.CharField(max_length=11, null=False)
     isEnrolled = models.BooleanField(default=0, null=False)
 
+    def __str__(self):
+        return self.studentID
+
 
 class Manager(models.Model):
     mID = models.CharField(max_length=8, primary_key=True, null=False)
