@@ -32,4 +32,4 @@ def Modify(request):
             equip.status = request.POST['status']
             equip.equipInfo = request.POST['equipInfo']
             equip.save()
-    return redirect('http://127.0.0.1:8000/admin_equipment_detail/', {'alert': '수정되었습니다'})
+    return redirect('http://127.0.0.1:8000/feat_admin/admin_equipment_detail/', {'alert': '수정되었습니다'})

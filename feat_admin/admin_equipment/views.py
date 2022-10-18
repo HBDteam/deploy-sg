@@ -19,4 +19,4 @@ def EquipRegister(request):
         equipInfo = request.POST['equipInfo']
         newEquip = Equip.objects.create(equipCode=EquipCode.objects.get(equipCode=equipcode), equipID=equipID,
                                         receivedDate=receivedDate, isRented=isRented, status=status, equipInfo=equipInfo)
-        return redirect('http://127.0.0.1:8000/admin_equipment_detail/', {'alert': '수정되었습니다'})
+        return redirect('http://127.0.0.1:8000/feat_admin/admin_equipment_detail/', {'alert': '수정되었습니다'})
