@@ -26,7 +26,6 @@ def aichatbot(request):
 class FindAnswer:
     def __init__(self, db):
         self.db = db
-        print('Enter        FindAnswer db -------' )
 
     # 검색 쿼리 생성 
     def _make_query(self, intent_name, ner_tags):
@@ -36,6 +35,14 @@ class FindAnswer:
              sql = sql + " where intent='{}' ".format(intent_name)
              print('검색 쿼리 생성1-1------------------------------------')
              print("111111111. " + sql)
+             if (len(ner_tags) > 0):
+                where += 'and ('
+                for ne in ner_tags:
+                    where += " ner like '%{}%' or ".format(ne)
+                where = where[:-3] + ')'
+             sql = sql + where             
+             print("make query : " + sql)    
+
         elif intent_name != None and ner_tags != None:    # intent와 ner이 있다면
              where = ' where intent="%s" ' % intent_name
              print('검색 쿼리 생성1-2------------------------------------')
@@ -56,17 +63,14 @@ class FindAnswer:
 
     # 답변 검색
     def search(self, intent_name, ner_tags):
-        print('--------search-------------------------------')
-       
+       #########여기부터 하면 될듯
         # 의도명, 개체명으로 답변 검색
         sql = self._make_query(intent_name, ner_tags)
-        print('search sql : ' + sql)
+        print('-----------search sql : ' + sql)
 
-        ############################ 6/4 여기부터 수정하면 됨
         cursor = connection.cursor()    # 디비 연결
         answer = self.db.execute(sql)    # execute는 항상 선행되어야함, 쿼리문 DB로 보냄
         datas = self.db.cursor.fetchall(answer) # 쿼리 실행한 모든 결과 가져옴
-        print(datas) # 데이터베이스에 있는거 가져옴
         print('answer : ' + answer )
 
         # 검색되는 답변이 없으면 의도명만 검색
@@ -116,10 +120,8 @@ def aiAnswer_ajax(query):
 
         # 실제 답변 검색
         try: 
-            print('!!!!!!!!!!!!!!!!!!444444444')
             f = FindAnswer(db)
-            print('!!!!!!!!!!!!!!!!!!55555555')
-            answer_text, answer_image = f.search(intent_name, ner_tags)
+            answer_text = f.search(intent_name)
             print('!!!!!!!!!!!!!!!!!!6666666666')
             answer = f.tag_to_word(predicts, answer_text) 
             print('!!!!!!!!!!!!!!!!!!777777777')
