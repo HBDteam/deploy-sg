@@ -5,37 +5,45 @@
   <meta charset="UTF-8">
   <title>AI챗봇 성공이</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
       <link rel="stylesheet" href="../../static/css/chatbot.css">
       <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-
 </head>
+
 
 <body>
 
-  <!-- Currently BROKEN!
-Working prototype on meesrutten.me :) -->
 <main class="page__main">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Gaegu&family=Gamja+Flower&display=swap" rel="stylesheet">
-    <div class="block--background">
+  
+
+
+  
+  <div class="block--background">
+    <div class="block--header"> 
+      <h2> 성결대 컴퓨터공학과 AI챗봇 </h2>
+      <h1> 성공이</h1>
+    </div>
       <div class="chatbot__overview">
         <ul class="chatlist">
           <li class="bot__output bot__output--standard">안녕! 나는 성결대 AI챗봇 성공이야😘</li>
         </ul>
-     
       </div>
+
       {% csrf_token %}
+
       <div class="chatbox-area">
         <form action="" id="chatform" method = "POST">
             <textarea placeholder="성공이에게 질문해주세요" id = "txt" class="chatbox" name="chatbox" resize: "none" minlength="2"></textarea>
             <input class="submit-button" type="submit" value="send" onclick="send_data();">
         </form>
       </div>
-			    <div class="block--background"></div>
+        <div class="block--background"></div>
+
   </link>
 
+  </div>
 </main>
 
 </body>
