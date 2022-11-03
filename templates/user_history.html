@@ -34,11 +34,11 @@
 
     .sub_title1{
       padding-top: 10px;
-      padding-bottom: 1000px;
+      padding-bottom: 500px;
     }
 
     .sub_title2{
-      padding-top: 5px;
+      padding-top: 0;
       height: 800px;
     }
 
@@ -144,7 +144,7 @@
               </tr>
             </thead>
             <tbody>
-                {% for now_userID in NOW_userID_list %}
+                {% for now_userID in now_rentlist %}
                 <tr>
                   <td>{{now_userID.equipID_id}}</td>
                   <td>{{now_userID.equipInfo}}</td>
@@ -179,7 +179,7 @@
               </tr>
             </thead>
             <tbody>
-                {% for past_userID in NOW_userID_list %}
+                {% for past_userID in pre_rentlist %}
                 <tr>
                   <td>{{past_userID.equipID_id}}</td>
                   <td>{{past_userID.equipInfo}}</td>
