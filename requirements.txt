@@ -1,0 +1,10 @@
+python==3.8
+django=3.0
+pymysql
+mysqlclient
+argon2-cffi
+pytz
+config
+django-config
+konlpy
+tensorflow
