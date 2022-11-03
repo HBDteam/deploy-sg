@@ -1,8 +1,8 @@
-/* https://meyerweb.com/eric/tools/css/reset/
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-@import url("https://fonts.googleapis.com/css?family=Droid+Sans");
+/* 메인 색상 : rgba(255, 153, 0) , rgb(255, 115, 0) */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Yeon+Sung&display=swap');
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -62,23 +62,38 @@ table {
 
 body {
   overflow-x: hidden;
-  font-family: 'Gaegu', cursive;
+  font-family:'Yeon Sung', cursive;
   font-weight: 400;
   font-size: 17px;
   font-size: 1.1em;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   line-height: 1.0;
-  background-color: #363636;
+  background-color: rgba(255, 153, 0);
+}
+
+.block--header {
+  font-family:'Do Hyeon', sans-serif;
+  color: rgb(255, 115, 0);
+  display: flex;
+  flex-flow: column;
+  align-content: space-between;
+  height: 3vh;
+  min-height: 3vh;
+  max-height: 7vh;
+  margin: 0 auto;
+  padding: 0.55em;
+  font-size: 4em;
+  text-align: right;
 }
 
 .chatbot__overview {
-  background-color: rgba(40,57,101,.9);
+  background-color: rgba(255, 153, 0);
   display: flex;
   flex-flow: row nowrap;
   align-content: space-between;
-  min-height: 85vh;
-  max-height: 100vh;
+  min-height: 76vh;
+  max-height: 96vh;
   margin: 0 auto;
   padding: 0.8em;
   padding-bottom: 0;
@@ -121,7 +136,7 @@ body {
 .chatlist .bot__output {
   align-self: flex-start;
   box-shadow: -1px 1px 2px #666;
-  border-top: 6px solid rgba(113, 132, 182, 0.9);
+  border-top: 6px solid rgba(255, 81, 0);
   will-change: auto;
   height: auto;
   opacity: 0;
@@ -176,11 +191,14 @@ body {
     opacity: 1;
   }
 }
+
 .block--background {
-  background-color: rgba(40,57,101,.9);
+  background-color: rgba(255, 153, 0);
   width: 100vw;
   height: 100vh;
 }
+
+
 
 #chatform {
   display: flex;
@@ -190,7 +208,7 @@ body {
   margin: 0 auto;
   padding-top: 1em;
   font-size: 1em;
-  font-family: 'Gaegu', cursive;
+  font-family: 'Yeon Sung', cursive;
 }
 @media screen and (max-width: 29em) {
   #chatform {
@@ -218,7 +236,7 @@ textarea[name="chatbox"] {
   margin: 0;
   padding: 0.8em;
   border-radius: 8px 0px 0px 8px;
-  font-family: 'Gaegu', cursive;
+  font-family: 'Yeon Sung', cursive;
   font-size: 1em;
 }
 /* 입력칸 눌렀을 때 */
@@ -250,19 +268,19 @@ input[type="submit"] {
   border: 0;
   width: 25%;
   margin: 0;
-  background-color: rgba(80, 97, 139, 0.9);
+  background-color: rgba(255, 81, 0, 0.9);
   color: #fff;
   border: 2px solid rgb(255, 255, 255);
   border-left: 0;
   border-radius: 0 8px 8px 0;
-  font-family: 'Gaegu', cursive;
+  font-family: 'Yeon Sung', cursive;
   font-size: 1.2em;
   transition: 200ms all ease-in;
 }
 input[type="submit"]:hover {
   background-color: rgb(255, 255, 255);
   border-color: rgb(255, 255, 255);
-  color: rgba(33, 50, 94, 0.9);
+  color: rgba(255, 153, 0);
 }
 
 .input__nested-list {
