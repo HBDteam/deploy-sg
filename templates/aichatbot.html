@@ -29,9 +29,6 @@
         <ul class="chatlist">
           <li class="bot__output bot__output--standard">안녕! 나는 성결대 AI챗봇 성공이야😘</li>
         </ul>
-        <ul class="chatlist">
-          <li class="bot__output bot__output--standard">내가 있는 서버에 장애가 생겨서 현재 이용은 불가해 ㅠㅠ 금방 복구할게!</li>
-        </ul>
       </div>
 
       {% csrf_token %}
@@ -170,7 +167,7 @@ var checkInput = function(input) {
   
   //When input is not in possibleInput
   if(hasCorrectInput == false){
-    console.log("개빡치네 왜안돼");
+    console.log("안돼 ㅠㅠ");
     //unknownCommand(unkwnCommReaction);
     hasCorrectInput = true;
   }
@@ -252,14 +249,24 @@ function commandReset(e){
 }
 
 
-
 // fixed 질문
 var possibleInput = {
   // "hlep" : this.help(),
+  "노트북" : function(){
+    responseText("노트북 종류가 여러 개있어! 맞는 사양 골라가면 될 것같아😁");
+    responseText("자세한건 Product페이지에 가면 볼 수있어!");
+    commandReset(0);
+    return
+    },
+  "실습장비" : function(){
+    responseText("실습장비 어떤게 필요해?");
+    commandReset(0);
+    return
+    },
   "도와줘" : function(){
-    responseText("밑의 입력칸에 성공이에게 물어보고 싶은걸 적어주세요!")
-    responseText("예를 들자면, '성공아 지금 비어있는 실습실 있어?' 이렇게요 ㅎㅎ")
-    responseText("만약 사용중에 문제가 있다면 @sunggong 으로 연락주세요😉")
+    responseText("밑의 입력칸에 성공이에게 물어보고 싶은걸 적어주세요!");
+    responseText("예를 들자면, '성공아 지금 비어있는 실습실 있어?' 이렇게요 ㅎㅎ");
+    responseText("만약 사용중에 문제가 있다면 @sunggong 으로 연락주세요😉");
     commandReset(0);
     return
     },
@@ -271,7 +278,6 @@ var possibleInput = {
   
 	"hii" : function(){
     responseText("어떤걸 도와줄까?");
-   
     commandReset(2);
     return
     },
