@@ -1,5 +1,5 @@
 python==3.8
-django=3.0
+django==3.0
 pymysql
 mysqlclient
 argon2-cffi
