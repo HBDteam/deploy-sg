@@ -9,8 +9,20 @@
     <link rel="stylesheet" href="../../static/css/user_main_sidevar.css">
     <link rel="stylesheet" href="../../static/css/user_main.css">
     <style>
+    
+      table {
+        width: 500px;
+        height: 300px;
+      }
+      td .a{
+        text-align: center;
+      }
+
+      th {
+        text-align: left;
+      }
         
-        </style>
+    </style>
 </head>
 <body id="body-pd">
     <div class="l-navbar" id="navbar">
@@ -247,11 +259,26 @@
 
             <div class="jumbotron">
                 <div class="jum_title">
-                    {% for now_userID in NOW_userID_list %}
-                    <ul>
-                        <li> {{now_userID.equipInfo}} </li>
-                    </ul>
-                    {% endfor %}
+                    <table>
+                        <thead>
+                            <th>대여 품목</th>
+                            <th>남은 기간</th>
+                        </thead>
+                        <tbody>
+                            {% for now_userID in now_rentlist %}   
+                            <tr>
+                                <td>{{now_userID.equipInfo}}</td>
+                                <td class="a">{{now_userID.dday}}일</td>
+                            </tr>
+                            {% endfor %} 
+                        </tbody>
+                    </table>
+                     
+                    <!--<ul>
+                        {% for now_userID in now_rentlist %}       
+                        <li> 대여 품목 : {{now_userID.equipInfo}} 남은 기간 : {{now_userID.dday}}일 </li>
+                        {% endfor %}       
+                    </ul> -->
                 </div>
                 
 

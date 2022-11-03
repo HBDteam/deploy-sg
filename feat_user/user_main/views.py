@@ -4,7 +4,9 @@ from tkinter import W
 from .models import Equip, EquipCode, User, Renting
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
-from datetime import datetime
+import datetime
+from operator import itemgetter
+
 
 
 def user_main(request):
@@ -170,16 +172,35 @@ def user_main(request):
     
         
 
-    #print(len(equip_list))
+
+    #대여내역출력
     for i in range(len(equip_list)):
         NOW_userID_list[i]['equipInfo'] = equip_list[i]['equipInfo']
 
-   
-   
-   #now = int(datetime.today().strftime('%Y%m%d'))
+    
+    now_rentlist = []
+
+    print(NOW_userID_list)
+
+    now = datetime.datetime.today().strftime('%Y%m%d')
+
+
+    for i in range(len(NOW_userID_list)):
+        a = NOW_userID_list[i]['returningDate'].strftime('%Y%m%d')
+        if a > now:
+            now_rentlist.append(NOW_userID_list[i])
+
+    now_rentlist.sort(key=itemgetter('returningDate'))
+
+
+
+    for i in range(len(now_rentlist)):
+        reday = now_rentlist[i]['returningDate'].strftime('%Y%m%d')
+        d_day = int(reday) - int(now)
+        now_rentlist[i]['dday'] = d_day
     
 
-    context = {'Users' : Users, 'NOW_userID_list' : NOW_userID_list, 'goods' : goods}
+    context = {'Users' : Users, 'now_rentlist' : now_rentlist, 'goods' : goods}
 
     
     return render(request, 'user_main.html', context)
