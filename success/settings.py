@@ -10,7 +10,7 @@ SECRET_KEY = 'django-insecure-4gahey=5csw-5bdt=z864_n7bet@plu*vq2@*@w8jq8*e77kd&
 
 DEBUG = True
 
-ALLOWED_HOSTS = ["0.0.0.0:8000" , "127.0.0.1" ,"localhost", ".ap-northeast-2.compute.amazonaws.com"]
+ALLOWED_HOSTS = ["0.0.0.0:8000" , "127.0.0.1" ,"localhost", ".ap-northeast-2.compute.amazonaws.com", ".sunggongee.shop"]
 
 
 # Application definition
