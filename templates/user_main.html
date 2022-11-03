@@ -30,32 +30,32 @@
             <div>
                 <div class="nav__brand">
                     <ion-icon name="menu-outline" class="nav__toggle" id="nav-toggle"></ion-icon>
-                    <a href="http://127.0.0.1:8000/feat_user/user_main" class="nav__logo">Please, SungGong!</a>
+                    <a href="http://www.sunggongee.shop/feat_user/user_main" class="nav__logo">Please, SungGong!</a>
                 </div>
                 <div class="nav__list">
-                    <a href="http://127.0.0.1:8000/feat_user/user_main" class="nav__link">
+                    <a href="http://www.sunggongee.shop/feat_user/user_main" class="nav__link">
                         <ion-icon name="storefront-outline" class="nav__icon"></ion-icon>
                         <span class="nav_name">HOME</span>
                     </a>
 
-                    <a href="http://127.0.0.1:8000/feat_user/user_mypage/" class="nav__link">
+                    <a href="http://www.sunggongee.shop/feat_user/user_mypage/" class="nav__link">
                         <ion-icon name="person-circle-outline" class="nav__icon"></ion-icon>
                         <span class="nav_name">MYPAGE</span>
                     </a>
 
-                    <a href="http://127.0.0.1:8000/feat_user/user_equipment/" class="nav__link collapse">
+                    <a href="http://www.sunggongee.shop/feat_user/user_equipment/" class="nav__link collapse">
                         <ion-icon name="construct-outline" class="nav__icon"></ion-icon>
                         <span class="nav_name">PRODUCT</span>
 
                         <ion-icon name="chevron-down-outline" class="collapse__link" ></ion-icon>
 
                         <ul class="collapse__menu" >
-                            <a href="http://127.0.0.1:8000/feat_user/user_equipment/#notebook_equip" class="collapse__sublink">Equipment</a>
-                            <a href="http://127.0.0.1:8000/feat_user/user_equipment/#lab_equip" class="collapse__sublink">Lab</a>
+                            <a href="http://www.sunggongee.shop/feat_user/user_equipment/#notebook_equip" class="collapse__sublink">Equipment</a>
+                            <a href="http://www.sunggongee.shop/feat_user/user_equipment/#lab_equip" class="collapse__sublink">Lab</a>
                         </ul>
                     </a>
 
-                    <a href="http://127.0.0.1:8000/feat_user/user_history/" class="nav__link">
+                    <a href="http://www.sunggongee.shop/feat_user/user_history/" class="nav__link">
                         <ion-icon name="receipt-outline" class="nav__icon"></ion-icon>
                         <span class="nav_name">HISTORY</span>
                     </a>
@@ -67,7 +67,7 @@
                     
                     
                 </div>
-                <a href = "http://127.0.0.1:8000/sign/logout/" class="nav__link">
+                <a href = "http://www.sunggongee.shop/sign/logout/" class="nav__link">
                     <ion-icon name="log-out-outline" class="nav__icon"></ion-icon>
                     <span class="nav_name">LOG OUT</span>
                 </a>
@@ -91,34 +91,34 @@
                 <ul class="rank_list">
                     <li>     
                         {% if goods.0.0 == "노트북" %}   
-                        <a href = "http://127.0.0.1:8000/feat_user/user_equipment/#notebook_equip">
+                        <a href = "http://www.sunggongee.shop/feat_user/user_equipment/#notebook_equip">
                             <img src="../../static/img/lggram_img.PNG" alt> 
                         {% elif goods.0.0 == "케이블" %}
-                        <a href = "http://127.0.0.1:8000/feat_user/user_equipment/#cable_equip">
+                        <a href = "http://www.sunggongee.shop/feat_user/user_equipment/#cable_equip">
                             <img src="../../static/img/hdmi_img.PNG" alt> 
                         {% elif goods.0.0 == "CD-ROM" %}
-                        <a href = "http://127.0.0.1:8000/feat_user/user_equipment/#cdrom_equip">
+                        <a href = "http://www.sunggongee.shop/feat_user/user_equipment/#cdrom_equip">
                             <img src="../../static/img/cd_rom_img.PNG" alt> 
                         {% elif goods.0.0 == "아두이노 키트" %}
-                        <a href = "http://127.0.0.1:8000/feat_user/user_equipment/#arduino_equip">
+                        <a href = "http://www.sunggongee.shop/feat_user/user_equipment/#arduino_equip">
                             <img src="../../static/img/arduino_img.PNG" alt> 
                         {% elif goods.0.0 == "라즈베리파이" %}
-                        <a href = "http://127.0.0.1:8000/feat_user/user_equipment/#raspberrypi_equip">
+                        <a href = "http://www.sunggongee.shop/feat_user/user_equipment/#raspberrypi_equip">
                             <img src="../../static/img/rasberrypi_img.PNG" alt> 
                         {% elif goods.0.0 == "졸업작품 물품" %}
-                        <a href = "http://127.0.0.1:8000/feat_user/user_equipment/#gradue_equip">
+                        <a href = "http://www.sunggongee.shop/feat_user/user_equipment/#gradue_equip">
                             <img src="../../static/img/gradu_img.PNG" alt> 
                         {% elif goods.0.0 == "실습실" %}
-                        <a href = "http://127.0.0.1:8000/feat_user/user_equipment/#lab_equip">
+                        <a href = "http://www.sunggongee.shop/feat_user/user_equipment/#lab_equip">
                             <img src="../../static/img/lab_img.PNG" alt> 
                         {% elif goods.0.0 == "태블릿PC" %}
-                        <a href = "http://127.0.0.1:8000/feat_user/user_equipment/#tabletpc_equip">
+                        <a href = "http://www.sunggongee.shop/feat_user/user_equipment/#tabletpc_equip">
                             <img src="../../static/img/tabletpc_img.PNG" alt>
                         {% elif goods.0.0 == "웹캠" %}
-                        <a href = "http://127.0.0.1:8000/feat_user/user_equipment/#webcam_equip">
+                        <a href = "http://www.sunggongee.shop/feat_user/user_equipment/#webcam_equip">
                             <img src="../../static/img/webcam_img.PNG" alt> 
                         {% else %}
-                        <a href = "http://127.0.0.1:8000/feat_user/user_equipment/#tablet_equip">
+                        <a href = "http://www.sunggongee.shop/feat_user/user_equipment/#tablet_equip">
                             <img src="../../static/img/tablet_img.PNG" alt>
                         {% endif %}
                             <p>{{goods.0.0}}</p>                          
@@ -127,34 +127,34 @@
                     </li>
                     <li>
                         {% if goods.1.0 == "노트북" %}   
-                        <a href = "http://127.0.0.1:8000/feat_user/user_equipment/#notebook_equip">
+                        <a href = "http://www.sunggongee.shop/feat_user/user_equipment/#notebook_equip">
                             <img src="../../static/img/lggram_img.PNG" alt> 
                         {% elif goods.1.0 == "케이블" %}
-                        <a href = "http://127.0.0.1:8000/feat_user/user_equipment/#cable_equip">
+                        <a href = "http://www.sunggongee.shop/feat_user/user_equipment/#cable_equip">
                             <img src="../../static/img/hdmi_img.PNG" alt> 
                         {% elif goods.1.0 == "CD-ROM" %}
-                        <a href = "http://127.0.0.1:8000/feat_user/user_equipment/#cdrom_equip">
+                        <a href = "http://www.sunggongee.shop/feat_user/user_equipment/#cdrom_equip">
                             <img src="../../static/img/cd_rom_img.PNG" alt> 
                         {% elif goods.1.0 == "아두이노 키트" %}
-                        <a href = "http://127.0.0.1:8000/feat_user/user_equipment/#arduino_equip">
+                        <a href = "http://www.sunggongee.shop/feat_user/user_equipment/#arduino_equip">
                             <img src="../../static/img/arduino_img.PNG" alt> 
                         {% elif goods.1.0 == "라즈베리파이" %}
-                        <a href = "http://127.0.0.1:8000/feat_user/user_equipment/#raspberrypi_equip">
+                        <a href = "http://www.sunggongee.shop/feat_user/user_equipment/#raspberrypi_equip">
                             <img src="../../static/img/rasberrypi_img.PNG" alt> 
                         {% elif goods.1.0 == "졸업작품 물품" %}
-                        <a href = "http://127.0.0.1:8000/feat_user/user_equipment/#gradue_equip">
+                        <a href = "http://www.sunggongee.shop/feat_user/user_equipment/#gradue_equip">
                             <img src="../../static/img/gradu_img.PNG" alt> 
                         {% elif goods.1.0 == "실습실" %}
-                        <a href = "http://127.0.0.1:8000/feat_user/user_equipment/#lab_equip">
+                        <a href = "http://www.sunggongee.shop/feat_user/user_equipment/#lab_equip">
                             <img src="../../static/img/lab_img.PNG" alt> 
                         {% elif goods.1.0 == "태블릿PC" %}
-                        <a href = "http://127.0.0.1:8000/feat_user/user_equipment/#tabletpc_equip">
+                        <a href = "http://www.sunggongee.shop/feat_user/user_equipment/#tabletpc_equip">
                             <img src="../../static/img/tabletpc_img.PNG" alt>
                         {% elif goods.1.0 == "웹캠" %}
-                        <a href = "http://127.0.0.1:8000/feat_user/user_equipment/#webcam_equip">
+                        <a href = "http://www.sunggongee.shop/feat_user/user_equipment/#webcam_equip">
                             <img src="../../static/img/webcam_img.PNG" alt> 
                         {% else %}
-                        <a href = "http://127.0.0.1:8000/feat_user/user_equipment/#tablet_equip">
+                        <a href = "http://www.sunggongee.shop/feat_user/user_equipment/#tablet_equip">
                             <img src="../../static/img/tablet_img.PNG" alt>
                         {% endif %}
         
@@ -164,34 +164,34 @@
                     </li>
                     <li>
                         {% if goods.2.0 == "노트북" %}   
-                        <a href = "http://127.0.0.1:8000/feat_user/user_equipment/#notebook_equip">
+                        <a href = "http://www.sunggongee.shop/feat_user/user_equipment/#notebook_equip">
                             <img src="../../static/img/lggram_img.PNG" alt> 
                         {% elif goods.2.0 == "케이블" %}
-                        <a href = "http://127.0.0.1:8000/feat_user/user_equipment/#cable_equip">
+                        <a href = "http://www.sunggongee.shop/feat_user/user_equipment/#cable_equip">
                             <img src="../../static/img/hdmi_img.PNG" alt> 
                         {% elif goods.2.0 == "CD-ROM" %}
-                        <a href = "http://127.0.0.1:8000/feat_user/user_equipment/#cdrom_equip">
+                        <a href = "http://www.sunggongee.shop/feat_user/user_equipment/#cdrom_equip">
                             <img src="../../static/img/cd_rom_img.PNG" alt> 
                         {% elif goods.2.0 == "아두이노 키트" %}
-                        <a href = "http://127.0.0.1:8000/feat_user/user_equipment/#arduino_equip">
+                        <a href = "http://www.sunggongee.shop/feat_user/user_equipment/#arduino_equip">
                             <img src="../../static/img/arduino_img.PNG" alt> 
                         {% elif goods.2.0 == "라즈베리파이" %}
-                        <a href = "http://127.0.0.1:8000/feat_user/user_equipment/#raspberrypi_equip">
+                        <a href = "http://www.sunggongee.shop/feat_user/user_equipment/#raspberrypi_equip">
                             <img src="../../static/img/rasberrypi_img.PNG" alt> 
                         {% elif goods.2.0 == "졸업작품 물품" %}
-                        <a href = "http://127.0.0.1:8000/feat_user/user_equipment/#gradue_equip">
+                        <a href = "http://www.sunggongee.shop/feat_user/user_equipment/#gradue_equip">
                             <img src="../../static/img/gradu_img.PNG" alt> 
                         {% elif goods.2.0 == "실습실" %}
-                        <a href = "http://127.0.0.1:8000/feat_user/user_equipment/#lab_equip">
+                        <a href = "http://www.sunggongee.shop/feat_user/user_equipment/#lab_equip">
                             <img src="../../static/img/lab_img.PNG" alt> 
                         {% elif goods.2.0 == "태블릿PC" %}
-                        <a href = "http://127.0.0.1:8000/feat_user/user_equipment/#tabletpc_equip">
+                        <a href = "http://www.sunggongee.shop/feat_user/user_equipment/#tabletpc_equip">
                             <img src="../../static/img/tabletpc_img.PNG" alt>
                         {% elif goods.2.0 == "웹캠" %}
-                        <a href = "http://127.0.0.1:8000/feat_user/user_equipment/#webcam_equip">
+                        <a href = "http://www.sunggongee.shop/feat_user/user_equipment/#webcam_equip">
                             <img src="../../static/img/webcam_img.PNG" alt> 
                         {% else %}
-                        <a href = "http://127.0.0.1:8000/feat_user/user_equipment/#tablet_equip">
+                        <a href = "http://www.sunggongee.shop/feat_user/user_equipment/#tablet_equip">
                             <img src="../../static/img/tablet_img.PNG" alt>
                         {% endif %}
 
@@ -201,34 +201,34 @@
                     </li>
                     <li>
                         {% if goods.3.0 == "노트북" %}   
-                        <a href = "http://127.0.0.1:8000/feat_user/user_equipment/#notebook_equip">
+                        <a href = "http://www.sunggongee.shop/feat_user/user_equipment/#notebook_equip">
                             <img src="../../static/img/lggram_img.PNG" alt> 
                         {% elif goods.3.0 == "케이블" %}
-                        <a href = "http://127.0.0.1:8000/feat_user/user_equipment/#cable_equip">
+                        <a href = "http://www.sunggongee.shop/feat_user/user_equipment/#cable_equip">
                             <img src="../../static/img/hdmi_img.PNG" alt> 
                         {% elif goods.3.0 == "CD-ROM" %}
-                        <a href = "http://127.0.0.1:8000/feat_user/user_equipment/#cdrom_equip">
+                        <a href = "http://www.sunggongee.shop/feat_user/user_equipment/#cdrom_equip">
                             <img src="../../static/img/cd_rom_img.PNG" alt> 
                         {% elif goods.3.0 == "아두이노 키트" %}
-                        <a href = "http://127.0.0.1:8000/feat_user/user_equipment/#arduino_equip">
+                        <a href = "http://www.sunggongee.shop/feat_user/user_equipment/#arduino_equip">
                             <img src="../../static/img/arduino_img.PNG" alt> 
                         {% elif goods.3.0 == "라즈베리파이" %}
-                        <a href = "http://127.0.0.1:8000/feat_user/user_equipment/#raspberrypi_equip">
+                        <a href = "http://www.sunggongee.shop/feat_user/user_equipment/#raspberrypi_equip">
                             <img src="../../static/img/rasberrypi_img.PNG" alt> 
                         {% elif goods.3.0 == "졸업작품 물품" %}
-                        <a href = "http://127.0.0.1:8000/feat_user/user_equipment/#gradue_equip">
+                        <a href = "http://www.sunggongee.shop/feat_user/user_equipment/#gradue_equip">
                             <img src="../../static/img/gradu_img.PNG" alt> 
                         {% elif goods.3.0 == "실습실" %}
-                        <a href = "http://127.0.0.1:8000/feat_user/user_equipment/#lab_equip">
+                        <a href = "http://www.sunggongee.shop/feat_user/user_equipment/#lab_equip">
                             <img src="../../static/img/lab_img.PNG" alt> 
                         {% elif goods.3.0 == "태블릿PC" %}
-                        <a href = "http://127.0.0.1:8000/feat_user/user_equipment/#tabletpc_equip">
+                        <a href = "http://www.sunggongee.shop/feat_user/user_equipment/#tabletpc_equip">
                             <img src="../../static/img/tabletpc_img.PNG" alt>
                         {% elif goods.3.0 == "웹캠" %}
-                        <a href = "http://127.0.0.1:8000/feat_user/user_equipment/#webcam_equip">
+                        <a href = "http://www.sunggongee.shop/feat_user/user_equipment/#webcam_equip">
                             <img src="../../static/img/webcam_img.PNG" alt> 
                         {% else %}
-                        <a href = "http://127.0.0.1:8000/feat_user/user_equipment/#tablet_equip">
+                        <a href = "http://www.sunggongee.shop/feat_user/user_equipment/#tablet_equip">
                             <img src="../../static/img/tablet_img.PNG" alt>
                         {% endif %}
 
@@ -295,7 +295,7 @@
         
         <!-- ai -->
         <div class="button-container" id="scrollDownPc" class="hidden-md hidden-sm hidden-xs" >
-            <a class="button1" href="http://127.0.0.1:8000/aichatbot/">
+            <a class="button1" href="http://www.sunggongee.shop/aichatbot/">
               <span class="content">성공AI</span>
               <span class="effect circle-1"></span>
               <span class="effect circle-2"></span>
