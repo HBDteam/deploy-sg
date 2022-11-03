@@ -34,16 +34,3 @@ def rental(request):
         post.save()   
 
         return redirect('../equipinfo', {'alert':'정상적으로 신청이 접수되었습니다'})
-
-
-    
-        
-    
-    
-    
-
-    
-    
-
-
-
