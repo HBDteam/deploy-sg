@@ -252,6 +252,11 @@ function commandReset(e){
 // fixed 질문
 var possibleInput = {
   // "hlep" : this.help(),
+  "실습실 현황" : function(){
+    responseText("현재 온도는 10도로, 종일 추운날이 예상돼🥲");
+    commandReset(0);
+    return
+    },
   "대여" : function(){
     responseText("어떤걸 대여하고 싶어?");
     commandReset(0);
