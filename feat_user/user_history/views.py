@@ -15,27 +15,54 @@ def user_history(request):
     
     login_user_ID = request.user.username
 
-    now = datetime.datetime.today()
     
     NOW_userID = Renting.objects.filter(userID = login_user_ID)
 
+    print(NOW_userID)
+
     equipid = NOW_userID.values('equipID')
+
+    print(equipid)
     equip = Equip.objects.filter(equipID__in=equipid)
     NOW_userID_list = list(NOW_userID.values())
+    print(NOW_userID_list)
     equip_list = list(equip.values('equipInfo'))
+    print(equip_list)
 
     for i in range(len(equip_list)):
         NOW_userID_list[i]['equipInfo'] = equip_list[i]['equipInfo']
 
-    
-    NOW_userID_list.sort(key=itemgetter('returningDate'))
+    print("===================================")
+    print(NOW_userID_list)
 
+
+    nn = []
+    pp = []
+
+
+    now = datetime.datetime.today().strftime('%Y%m%d')
+
+    for i in range(len(NOW_userID_list)):
+        haa = NOW_userID_list[i]['returningDate'].strftime('%Y%m%d')
+        if haa > now:
+            nn.append(NOW_userID_list[i])
+        else:
+            pp.append(NOW_userID_list[i])
+    
+
+    nn.sort(key=itemgetter('returningDate'))
+    pp.sort(key=itemgetter('returningDate'))
+    
+
+    '''
+    NOW_userID_list.sort(key=itemgetter('returningDate'))
     now_list = NOW_userID_list[3:]
     past_list = NOW_userID_list[0:3]
+    '''
 
     
 
-    context = {'now_list' : now_list, 'past_list' : past_list}
+    context = {'nn' : nn, 'pp' : pp}
     
     
 
@@ -46,18 +73,12 @@ def user_history(request):
 '''
     now_rentlist = []
     pre_rentlist = []
-
-
     
-
     for i in range(len(NOW_userID_list)):
         if NOW_userID_list[i]['returningDate'].strftime('%Y%m%d') > now:
             now_rentlist.append(NOW_userID_list[i])
         else:
             pre_rentlist.append(NOW_userID_list[i])
-
     now_rentlist.sort(key=itemgetter('returningDate'))
     pre_rentlist.sort(key=itemgetter('returningDate'))
     '''
-    
-    
