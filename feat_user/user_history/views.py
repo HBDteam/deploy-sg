@@ -54,6 +54,8 @@ def user_history(request):
     pp.sort(key=itemgetter('returningDate'))
     
 
+    NOW_userID_list.sort(key=itemgetter('returningDate'))
+    
     '''
     NOW_userID_list.sort(key=itemgetter('returningDate'))
     now_list = NOW_userID_list[3:]
