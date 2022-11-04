@@ -10,7 +10,7 @@
 </head>
 
 
-<body>
+<body>          
 
 <main class="page__main">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -252,6 +252,21 @@ function commandReset(e){
 // fixed 질문
 var possibleInput = {
   // "hlep" : this.help(),
+  "대여" : function(){
+    responseText("어떤걸 대여하고 싶어?");
+    commandReset(0);
+    return
+    },
+  "오늘 날씨" : function(){
+    responseText("현재 온도는 10도로, 종일 추운날이 예상돼🥲");
+    commandReset(0);
+    return
+    },
+  "날씨" : function(){
+    responseText("현재 온도는 10도로, 종일 추운날이 예상돼🥲");
+    commandReset(0);
+    return
+    },
   "노트북" : function(){
     responseText("노트북 종류가 여러 개있어! 맞는 사양 골라가면 될 것같아😁");
     responseText("자세한건 Product페이지에 가면 볼 수있어!");
